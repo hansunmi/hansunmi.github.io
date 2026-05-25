@@ -32,6 +32,23 @@ document.querySelectorAll('a, button, .work-card, .tag').forEach(el => {
   });
 });
 
+// ── 새로고침 시 hash로 인한 자동 스크롤 방지
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
+// ── 앵커 클릭: URL에 hash 남기지 않고 smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState(null, '', location.pathname);
+  });
+});
+
 // ── Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
