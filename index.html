@@ -1,11 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메롱</title>
-</head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한선미 — UX Designer</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 <body>
-    메롱
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#intro" class="nav-logo">Hansunmi</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#education">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ① INTRO -->
+  <section id="intro">
+    <div class="section-label">UX Designer &amp; Publisher</div>
+    <h1 class="intro-tagline">
+      보기 좋은 디자인보다<br>
+      <span>이해되는 경험</span>을<br>
+      만듭니다.
+    </h1>
+    <p class="intro-sub">Han Sun-mi · UX/UI Design · Publishing · Planning</p>
+    <div class="intro-scroll">
+      <span class="scroll-line"></span>
+      Scroll to explore
+    </div>
+  </section>
+
+  <!-- ② ABOUT -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="img/my_img.jpg" alt="한선미 프로필" class="about-img" />
+      </div>
+      <div class="about-info">
+        <div>
+          <div class="about-name">한선미</div>
+          <div class="about-name-en">Han Sun-mi</div>
+        </div>
+        <div>
+          <div class="tags-group">
+            <div class="tags-group-label">Work Style</div>
+            <div class="tags">
+              <span class="tag">#UX</span>
+              <span class="tag">#사용자시점</span>
+              <span class="tag">#디테일집착</span>
+              <span class="tag">#기획좋아함</span>
+            </div>
+          </div>
+          <div class="tags-group">
+            <div class="tags-group-label">Personality</div>
+            <div class="tags">
+              <span class="tag pink">#차분한</span>
+              <span class="tag pink">#논리적</span>
+              <span class="tag pink">#꾸준한</span>
+              <span class="tag pink">#도전적</span>
+              <span class="tag pink">#완벽주의</span>
+              <span class="tag pink">#INTJ</span>
+              <span class="tag pink">#감성T</span>
+              <span class="tag pink">#귀여운 거 좋아해요</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Experience</div>
+    <div class="exp-item">
+      <div class="exp-period">2025.01 — 재직 중</div>
+      <div>
+        <div class="exp-company">
+          TradeIt
+          <span class="exp-badge">Current</span>
+        </div>
+        <div class="exp-role">웹개발팀 · Design / Publishing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ WORKS -->
+  <section id="works">
+    <div class="section-label">Works</div>
+    <div class="works-grid">
+      <a href="#" class="work-card" data-notion="true">
+        <div class="work-season">TradeIt SaaS · Season 01–04</div>
+        <div class="work-title">Design</div>
+        <div class="work-desc">서비스 전반 UI/UX 디자인 — 시즌별 개선 및 신규 기능 설계</div>
+        <span class="work-arrow">→</span>
+      </a>
+      <a href="#" class="work-card" data-notion="true">
+        <div class="work-season">TradeIt SaaS · Admin</div>
+        <div class="work-title">Admin Design</div>
+        <div class="work-desc">관리자 페이지 전체 디자인 및 퍼블리싱</div>
+        <span class="work-arrow">→</span>
+      </a>
+      <a href="#" class="work-card" data-notion="true">
+        <div class="work-season">Marketing</div>
+        <div class="work-title">마케팅 지원 디자인</div>
+        <div class="work-desc">SNS 콘텐츠, 배너, 랜딩 페이지 디자인</div>
+        <span class="work-arrow">→</span>
+      </a>
+      <a href="#" class="work-card" data-notion="true">
+        <div class="work-season">Planning</div>
+        <div class="work-title">사업계획서</div>
+        <div class="work-desc">사업계획서 시각화 디자인</div>
+        <span class="work-arrow">→</span>
+      </a>
+      <div class="work-notice">* 노션 링크 연결 예정입니다.</div>
+    </div>
+  </section>
+
+  <!-- ⑤ PROJECT -->
+  <section id="project">
+    <div class="section-label">Project</div>
+    <div class="coming-soon-wrap">
+      <div class="coming-soon-text">Coming<br>Soon</div>
+      <div class="coming-soon-dot"></div>
+    </div>
+  </section>
+
+  <!-- ⑥ EDUCATION & SKILLS -->
+  <section id="education">
+    <div class="section-label">Education &amp; Skills</div>
+    <div class="edu-skills-grid">
+      <div>
+        <div class="edu-block">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <div class="edu-item-title">동의대학교 패션디자인학과</div>
+            <div class="edu-item-detail">2020.03 ~ 2024.02</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-item-title">스마트웹 UX/UI 웹퍼블리셔 웹콘텐츠 개발자양성과정</div>
+            <div class="edu-item-detail">2024.05 ~ 2024.10</div>
+          </div>
+        </div>
+        <div class="edu-block" style="margin-top:48px">
+          <h3>Certificate</h3>
+          <div class="edu-item">
+            <div class="edu-item-title">GTQ 포토샵 2급</div>
+            <div class="edu-item-detail">2021.06</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-item-title">GTQ 일러스트 1급</div>
+            <div class="edu-item-detail">2024.05</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-item-title">GTQ 인디자인 1급</div>
+            <div class="edu-item-detail">2024.06</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-item-title">자동차 운전면허 2종 보통</div>
+            <div class="edu-item-detail">2022.07</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="edu-block">
+          <h3>Tools &amp; Skills</h3>
+          <div class="skill-group">
+            <div class="skill-group-name">Design</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Adobe XD</span>
+              <span class="skill-pill">Illustrator</span>
+              <span class="skill-pill">Photoshop</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Publishing</div>
+            <div class="skill-pills">
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">React</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Collaboration</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Notion</span>
+              <span class="skill-pill">Slack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ CONTACT -->
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <h2 class="contact-heading">함께<br>만들어봐요.</h2>
+    <div class="contact-list">
+      <a href="tel:01054979082" class="contact-item">
+        <span class="contact-type">Phone</span>
+        <span class="contact-value">010-5497-9082</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="mailto:gkstjsal1016@naver.com" class="contact-item">
+        <span class="contact-type">Email</span>
+        <span class="contact-value">gkstjsal1016@naver.com</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://www.instagram.com/h_miyaa_" target="_blank" rel="noopener" class="contact-item">
+        <span class="contact-type">Instagram</span>
+        <span class="contact-value">@h_miyaa_</span>
+        <span class="contact-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ⑧ ENDING -->
+  <section id="ending">
+    <div class="section-label">— Hansunmi</div>
+    <p class="ending-quote">
+      작은 <span>디테일</span>이<br>
+      큰 경험을 만든다고<br>
+      믿습니다.
+    </p>
+    <div class="ending-footer">
+      <span class="ending-name">Han Sun-mi · UX Designer</span>
+      <span>© 2025 hansunmi. All rights reserved.</span>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
