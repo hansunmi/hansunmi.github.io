@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design — Hansunmi</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../css/design.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="sub-nav">
+    <a href="../index.html" class="nav-logo">Hansunmi</a>
+    <a href="../index.html#works" class="back-btn">← Works</a>
+  </nav>
+
+  <!-- ① HERO -->
+  <section class="hero">
+    <div class="hero-intro">
+      <div class="sub-label">TradeIt SaaS · Season 01–04</div>
+      <h1 class="hero-title">서비스 전반<br>UI/UX 디자인</h1>
+      <p class="hero-desc">시즌별 개선 및 신규 기능 설계<br>CRM SaaS 플랫폼 전체 UI/UX 디자인</p>
+      <div class="hero-tags">
+        <span class="htag">Figma</span>
+        <span class="htag">UI Design</span>
+        <span class="htag">UX Research</span>
+        <span class="htag">Design System</span>
+      </div>
+    </div>
+
+    <!-- Tab Video Player -->
+    <div class="player">
+      <!-- Tab bar (= progress indicator) -->
+      <div class="player-tabs">
+
+        <button class="player-tab" data-index="0">
+          <div class="tab-meta">
+            <span class="tab-num">01</span>
+            <span class="tab-name">바이어 검색</span>
+          </div>
+          <div class="tab-track">
+            <div class="tab-fill"></div>
+          </div>
+        </button>
+
+        <button class="player-tab" data-index="1">
+          <div class="tab-meta">
+            <span class="tab-num">02</span>
+            <span class="tab-name">영업관리</span>
+          </div>
+          <div class="tab-track">
+            <div class="tab-fill"></div>
+          </div>
+        </button>
+
+      </div><!-- /player-tabs -->
+
+      <!-- Screen -->
+      <div class="player-screen">
+
+        <!-- Slot 0 : 바이어 검색
+             영상 준비되면 아래 video 태그의 src 속성에 경로 입력
+             예: <video src="../video/buyer-search.mp4" preload="metadata"></video>
+             data-ph-duration : 임시 플레이스홀더 초(sec) — 영상 삽입 시 자동으로 영상 길이 사용 -->
+        <div class="video-slot" data-index="0" data-ph-duration="30">
+          <!--<video src="" preload="metadata" playsinline muted></video>-->
+          <div class="video-ph">
+            <div class="ph-ring">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="ph-label">바이어 검색 플로우</span>
+            <span class="ph-hint">영상 삽입 예정 · 임시 30초</span>
+          </div>
+        </div>
+
+        <!-- Slot 1 : 영업관리 -->
+        <div class="video-slot" data-index="1" data-ph-duration="40">
+          <!--<video src="" preload="metadata" playsinline muted></video>-->
+          <div class="video-ph">
+            <div class="ph-ring">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="ph-label">영업관리 플로우</span>
+            <span class="ph-hint">영상 삽입 예정 · 임시 40초</span>
+          </div>
+        </div>
+
+      </div><!-- /player-screen -->
+    </div><!-- /player -->
+  </section>
+
+  <!-- ② DESIGN EVOLUTION -->
+  <section class="section evo-section">
+    <div class="section-head">
+      <div class="sub-label pink">Design Evolution</div>
+      <h2 class="section-title">시즌별 디자인 변천사</h2>
+      <p class="section-desc">사용자 피드백과 비즈니스 요구에 맞춰 서비스 디자인이 지속적으로 발전했습니다.</p>
+    </div>
+
+    <div class="evo-grid">
+      <div class="evo-card">
+        <div class="evo-season-label">Season 01</div>
+        <div class="img-ph ratio-16-9" data-hint="Season 01 디자인 스크린샷"></div>
+        <div class="evo-desc-row">
+          <span class="evo-pill">초기 런칭</span>
+          <span class="evo-pill">기본 구조 수립</span>
+        </div>
+      </div>
+
+      <div class="evo-divider">
+        <span class="evo-arrow">→</span>
+        <span class="evo-change-note">UX 개선<br>레이아웃 리뉴얼</span>
+      </div>
+
+      <div class="evo-card">
+        <div class="evo-season-label">Season 02–03</div>
+        <div class="img-ph ratio-16-9" data-hint="Season 02–03 디자인 스크린샷"></div>
+        <div class="evo-desc-row">
+          <span class="evo-pill">네비게이션 개편</span>
+          <span class="evo-pill">컴포넌트 정비</span>
+        </div>
+      </div>
+
+      <div class="evo-divider">
+        <span class="evo-arrow">→</span>
+        <span class="evo-change-note">디자인 시스템<br>반응형 대응</span>
+      </div>
+
+      <div class="evo-card evo-card--current">
+        <div class="evo-season-label">Season 04 <span class="current-badge">Current</span></div>
+        <div class="img-ph ratio-16-9" data-hint="Season 04 최신 디자인 스크린샷"></div>
+        <div class="evo-desc-row">
+          <span class="evo-pill">신규 기능 추가</span>
+          <span class="evo-pill">반응형</span>
+          <span class="evo-pill">디자인시스템</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ RESPONSIVE -->
+  <section class="section resp-section">
+    <div class="section-head">
+      <div class="sub-label pink">Responsive</div>
+      <h2 class="section-title">반응형 화면 구성</h2>
+      <p class="section-desc">최신 시즌부터 PC / 태블릿 / 모바일 환경을 모두 지원합니다.<br>레이아웃과 컴포넌트 구조가 디바이스에 맞게 재구성됩니다.</p>
+    </div>
+
+    <div class="resp-devices">
+      <div class="device-wrap device-wrap--pc">
+        <div class="device-name">PC / Desktop</div>
+        <div class="laptop">
+          <div class="laptop-body">
+            <div class="laptop-cam"></div>
+            <div class="laptop-screen">
+              <div class="img-ph full" data-hint="PC 화면 스크린샷"></div>
+            </div>
+          </div>
+          <div class="laptop-hinge"></div>
+          <div class="laptop-base"><div class="laptop-trackpad"></div></div>
+        </div>
+      </div>
+
+      <div class="device-wrap device-wrap--mobile">
+        <div class="device-name">Mobile</div>
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="img-ph full" data-hint="모바일 화면 스크린샷"></div>
+          </div>
+          <div class="phone-home"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resp-points">
+      <div class="resp-point">
+        <span class="rp-num">01</span>
+        <div><div class="rp-title">네비게이션 변환</div><div class="rp-desc">사이드바 → 상단 탭 / 바텀 네비게이션으로 전환</div></div>
+      </div>
+      <div class="resp-point">
+        <span class="rp-num">02</span>
+        <div><div class="rp-title">레이아웃 재구성</div><div class="rp-desc">멀티 컬럼 그리드 → 단일 컬럼 스택</div></div>
+      </div>
+      <div class="resp-point">
+        <span class="rp-num">03</span>
+        <div><div class="rp-title">테이블 → 카드형</div><div class="rp-desc">데이터 테이블이 터치 친화적인 카드 리스트로 변환</div></div>
+      </div>
+      <div class="resp-point">
+        <span class="rp-num">04</span>
+        <div><div class="rp-title">터치 최적화</div><div class="rp-desc">버튼 / 인풋 크기 및 간격을 모바일 기준으로 확대</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ STYLE GUIDE -->
+  <section class="section sg-section">
+    <div class="section-head">
+      <div class="sub-label pink">Style Guide</div>
+      <h2 class="section-title">디자인 시스템</h2>
+      <p class="section-desc">일관된 사용자 경험을 위해 컬러, 타이포그래피, 컴포넌트를 정의했습니다.</p>
+    </div>
+
+    <div class="sg-block">
+      <h3 class="sg-block-title">Color</h3>
+      <div class="sg-colors">
+        <div class="sg-swatch"><div class="swatch-box" style="background:#0D1117"></div><div class="swatch-info"><span class="sw-name">Primary</span><span class="sw-hex">#0D1117</span></div></div>
+        <div class="sg-swatch"><div class="swatch-box" style="background:#1461F0"></div><div class="swatch-info"><span class="sw-name">Brand Blue</span><span class="sw-hex">#1461F0</span></div></div>
+        <div class="sg-swatch"><div class="swatch-box" style="background:#F0F2F5"></div><div class="swatch-info"><span class="sw-name">Background</span><span class="sw-hex">#F0F2F5</span></div></div>
+        <div class="sg-swatch"><div class="swatch-box" style="background:#22C55E"></div><div class="swatch-info"><span class="sw-name">Success</span><span class="sw-hex">#22C55E</span></div></div>
+        <div class="sg-swatch"><div class="swatch-box" style="background:#EF4444"></div><div class="swatch-info"><span class="sw-name">Error</span><span class="sw-hex">#EF4444</span></div></div>
+        <div class="sg-swatch"><div class="swatch-box" style="background:#6B7280"></div><div class="swatch-info"><span class="sw-name">Neutral</span><span class="sw-hex">#6B7280</span></div></div>
+      </div>
+      <p class="sg-note">* 실제 서비스 컬러로 교체 예정</p>
+    </div>
+
+    <div class="sg-block">
+      <h3 class="sg-block-title">Typography</h3>
+      <div class="sg-type">
+        <div class="sg-type-row">
+          <span class="sg-type-label">Display</span>
+          <span class="sg-type-sample" style="font-size:36px;font-weight:700;letter-spacing:-0.03em">Heading Text</span>
+          <span class="sg-type-spec">36 / 700 / −0.03em</span>
+        </div>
+        <div class="sg-type-row">
+          <span class="sg-type-label">Title</span>
+          <span class="sg-type-sample" style="font-size:22px;font-weight:600">제목 텍스트</span>
+          <span class="sg-type-spec">22 / 600</span>
+        </div>
+        <div class="sg-type-row">
+          <span class="sg-type-label">Body</span>
+          <span class="sg-type-sample" style="font-size:15px;font-weight:400">본문 텍스트입니다. 정보를 전달합니다.</span>
+          <span class="sg-type-spec">15 / 400</span>
+        </div>
+        <div class="sg-type-row">
+          <span class="sg-type-label">Caption</span>
+          <span class="sg-type-sample" style="font-size:12px;font-weight:400;color:#888">보조 설명 텍스트</span>
+          <span class="sg-type-spec">12 / 400</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-block">
+      <h3 class="sg-block-title">Components</h3>
+      <div class="img-ph ratio-16-9 comp-ph" data-hint="컴포넌트 스타일가이드 이미지 (버튼, 인풋, 배지, 카드 등)"></div>
+    </div>
+  </section>
+
+  <script src="../js/design.js"></script>
+</body>
+</html>
