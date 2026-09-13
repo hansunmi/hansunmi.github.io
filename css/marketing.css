@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --pink: #D4788A;
+  --blue: #5B8DD9;
   --black: #111111;
   --gray: #888888;
 }
@@ -36,7 +36,7 @@ body {
 .back-btn {
   font-size: 13px;
   letter-spacing: 0.1em;
-  color: var(--pink);
+  color: var(--blue);
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -52,7 +52,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--blue);
   margin-bottom: 20px;
 }
 .sub-title {
@@ -135,11 +135,11 @@ body {
 }
 .bento-item:hover .bento-thumb { transform: scale(1.04); }
 .bento-item:hover .bento-overlay {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(212,120,138,0.15) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(91,141,217,0.15) 100%);
 }
 .bento-item:hover .bento-icon {
-  background: var(--pink);
-  border-color: var(--pink);
+  background: var(--blue);
+  border-color: var(--blue);
   transform: rotate(45deg);
 }
 
@@ -179,7 +179,7 @@ body {
   line-height: 1;
   z-index: 10;
 }
-.modal-close:hover { background: var(--pink); border-color: var(--pink); }
+.modal-close:hover { background: var(--blue); border-color: var(--blue); }
 
 .modal-content {
   display: flex;
@@ -223,11 +223,11 @@ body {
   padding: 16px 0;
   /* 스크롤바 스타일 */
   scrollbar-width: thin;
-  scrollbar-color: var(--pink) rgba(255,255,255,0.05);
+  scrollbar-color: var(--blue) rgba(255,255,255,0.05);
 }
 .modal-img-wrap.scrollable::-webkit-scrollbar { width: 4px; }
 .modal-img-wrap.scrollable::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 2px; }
-.modal-img-wrap.scrollable::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 2px; }
+.modal-img-wrap.scrollable::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 2px; }
 .modal-img-wrap.scrollable .modal-img {
   width: 100%;
   max-height: none;
@@ -279,7 +279,7 @@ body {
   transition: background 0.2s, border-color 0.2s;
   line-height: 1;
 }
-.modal-nav:hover { background: var(--pink); border-color: var(--pink); }
+.modal-nav:hover { background: var(--blue); border-color: var(--blue); }
 .modal-nav:disabled { opacity: 0.2; pointer-events: none; }
 .modal-nav.hidden { visibility: hidden; }
 
@@ -299,7 +299,7 @@ body {
 }
 .modal-counter {
   font-size: 13px;
-  color: var(--pink);
+  color: var(--blue);
   letter-spacing: 0.08em;
 }
 

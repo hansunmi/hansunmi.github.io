@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --pink: #D4788A;
+  --blue: #5B8DD9;
   --black: #111111;
   --gray: #888888;
   --border: rgba(255,255,255,0.07);
@@ -33,7 +33,7 @@ body {
 }
 .back-btn {
   font-size: 13px; letter-spacing: 0.1em;
-  color: var(--pink); text-decoration: none;
+  color: var(--blue); text-decoration: none;
   transition: opacity 0.2s;
 }
 .back-btn:hover { opacity: 0.65; }
@@ -43,7 +43,7 @@ body {
   font-size: 11px; font-weight: 500; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--gray); margin-bottom: 18px;
 }
-.sub-label.pink { color: var(--pink); }
+.sub-label.pink { color: var(--blue); }
 
 /* ── PLACEHOLDER ── */
 .img-ph {
@@ -146,7 +146,7 @@ body {
 }
 .tab-num {
   font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
-  color: var(--pink); opacity: 0.4;
+  color: var(--blue); opacity: 0.4;
   transition: opacity 0.3s;
 }
 .tab-name {
@@ -167,7 +167,7 @@ body {
 .tab-fill {
   height: 100%;
   width: 0%;
-  background: var(--pink);
+  background: var(--blue);
   border-radius: 2px;
   will-change: width;
 }
@@ -207,10 +207,10 @@ body {
 }
 .ph-ring {
   width: 68px; height: 68px; border-radius: 50%;
-  background: rgba(212,120,138,0.1);
-  border: 1.5px solid rgba(212,120,138,0.3);
+  background: rgba(91,141,217,0.1);
+  border: 1.5px solid rgba(91,141,217,0.3);
   display: flex; align-items: center; justify-content: center;
-  color: var(--pink);
+  color: var(--blue);
 }
 .ph-label {
   font-size: 17px; font-weight: 600;
@@ -236,8 +236,8 @@ body {
   display: flex; flex-direction: column; gap: 16px;
   transition: border-color 0.3s;
 }
-.evo-card:hover { border-color: rgba(212,120,138,0.3); }
-.evo-card--current { border-color: rgba(212,120,138,0.25); }
+.evo-card:hover { border-color: rgba(91,141,217,0.3); }
+.evo-card--current { border-color: rgba(91,141,217,0.25); }
 
 .evo-season-label {
   font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
@@ -247,7 +247,7 @@ body {
 .current-badge {
   font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
   padding: 2px 8px; border-radius: 999px;
-  background: var(--pink); color: #fff;
+  background: var(--blue); color: #fff;
   text-transform: uppercase;
 }
 .evo-desc-row { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -263,7 +263,7 @@ body {
   padding: 0 24px; gap: 8px; padding-top: 80px;
 }
 .evo-arrow {
-  font-size: 28px; color: rgba(212,120,138,0.5);
+  font-size: 28px; color: rgba(91,141,217,0.5);
 }
 .evo-change-note {
   font-size: 10px; letter-spacing: 0.04em;
@@ -354,7 +354,7 @@ body {
 }
 .rp-num {
   font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
-  color: var(--pink);
+  color: var(--blue);
 }
 .rp-title {
   font-size: 14px; font-weight: 600; margin-bottom: 6px;
