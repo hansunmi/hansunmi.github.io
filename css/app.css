@@ -68,6 +68,13 @@ body {
 .img-ph.ratio-16-9 { aspect-ratio: 16/9; width: 100%; }
 .img-ph.ratio-9-19 { aspect-ratio: 9/19; width: 100%; }
 .img-ph.full { width: 100%; height: 100%; border-radius: 0; }
+.img-ph.filled { border-style: solid; border-color: transparent; background: #000; }
+.img-ph img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
 
 /* ── SECTIONS ── */
 .section {
