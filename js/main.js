@@ -92,8 +92,21 @@ window.addEventListener('scroll', () => {
     hTile.classList.toggle('is-pressed', p === 2);
   }
 
+  // 실제 새로고침(F5, 주소창 엔터 등)일 때는 세션 플래그를 무시하고 항상 다시 재생.
+  // 내부 링크 클릭(뒤로가기/목록 버튼 등)으로 들어온 경우에는 이 값이 'reload'가 아니므로
+  // 아래 sessionStorage 스킵 로직이 그대로 적용된다.
+  let isReload = false;
+  try {
+    const navEntries = performance.getEntriesByType('navigation');
+    if (navEntries.length) {
+      isReload = navEntries[0].type === 'reload';
+    } else if (performance.navigation) {
+      isReload = performance.navigation.type === 1;
+    }
+  } catch (e) {}
+
   let skip = false;
-  try { skip = sessionStorage.getItem('introPlayed') === '1'; } catch (e) {}
+  try { skip = !isReload && sessionStorage.getItem('introPlayed') === '1'; } catch (e) {}
 
   if (skip || reduceMotion) {
     hero.classList.add('intro-skipped');
