@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>하루의 기록 — Hansunmi</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+  <link rel="stylesheet" href="../css/haru.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="sub-nav">
+    <a href="../index.html" class="nav-logo">Hansunmi</a>
+    <a href="../index.html#personal" class="back-btn">← Personal</a>
+  </nav>
+
+  <!-- ① HERO · 한 줄 소개 -->
+  <header class="hero">
+    <div class="hero-top">
+      <div class="hero-intro">
+        <div class="badge-row">
+          <span class="badge-fill badge-fill--live"><span class="badge-dot"></span>LIVE · 운영 중</span>
+          <span class="htag">Personal Blog</span>
+          <span class="htag">Web · Mobile</span>
+        </div>
+
+        <div class="app-logo-row" data-reveal>
+          <svg class="haru-logo" viewBox="0 0 66 66" aria-hidden="true">
+            <rect width="66" height="66" rx="16" fill="#1C1F25"></rect>
+            <path d="M17 38a16 16 0 0 1 32 0z" fill="oklch(0.8 0.11 220)"></path>
+            <rect x="12" y="41" width="42" height="3" rx="1.5" fill="#fff"></rect>
+          </svg>
+          <div class="app-title-group">
+            <h1 class="app-title">하루의 기록</h1>
+            <p class="app-tagline">/ haru blog</p>
+          </div>
+        </div>
+
+        <p class="hero-desc" data-reveal>일상 다이어리, 여행, 공부 기록을 한 화면에 모은 <strong>개인 아카이빙 블로그</strong>입니다. 딱딱한 기술 블로그가 아니라 <strong>“넘겨보는 디지털 다이어리”</strong>를 목표로, 기획 · 디자인 · 개발 · 배포까지 혼자 진행했습니다.</p>
+
+        <div class="hero-cta-row" data-reveal>
+          <a href="https://sunmi-blog.vercel.app" target="_blank" rel="noopener" class="outro-btn outro-btn--fill">Visit Live Site ↗</a>
+          <span class="cta-note">sunmi-blog.vercel.app</span>
+        </div>
+      </div>
+
+      <div class="info-grid" data-reveal>
+        <div class="info-cell"><span class="info-label">Role</span><span class="info-value">기획 · UI/UX 디자인 · 프론트엔드/백엔드 · 배포 (1인)</span></div>
+        <div class="info-cell"><span class="info-label">Timeline</span><span class="info-value">2026.10</span></div>
+        <div class="info-cell">
+          <span class="info-label">Stack</span>
+          <div class="stack-list">
+            <span>Next.js (App Router)</span><span>TypeScript</span><span>Tailwind CSS</span><span>Prisma</span>
+            <span>Supabase (PostgreSQL · Storage)</span><span>Auth.js (GitHub OAuth)</span><span>Vercel (Seoul)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ② WHY · 왜 만들었나 -->
+  <section class="section points-section">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title">Why</h2>
+      <p class="section-desc">흩어진 기록, 글 목록 중심의 블로그, 확인할 수 없는 공부량 — 세 가지 불편에서 시작했습니다.</p>
+    </div>
+    <div class="points-grid">
+      <div class="point-card" data-reveal>
+        <p class="point-label">Problem 01</p>
+        <h3 class="point-title">기록이 여기저기<br>흩어져 있었다</h3>
+        <p class="point-desc">글, 사진, 공부 기록이 노션 · 메모앱 · 갤러리에 나뉘어 있었습니다.</p>
+      </div>
+      <div class="point-card" data-reveal data-delay="80">
+        <p class="point-label">Problem 02</p>
+        <h3 class="point-title">하루 단위로<br>돌아보기 어려웠다</h3>
+        <p class="point-desc">기존 블로그는 “글 목록”이 중심이라, 하루를 기준으로 되짚어 보기 어려웠습니다.</p>
+      </div>
+      <div class="point-card" data-reveal data-delay="160">
+        <p class="point-label">Problem 03</p>
+        <h3 class="point-title">공부는 “했다는 느낌”만<br>남았다</h3>
+        <p class="point-desc">실제로 얼마나 했는지, 무엇이 남았는지 확인할 방법이 없었습니다.</p>
+      </div>
+    </div>
+    <p class="answer-line" data-reveal>→ <strong>“오늘 무엇을 했고, 무엇이 남았는지”</strong>를 한눈에 보는 대시보드형 블로그로 정리했습니다.</p>
+  </section>
+
+  <!-- ③ DESIGN CONCEPT -->
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title">Design Concept</h2>
+      <p class="section-desc">크기가 다른 카드가 맞물리는 다크 벤토 그리드 위에, 포인트 컬러는 단 하나만 남겼습니다.</p>
+    </div>
+
+    <div class="concept-grid">
+      <div class="point-card" data-reveal>
+        <p class="point-label">Layout</p>
+        <h3 class="point-title">Dark Bento Grid</h3>
+        <p class="point-desc">크기가 다른 카드가 격자로 맞물리는 대시보드. 라운드 16–24px, 간격 20px.</p>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:#121418"></i>#121418 · 배경</span>
+          <span class="swatch"><i style="background:#1C1F25"></i>#1C1F25 · 카드</span>
+        </div>
+      </div>
+      <div class="point-card" data-reveal data-delay="60">
+        <p class="point-label">Accent</p>
+        <h3 class="point-title">포인트 컬러는 하나</h3>
+        <p class="point-desc">하늘색은 오늘 · 선택 · 새 글(N) 표시에만 씁니다.</p>
+        <div class="swatch-row">
+          <span class="swatch"><i style="background:oklch(0.8 0.11 220)"></i>oklch(0.8 0.11 220)</span>
+        </div>
+      </div>
+      <div class="point-card" data-reveal data-delay="120">
+        <p class="point-label">Tag Color</p>
+        <h3 class="point-title">태그 컬러의 일관성</h3>
+        <p class="point-desc">달력 점, 배지, 필터에 같은 색을 일관되게 사용합니다.</p>
+        <div class="swatch-row">
+          <span class="swatch"><i class="dot-study"></i>Study</span>
+          <span class="swatch"><i class="dot-travel"></i>Travel</span>
+          <span class="swatch"><i class="dot-diary"></i>Diary</span>
+        </div>
+      </div>
+      <div class="point-card" data-reveal data-delay="180">
+        <p class="point-label">Typography</p>
+        <h3 class="point-title">Pretendard <span class="mono">+ JetBrains Mono</span></h3>
+        <p class="point-desc">본문은 Pretendard, 날짜 · 숫자 라벨은 JetBrains Mono. 숫자를 모노로 써서 “기록지” 느낌을 냈습니다.</p>
+      </div>
+      <div class="point-card" data-reveal data-delay="240">
+        <p class="point-label">Logo</p>
+        <h3 class="point-title">반원 + 지평선 = 하루의 시작</h3>
+        <p class="point-desc">글자 없이도 16px 파비콘에서 읽히도록 만들었습니다.</p>
+      </div>
+    </div>
+
+    <figure class="shot" data-reveal>
+      <img src="../img/haru/home.png" alt="하루의 기록 홈 화면 — 배너, Bookmarks, Study Room 요약, Shorts, 기록 캘린더가 벤토 그리드로 배치된 데스크톱 화면" loading="lazy" width="2410" height="2928">
+      <figcaption>Home · Dark Bento Grid 대시보드</figcaption>
+    </figure>
+  </section>
+
+  <!-- ④ FEATURES -->
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title">Key Features</h2>
+    </div>
+
+    <div class="feature-block" data-reveal>
+      <div class="feature-head">
+        <span class="feature-num">01</span>
+        <h3 class="feature-title">홈 — 하루를 한 화면에</h3>
+      </div>
+      <ul class="feature-list">
+        <li><b>배너</b>‘배너 고정’을 켠 글이 슬라이드로 돌아갑니다. 고정한 글이 없으면 최신 글을 보여줍니다.</li>
+        <li><b>Bookmarks</b>♡를 누른 내 글을 모아 봅니다.</li>
+        <li><b>Study Room 요약</b>학습 단위를 고르고 바로 타이머를 시작합니다. 오늘 공부 시간 · 연속일 · 가장 가까운 D-day를 함께 표시합니다.</li>
+        <li><b>Shorts</b>세로 영상 카드. 글에 영상을 첨부하면 자동으로 Shorts에도 올라갑니다.</li>
+        <li><b>기록 캘린더 + 타임라인</b>글(태그 색 점)과 일상 할 일(빈 원)을 함께 표시합니다. 날짜를 누르면 그날의 글과 할 일이 나옵니다.</li>
+        <li><b>실시간 검색</b>한 글자씩 매칭합니다(“영” → 영국, 영어, 했어영). 드롭다운에서 바로 글로 이동하고, ⌘K 단축키를 지원합니다.</li>
+      </ul>
+    </div>
+
+    <div class="feature-block feature-block--split" data-reveal>
+      <div>
+        <div class="feature-head">
+          <span class="feature-num">02</span>
+          <h3 class="feature-title">Study Room — 공부를 “관리”하는 화면</h3>
+        </div>
+        <ul class="feature-list">
+          <li><b>학습 단위</b>진도 체크리스트, 메모, 연관 기록을 담습니다. 배지는 글자 · 아이콘 · 이미지 중에서 고를 수 있습니다.</li>
+          <li><b>오늘의 학습</b>학습 단위에서 오늘 할 항목만 골라 가져옵니다. 상위 항목을 체크하면 하위 항목이 모두 체크됩니다.</li>
+          <li><b>이어하기</b>어제 못 끝낸 항목만 다음 날 “이어서 할까요?”로 제안하고, 미룬 항목은 정리됩니다.</li>
+          <li><b>스톱워치</b>실제 공부 시간을 기록합니다. 저장할 때 <em>공부 리뷰</em>(오늘 머리에 남은 것)를 바로 적게 해, “공부하는 척”을 스스로 점검하게 했습니다.</li>
+          <li><b>하루 타임테이블</b>06–22시, 10분 단위 칸. 계획이 아니라 <em>실제로 공부한 시간</em>을 학습 단위 색으로 칠합니다. 스톱워치 기록은 자동으로, 재지 못한 시간은 드래그로 채웁니다.</li>
+          <li><b>연속 공부 · D-day</b>1분 이상 재면 자동으로 체크됩니다. 목표일이 지나면 D+는 회색으로 눈에 덜 띄게 처리했습니다.</li>
+        </ul>
+      </div>
+      <figure class="shot shot--scroll">
+        <div class="shot-frame" tabindex="0" aria-label="Study Room 전체 화면 — 스크롤해서 보기">
+          <img src="../img/haru/study-room.png" alt="Study Room 화면 — 학습 단위, 오늘의 학습, 스톱워치, 하루 타임테이블, 연속 공부와 D-day" loading="lazy" width="2410" height="5176">
+        </div>
+        <figcaption>Study Room · 프레임 안에서 스크롤</figcaption>
+      </figure>
+    </div>
+
+    <div class="feature-pair">
+      <div class="feature-block" data-reveal>
+        <div class="feature-head">
+          <span class="feature-num">03</span>
+          <h3 class="feature-title">글쓰기 · 상세</h3>
+        </div>
+        <ul class="feature-list">
+          <li><b>글쓰기</b>본문 사이 사진 + 크롭, 태그, 공개 범위(공개/비공개), 배너 고정, 영상 첨부, 임시저장.</li>
+          <li><b>상세</b>연결된 Shorts, 같은 태그 글, 이전 · 다음 글, 공유.</li>
+        </ul>
+      </div>
+      <div class="feature-block" data-reveal data-delay="80">
+        <div class="feature-head">
+          <span class="feature-num">04</span>
+          <h3 class="feature-title">방명록</h3>
+        </div>
+        <ul class="feature-list">
+          <li><b>누구나</b>로그인 없이 남길 수 있습니다. 랜덤 닉네임, 최대 500자.</li>
+          <li><b>새 글 알림</b>새 방명록이 오면 헤더에 <span class="n-badge">N</span> 배지가 붙습니다.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ DECISIONS -->
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title">Decisions</h2>
+      <p class="section-desc">만들면서 고민했던 지점과 그에 대한 결정입니다.</p>
+    </div>
+    <div class="decision-list">
+      <div class="decision-row decision-row--head" aria-hidden="true">
+        <span>PROBLEM</span><span>DECISION</span>
+      </div>
+      <div class="decision-row" data-reveal>
+        <p class="decision-q">나와 방문자가 같은 화면을 봄</p>
+        <p class="decision-a">GitHub 로그인 + <code>OWNER_EMAIL</code>이 일치할 때만 Owner로 판별. 방문자에게는 비공개 글과 편집 버튼을 서버에서부터 숨겼습니다.</p>
+      </div>
+      <div class="decision-row" data-reveal>
+        <p class="decision-q">공부 할 일 vs 일상 할 일</p>
+        <p class="decision-a">공부 할 일은 Study Room(학습 단위 안)에, 일상 할 일(세탁소, 약속)은 홈 캘린더로 분리했습니다.</p>
+      </div>
+      <div class="decision-row" data-reveal>
+        <p class="decision-q">계획표 vs 기록표</p>
+        <p class="decision-a">타임테이블은 계획이 아니라, 실제로 한 시간만 칠하는 기록표로 만들었습니다.</p>
+      </div>
+      <div class="decision-row" data-reveal>
+        <p class="decision-q">깊어지는 화면 이동</p>
+        <p class="decision-a">어디서든 로고를 누르면 홈으로, 뒤로가기는 들어온 경로 그대로 돌아갑니다.</p>
+      </div>
+      <div class="decision-row" data-reveal>
+        <p class="decision-q">모바일 헤더가 복잡함</p>
+        <p class="decision-a">상단에는 로고와 검색만 두고, 메뉴는 하단 탭(홈 · 전체 글 · Study · 나)으로 옮겼습니다.</p>
+      </div>
+      <div class="decision-row" data-reveal>
+        <p class="decision-q">배포 후 페이지 이동이 느림</p>
+        <p class="decision-a">Vercel 함수 리전을 서울(icn1)로 옮겨 DB와 같은 지역에 두고, loading 스켈레톤 · 병렬 쿼리 · 캐시를 적용했습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ MOBILE -->
+  <section class="section">
+    <div class="section-head section-head--row" data-reveal>
+      <h2 class="section-title">Mobile</h2>
+      <span class="section-count">04 SCREENS</span>
+    </div>
+    <div class="mobile-grid">
+      <div class="screen-card" data-reveal>
+        <div class="img-ph ratio-mobile filled"><img src="../img/haru/mobile-1a-home.png" alt="모바일 홈 화면" loading="lazy"></div>
+        <p class="screen-caption">홈</p>
+      </div>
+      <div class="screen-card" data-reveal data-delay="60">
+        <div class="img-ph ratio-mobile filled"><img src="../img/haru/mobile-1b-study.png" alt="모바일 Study Room 화면" loading="lazy"></div>
+        <p class="screen-caption">Study Room</p>
+      </div>
+      <div class="screen-card" data-reveal data-delay="120">
+        <div class="img-ph ratio-mobile filled"><img src="../img/haru/mobile-1c-search.png" alt="모바일 검색 화면" loading="lazy"></div>
+        <p class="screen-caption">검색</p>
+      </div>
+      <div class="screen-card" data-reveal data-delay="180">
+        <div class="img-ph ratio-mobile filled"><img src="../img/haru/mobile-1d-write.png" alt="모바일 ＋ 작성 시트 화면" loading="lazy"></div>
+        <p class="screen-caption">＋ 작성 시트</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ ARCHITECTURE -->
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title">Architecture</h2>
+      <p class="section-desc">GitHub에 push하면 Vercel이 자동으로 배포합니다.</p>
+    </div>
+    <div class="arch" data-reveal>
+      <div class="arch-node">Browser</div>
+      <span class="arch-line" aria-hidden="true"></span>
+      <div class="arch-node arch-node--main">
+        Vercel <small>Next.js · Seoul (icn1)</small>
+        <div class="arch-sub">Auth.js <small>GitHub OAuth · Owner 판별</small></div>
+      </div>
+      <span class="arch-line" aria-hidden="true"></span>
+      <div class="arch-stack">
+        <div class="arch-node">Supabase PostgreSQL <small>Prisma</small></div>
+        <div class="arch-node">Supabase Storage <small>이미지 · 영상</small></div>
+      </div>
+    </div>
+    <p class="arch-deploy" data-reveal><span>GitHub push</span> → <span>Vercel 자동 배포</span></p>
+  </section>
+
+  <!-- ⑧ RETROSPECTIVE -->
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title">Looking Back</h2>
+    </div>
+    <div class="points-grid">
+      <div class="point-card" data-reveal>
+        <p class="point-label">Less</p>
+        <h3 class="point-title">“매일 열고 싶은 화면인가”</h3>
+        <p class="point-desc">기능을 더하기보다, 이 기준으로 덜어냈습니다.</p>
+      </div>
+      <div class="point-card" data-reveal data-delay="80">
+        <p class="point-label">Learned</p>
+        <h3 class="point-title">화면 아래의 데이터와 권한</h3>
+        <p class="point-desc">디자이너 관점에서 시작했지만 DB 스키마 · 인증 · 배포까지 직접 해 보면서, 화면 하나가 어떤 데이터와 권한 위에 서 있는지 이해하게 됐습니다.</p>
+      </div>
+      <div class="point-card" data-reveal data-delay="160">
+        <p class="point-label">Next</p>
+        <h3 class="point-title">다음 단계</h3>
+        <ul class="next-list">
+          <li>방명록 도배 방지</li>
+          <li>타임테이블 터치 드래그 개선</li>
+          <li>삭제 되돌리기</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <footer class="closing" data-reveal>
+    <p class="closing-note">직접 둘러보세요 — <a href="https://sunmi-blog.vercel.app" target="_blank" rel="noopener">sunmi-blog.vercel.app</a></p>
+    <a href="../index.html#personal" class="back-btn">BACK TO PERSONAL →</a>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -346,6 +346,142 @@ body.intro-active .cursor-ring { opacity: 0; }
   .work-preview { display: none; }
 }
 
+/* ══════════════ PERSONAL PROJECTS ══════════════ */
+#personal {
+  position: relative;
+  width: 100%;
+  background: var(--black); color: #fff;
+  padding: 0 6vw 110px;
+  box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 40px;
+}
+.personal-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.14);
+}
+.personal-title {
+  font-size: clamp(26px, 3.6vw, 52px); font-weight: 800;
+  letter-spacing: -0.045em; line-height: 1;
+}
+.personal-meta { font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,0.45); }
+
+.personal-card {
+  display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: clamp(24px, 3.4vw, 48px); align-items: center;
+  padding: clamp(22px, 2.6vw, 34px);
+  border: 1px solid rgba(255,255,255,0.16);
+  color: #fff; text-decoration: none;
+  background: rgba(255,255,255,0.02);
+  transition: background 0.24s ease, border-color 0.24s ease, transform 0.24s ease;
+}
+.personal-card:hover {
+  background: rgba(91,141,217,0.1);
+  border-color: var(--blue);
+  transform: translateY(-3px);
+}
+
+/* 픽셀 오피스를 암시하는 CSS 전용 미리보기 */
+.personal-visual {
+  position: relative; aspect-ratio: 16 / 10;
+  background: #e8e0cf; border: 3px solid #24211c;
+  box-shadow: 6px 6px 0 rgba(255,255,255,0.14);
+  overflow: hidden;
+}
+.pv-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(#ddd4c1 2px, transparent 2px),
+                    linear-gradient(90deg, #ddd4c1 2px, transparent 2px);
+  background-size: 11% 17%;
+}
+.pv-desk {
+  position: absolute; width: 22%; height: 9%;
+  background: #8a6a4a; border: 2px solid #24211c;
+  box-shadow: inset 0 -4px 0 #6e5236;
+}
+.pv-desk-1 { left: 10%; top: 26%; }
+.pv-desk-2 { left: 62%; top: 26%; }
+.pv-desk-3 { left: 36%; top: 68%; }
+.pv-agent {
+  position: absolute; width: 7%; aspect-ratio: 2 / 3;
+  border: 2px solid #24211c;
+}
+.pv-agent-1 { left: 15%; top: 13%; background: oklch(0.72 0.12 250); }
+.pv-agent-2 { left: 67%; top: 13%; background: oklch(0.72 0.12 350); }
+.pv-agent-3 { left: 41%; top: 55%; background: oklch(0.72 0.12 150); }
+.pv-agent-4 { left: 76%; top: 60%; background: oklch(0.72 0.12 75); }
+.pv-tag {
+  position: absolute; right: 0; bottom: 0;
+  padding: 5px 9px; background: #24211c; color: #f4f1ea;
+  font-size: 10px; letter-spacing: 0.12em;
+}
+
+/* 집결 카드 — 실제 화면 캡처를 쓰는 미리보기 */
+.personal-visual.jg {
+  background: #e9e4d8; border: 3px solid #1a1a1a;
+  box-shadow: 6px 6px 0 rgba(255,255,255,0.14);
+}
+.personal-visual.jg img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+.personal-visual.jg .pv-tag { background: #1a1a1a; }
+
+/* 하루의 기록 카드 — 다크 대시보드 캡처 */
+.personal-visual.haru {
+  background: #121418; border: 3px solid #1C1F25;
+  box-shadow: 6px 6px 0 rgba(255,255,255,0.14);
+}
+.personal-visual.haru img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+.personal-visual.haru .pv-tag { background: #1C1F25; }
+
+.personal-body { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.personal-row-top { display: flex; align-items: center; gap: 12px; }
+.personal-num { font-size: 11px; letter-spacing: 0.14em; opacity: 0.4; }
+.personal-kicker { font-size: 10px; letter-spacing: 0.2em; color: var(--blue); }
+/* 계속 업데이트 중인 프로젝트 표시 — 숨 쉬는 점 */
+.personal-status {
+  margin-left: auto; flex: none;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 10px; border: 1px solid rgba(91,141,217,0.45); border-radius: 999px;
+  font-size: 9.5px; letter-spacing: 0.18em; color: var(--blue);
+}
+.personal-status i {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(91,141,217,0.6); }
+  50% { box-shadow: 0 0 0 5px rgba(91,141,217,0); }
+}
+@media (prefers-reduced-motion: reduce) { .personal-status i { animation: none; } }
+.personal-name {
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 46px); font-weight: 600; letter-spacing: -0.035em; line-height: 1;
+}
+.personal-sub { font-size: clamp(13px, 1.2vw, 16px); letter-spacing: -0.01em; opacity: 0.6; }
+.personal-desc {
+  margin: 0;
+  font-size: clamp(13px, 1.15vw, 16px); line-height: 1.75;
+  color: rgba(255,255,255,0.7); word-break: keep-all; max-width: 56ch;
+}
+.personal-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.personal-tags span {
+  padding: 7px 13px; border: 1px solid rgba(255,255,255,0.22); border-radius: 999px;
+  font-size: 10px; letter-spacing: 0.12em; color: rgba(255,255,255,0.78);
+}
+.personal-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-top: 6px;
+  padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12);
+}
+.personal-period { font-size: clamp(10px, 1vw, 13px); letter-spacing: 0.08em; opacity: 0.6; }
+.personal-arrow { font-size: 22px; opacity: 0.35; transition: opacity 0.22s ease, transform 0.22s ease; }
+.personal-card:hover .personal-arrow { opacity: 1; transform: translateX(6px); }
+
 /* ══════════════ EDUCATION & SKILLS ══════════════ */
 #education {
   position: relative;
@@ -520,6 +656,11 @@ body.intro-active .cursor-ring { opacity: 0; }
   .detail-right { align-items: flex-start; text-align: left; }
   .detail-tags { justify-content: flex-start; }
 
+  #personal { padding: 0 24px 84px; gap: 28px; }
+  .personal-head { padding-top: 40px; }
+  .personal-card { grid-template-columns: 1fr; padding: 20px; }
+  .personal-foot { padding-top: 14px; }
+
   #education { padding: 120px 24px; gap: 56px; }
   #contact { padding: 84px 24px 0; }
   .contact-end { padding: 56px 0 26vw; flex-direction: column; align-items: flex-start; }
@@ -529,6 +670,8 @@ body.intro-active .cursor-ring { opacity: 0; }
 @media (max-width: 560px) {
   .work-row { grid-template-columns: 26px 1fr 18px; }
   .work-period { display: none; }
+  .personal-desc { font-size: 13px; }
+  .personal-tags span { padding: 6px 10px; }
   .contact-row { flex-wrap: wrap; }
   .contact-row-value { font-size: clamp(20px, 6vw, 30px); }
 }
