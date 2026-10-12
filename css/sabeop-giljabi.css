@@ -1,0 +1,143 @@
+/*
+ * 사법길잡이 2026 — UX 기획 케이스 스터디 (/projects/sabeop-giljabi/)
+ * 원본: claude.ai/design "Sabeop-Giljabi Portfolio Web.dc.html" + styles.css
+ * 모든 규칙을 .sbg 아래로 묶어 사이트의 다른 페이지에 새지 않게 한다.
+ * 본문 레이아웃은 원본처럼 인라인 스타일로 두고, 여기에는 토큰 · 기본값 · 클래스만 둔다.
+ */
+
+/* ── 토큰 (원본 styles.css :root + 페이지 :root) ── */
+.sbg {
+  --color-bg: #f2f2f3;
+  --color-surface: #e9e9ea;
+  --color-text: #1d1f20;
+  --color-accent: #5980a6;
+  --color-accent-2: #728fab;
+  --color-divider: color-mix(in srgb, #1d1f20 16%, transparent);
+
+  --color-neutral-100: #f5f5f8;
+  --color-neutral-200: #e7e7ea;
+  --color-neutral-300: #d4d4d7;
+  --color-neutral-400: #b7b7ba;
+  --color-neutral-500: #98989b;
+  --color-neutral-600: #7a7a7d;
+  --color-neutral-700: #5d5d60;
+  --color-neutral-800: #424244;
+  --color-neutral-900: #2b2b2d;
+
+  --color-accent-100: #eef6ff;
+  --color-accent-200: #d6ebff;
+  --color-accent-300: #b5d9fd;
+  --color-accent-400: #94bce3;
+  --color-accent-500: #749dc4;
+  --color-accent-600: #597ea3;
+  --color-accent-700: #416180;
+  --color-accent-800: #2c455d;
+  --color-accent-900: #1d2d3d;
+
+  --font-heading: "Barlow Condensed", system-ui, sans-serif;
+  --font-heading-weight: 600;
+  --font-body: "Barlow", system-ui, sans-serif;
+
+  --space-2: 6.8px;
+  --space-3: 10.2px;
+
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2b2b2d 22%, transparent);
+
+  --c-police: oklch(0.5 0.13 262);
+  --c-nis: oklch(0.5 0.13 45);
+  --c-pros: oklch(0.5 0.13 155);
+}
+
+/* ── 원본 body 규칙 → 페이지 래퍼 ── */
+.sbg {
+  /* 사이트 공통 상단 바(.sub-nav, fixed) 높이만큼 비운다 */
+  padding-top: 66px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Pretendard", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+}
+.sbg *, .sbg *::before, .sbg *::after { box-sizing: border-box; }
+
+/* 목차 링크로 이동할 때 고정 상단 바에 가리지 않게 */
+.sbg [id] { scroll-margin-top: 88px; }
+
+/* ── 원본 styles.css 기본 요소 ── */
+.sbg h1, .sbg h2, .sbg h3, .sbg h4, .sbg h5, .sbg h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+.sbg h1 { font-size: 42px; }
+.sbg h2 { font-size: 32px; }
+.sbg h3 { font-size: 25px; }
+.sbg h4 { font-size: 20px; }
+.sbg p { margin: 0 0 var(--space-3); }
+.sbg img { display: block; max-width: 100%; }
+.sbg :focus { outline: none; }
+.sbg :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.sbg ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* 원본 페이지 <style>의 링크 규칙 */
+.sbg a { color: var(--color-accent-700); text-decoration: none; text-underline-offset: 3px; }
+.sbg a:hover { color: var(--color-accent-900); text-decoration: underline; }
+
+/* ── 화면 번호 마커 ── */
+.sbg .mk {
+  position: absolute; right: -15px; z-index: 2;
+  width: 30px; height: 30px;
+  background: var(--color-accent); color: #fff;
+  font: 600 18px/30px "Barlow Condensed", sans-serif; text-align: center;
+}
+
+/* ── 폰 프레임 (안에는 PNG 화면만) ── */
+.sbg .phone {
+  position: absolute; inset: 0;
+  border: 9px solid #1b1d1f; border-radius: 54px;
+  background: #f4f5f7; overflow: hidden;
+  display: flex; flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── 상단 프로토타입 버튼 ── */
+.sbg .sbg-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 22px;
+  background: var(--color-accent-700); color: #fff;
+  font-size: 16px; font-weight: 700; letter-spacing: -0.01em;
+  border: 1px solid var(--color-accent-700);
+  transition: background 0.2s ease;
+}
+.sbg .sbg-cta:hover { background: var(--color-accent-900); color: #fff; text-decoration: none; }
+
+/* ── 오른쪽에 따라다니는 앵커 목차 (본문 오른쪽 여백이 충분할 때만) ── */
+.sbg .sbg-toc { display: none; }
+@media (min-width: 1440px) {
+  .sbg .sbg-toc {
+    display: block;
+    position: fixed; right: 28px; top: 50%; transform: translateY(-50%);
+    z-index: 50;
+  }
+}
+.sbg .sbg-toc ol { list-style: none; margin: 0; padding: 0 0 0 12px; border-left: 1px solid var(--color-divider); }
+.sbg .sbg-toc a {
+  position: relative;
+  display: flex; align-items: baseline; gap: 8px;
+  padding: 6px 0;
+  font-size: 12px; font-weight: 500;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  transition: color 0.2s ease;
+}
+.sbg .sbg-toc a span {
+  font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 13px;
+  color: inherit;
+}
+.sbg .sbg-toc a:hover { color: var(--color-text); text-decoration: none; }
+.sbg .sbg-toc a[aria-current="true"] { color: var(--color-accent-700); font-weight: 700; }
+.sbg .sbg-toc a[aria-current="true"]::before {
+  content: ""; position: absolute; left: -13px; top: 4px; bottom: 4px;
+  width: 2px; background: var(--color-accent-700);
+}

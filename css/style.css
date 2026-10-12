@@ -438,6 +438,17 @@ body.intro-active .cursor-ring { opacity: 0; }
 }
 .personal-visual.haru .pv-tag { background: #1C1F25; }
 
+/* 사법길잡이 — 모바일 화면 미리보기 */
+.personal-visual.sabeop {
+  background: #F2F2F3; border: 3px solid #2C455D;
+  box-shadow: 6px 6px 0 rgba(255,255,255,0.14);
+}
+.personal-visual.sabeop img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+.personal-visual.sabeop .pv-tag { background: #2C455D; }
+
 .personal-body { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .personal-row-top { display: flex; align-items: center; gap: 12px; }
 .personal-num { font-size: 11px; letter-spacing: 0.14em; opacity: 0.4; }

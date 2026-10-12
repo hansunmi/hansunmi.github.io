@@ -1,1 +1,4 @@
 node_modules/
+
+# Expo 웹 빌드가 내보내는 에셋 경로
+!sabeop/assets/node_modules/
