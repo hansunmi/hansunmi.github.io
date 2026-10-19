@@ -1,0 +1,70 @@
+/* 디자인 토큰 — 작업지시서 2장. :root 변수만 둔다 */
+:root {
+  /* 컬러 · 인디고 */
+  --color-primary: #2F3B63;
+  --color-primary-tint: #EEF1F6;
+  --color-primary-tint-2: #EEF0F4;
+  --color-primary-soft: #DDE2EC;
+
+  /* 컬러 · 테라코타 (애프터 · 매칭 · 마감 임박에만) */
+  --color-accent: #B5562F;
+  --color-accent-ink: #8A3D1F;
+  --color-accent-ink-strong: #6B2F17;
+  --color-accent-tint: #FBEDE6;
+  --color-accent-soft: #F0B79C;
+
+  /* 컬러 · 글자 */
+  --color-text: #24252B;
+  --color-text-2: #4A4D57;
+  --color-text-3: #5E6270;
+  --color-text-4: #6B6F7A;
+
+  /* 컬러 · 선 */
+  --color-line: #E3E6EA;
+  --color-line-soft: #EEF0F3;
+  --color-line-strong: #D5D9DF;
+  --color-line-dashed: #C3C8D0;
+
+  /* 컬러 · 면 */
+  --color-surface: #F4F5F7;
+  --color-surface-2: #F8F9FB;
+  --color-bg: #FFFFFF;
+  --color-white: #FFFFFF;         /* 어두운 면 · 사진 위 글자 */
+
+  /* 컬러 · 시안에만 있는 값 */
+  --color-seat-empty: #9AA3B5;    /* 좌석 점 빈자리 테두리 */
+  --color-hero: #FFF6F1;          /* S01 PC 히어로 배경 (시안 그대로) */
+  --color-cell-off: #FAFBFC;      /* 달력 다른 달 칸 */
+
+  /* 컬러 · 외부 서비스 */
+  --color-kakao: #FEE500;
+  --color-kakao-ink: #191600;
+  --color-naver: #03C75A;
+
+  /* 딤 */
+  --dim-sheet: rgba(24, 28, 44, 0.55);
+  --dim-modal: rgba(24, 28, 44, 0.6);
+
+  /* 폰트 */
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'IBM Plex Sans KR', sans-serif;
+
+  /* 그림자 */
+  --shadow-card: 0 0 0 1px #E3E6EA, 0 6px 20px rgba(36, 37, 43, 0.045);
+  --shadow-line: 0 0 0 1px #E3E6EA;
+  --shadow-pill: 0 1px 3px rgba(36, 37, 43, 0.12);
+  --shadow-dialog: 0 20px 48px rgba(16, 20, 36, 0.18);
+
+  /* 둥글기 */
+  --radius-card-18: 18px;
+  --radius-card-20: 20px;
+  --radius-card-22: 22px;
+  --radius-card-24: 24px;
+  --radius-sheet: 30px;
+
+  /* 레이아웃 */
+  --container: 1344px;            /* 본문 1280 + 좌우 패딩 32 (시안은 content-box 기준 max-width 1280) */
+  --gutter-pc: 32px;
+  --gutter-mobile: 20px;
+  --narrow: 480px;
+}

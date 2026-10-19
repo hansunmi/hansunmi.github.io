@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이음 — UX/UI 케이스 스터디 — Hansunmi</title>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="../../css/app.css" />
+  <link rel="stylesheet" href="../../css/ieum.css" />
+</head>
+<body>
+
+  <!-- NAV (사이트 공통) -->
+  <nav class="sub-nav">
+    <a href="../../index.html" class="nav-logo">Hansunmi</a>
+    <a href="../../index.html#personal" class="back-btn">← Personal</a>
+  </nav>
+
+  <!-- 본문: 스타일은 css/ieum.css의 .ieum 안에서만 적용 -->
+<div class="ieum">
+<header class="wrap hero">
+  <div class="brand">
+    <svg width="38" height="24" viewBox="0 0 340 212" aria-hidden="true"><circle cx="134" cy="106" r="60" fill="none" stroke="#2F3B63" stroke-width="20"/><circle cx="206" cy="106" r="60" fill="none" stroke="#B5562F" stroke-width="20"/><path d="M186.4 134.2 A60 60 0 0 1 149.5 164" fill="none" stroke="#2F3B63" stroke-width="20"/></svg>
+    이음
+  </div>
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">UX/UI Case Study · 오프라인 로테이션 소개팅</span>
+      <h1 class="hero-title">한 번의 대화가<br><em>관계로 이어지도록</em></h1>
+      <p class="sub">인증된 사람들이 한자리에서 차례로 대화하고, 서로 고른 사람과만 이어지는 오프라인 로테이션 소개팅 웹 서비스. 참가자 화면을 기획부터 디자인까지 설계했습니다.</p>
+      <div class="cta-row"><a class="cta" href="../../ieum/" target="_blank" rel="noopener">서비스 구경하기 <span aria-hidden="true">↗</span></a></div>
+      <dl class="meta">
+        <div><dt>역할</dt><dd>서비스 기획 · UX/UI 디자인 (1인)</dd></div>
+        <div><dt>범위</dt><dd>참가자 웹 · 반응형(모바일 · PC)</dd></div>
+        <div><dt>산출물</dt><dd>와이어프레임 · 브랜드 · 디자인 60화면</dd></div>
+        <div><dt>기간 · 도구</dt><dd><span class="ph">[기간]</span> · <span class="ph">[사용 도구]</span></dd></div>
+      </dl>
+    </div>
+    <div class="phones">
+      <div class="phone"><img src="../../img/ieum/D-S01-Mobile.jpg" alt="소개팅 탐색 화면"></div>
+      <div class="phone"><img src="../../img/ieum/D-S16-Mobile.jpg" alt="행사 당일 화면"></div>
+      <div class="phone"><img src="../../img/ieum/D-S11-Mobile.jpg" alt="매칭 결과 화면"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="block" id="problem"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">01 · 배경</span><div><h2>앱 소개팅은 지치고, 오프라인은 불안하다</h2></div>
+    <p class="lead">스와이프형 소개팅 앱에 피로를 느낀 사람들이 다시 오프라인 만남을 찾지만, 로테이션 소개팅은 정보가 흩어져 있고 진행 경험도 매끄럽지 않습니다. 참가자 입장에서 세 가지 불안을 문제로 정의했습니다.</p></div>
+  <div class="problems">
+    <div class="problem"><span class="tag">신뢰</span><p class="q">"어떤 사람들이 오는지 모르겠어요"</p><p>참가자의 신원과 직업을 확인할 방법이 없어, 신청 자체를 망설이게 됩니다.</p></div>
+    <div class="problem"><span class="tag">기억</span><p class="q">"10명과 얘기하고 나니 누가 누군지 헷갈려요"</p><p>짧은 대화가 연달아 이어져서, 끝난 뒤 마음에 든 사람을 정확히 떠올리기 어렵습니다.</p></div>
+    <div class="problem"><span class="tag">부담</span><p class="q">"먼저 연락했다가 거절당하면 민망해요"</p><p>행사 뒤 연락처를 묻거나 먼저 연락하는 과정이 부담스러워 기회를 놓칩니다.</p></div>
+  </div>
+  <p class="note">위 문제는 서비스 구조와 사용 맥락을 바탕으로 세운 가설입니다. 사용자 인터뷰 결과가 있다면 이 자리에 인용과 함께 넣습니다.</p>
+</div></section>
+
+<section class="block" id="persona"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">02 · 타깃</span><div><h2>진지하지만 부담은 싫은 2030 직장인</h2></div>
+    <p class="lead">25~37세, 일상에서 새로운 사람을 만날 기회가 적은 직장인을 주 타깃으로 잡았습니다. 남녀 모두 부담 없이 쓸 수 있는 톤을 목표로 했습니다.</p></div>
+  <div class="persona">
+    <img src="../../img/ieum/persona.jpg" alt="가상 페르소나 프로필 사진">
+    <div>
+      <span class="eyebrow">Persona · 가상 인물</span>
+      <h3 class="persona-name">한○○, 30세</h3>
+      <p class="role">IT 회사 기획자 · 서울 마포구 거주 · 취미 사진, 음악 감상</p>
+      <blockquote>"앱에서 대화만 길게 하다 끝나는 게 지쳤어요. 직접 만나 보고, 괜찮은 사람이면 자연스럽게 이어졌으면 좋겠어요."</blockquote>
+      <div class="persona-cols">
+        <div><h4>원하는 것</h4><ul><li>인증된 사람만 오는 자리</li><li>대화거리가 있는 편안한 분위기</li><li>거절당할 걱정 없는 연결 방식</li></ul></div>
+        <div><h4>불편한 것</h4><ul><li>모르는 사람에게 정보가 너무 많이 공개되는 것</li><li>퇴근 후 일정 맞추기와 노쇼</li><li>행사 뒤 연락을 먼저 해야 하는 상황</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="solution"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">03 · 핵심 해결</span><div><h2>세 가지 불안에 하나씩 답하기</h2></div></div>
+
+  <div class="sol">
+    <div><span class="k">신뢰 →</span><h3>인증된 사람만, 필요한 만큼만 공개</h3>
+      <p>가입 때 본인 인증과 직업 인증을 받고, 프로필은 관계가 가까워질수록 한 단계씩 열리도록 설계했습니다. 회사명은 끝까지 공개하지 않고, 같은 회사 사람과 같은 회차에 배정되지 않는 데에만 씁니다.</p>
+      <div class="disclose">
+        <div><b>참가 확정 후</b><span>사진, 성+○○, 성별, 나이대, 한마디</span></div>
+        <div><b>크레딧 열람</b><span>지역(구까지), 직업군, 취미 · 열람하면 상대에게 알림</span></div>
+        <div><b>매칭 후</b><span>실명, 인앱 대화</span></div>
+        <div><b>공개 안 함</b><span>회사명, 상세 주소, 연락처</span></div>
+      </div>
+    </div>
+    <div class="phone"><img src="../../img/ieum/D-S05-3-Mobile.jpg" alt="참가 신청 3단계, 단계별 공개 안내 화면"></div>
+  </div>
+
+  <div class="sol">
+    <div><span class="k">기억 →</span><h3>대화하는 동안 남기는 로테이션 메모</h3>
+      <p>행사 당일 화면에서 지금 몇 번째 대화인지 보여주고, 대화한 사람마다 짧은 메모와 '다시 보고 싶어요' 하트를 남길 수 있게 했습니다. 이 메모와 하트는 애프터 선택 화면에 그대로 따라와서, 사진과 번호만으로 사람을 떠올리지 않아도 됩니다.</p>
+      <ul><li>메모는 나만 볼 수 있음</li><li>메모 남긴 사람 · 하트 누른 사람으로 애프터 후보 필터링</li></ul>
+    </div>
+    <div class="phone"><img src="../../img/ieum/D-S17-Mobile.jpg" alt="로테이션 메모 화면"></div>
+  </div>
+
+  <div class="sol">
+    <div><span class="k">부담 →</span><h3>서로 골랐을 때만 연결되는 애프터</h3>
+      <p>행사가 끝나면 24시간 동안 더 알아가고 싶은 사람을 고릅니다. 서로 선택한 경우에만 매칭되고, 이어지지 않은 선택은 상대에게 알려지지 않습니다. 매칭되면 실명이 공개되고 인앱 대화로 바로 이어집니다.</p>
+      <ul><li>선택 인원은 참석 인원의 15% (20명 참석 → 3명)</li><li>마감 전까지 선택 변경 가능</li><li>이어지지 않으면 비슷한 다음 소개팅을 추천</li></ul>
+    </div>
+    <div class="phone"><img src="../../img/ieum/D-S10-Mobile.jpg" alt="애프터 선택 화면"></div>
+  </div>
+</div></section>
+
+<section class="block" id="flow"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">04 · 사용자 여정</span><div><h2>탐색부터 대화까지 한 번에 이어지는 흐름</h2></div>
+    <p class="lead">참가자가 서비스를 처음 만나는 순간부터 매칭 상대와 대화를 시작하기까지의 핵심 경로입니다.</p></div>
+  <div class="phase"><span>찾기 · 신청</span><span>참가</span><span class="t">애프터</span></div>
+  <div class="flow">
+    <div class="step"><div class="phone"><img src="../../img/ieum/D-S01-Mobile.jpg" alt=""></div><p class="lbl">탐색<span>테마 · 마감 임박 · 달력</span></p></div>
+    <div class="step"><div class="phone"><img src="../../img/ieum/D-S04-Mobile.jpg" alt=""></div><p class="lbl">상세 · 신청<span>3단계 신청 · 결제</span></p></div>
+    <div class="step"><div class="phone"><img src="../../img/ieum/D-S06-Mobile.jpg" alt=""></div><p class="lbl">업체 확인<span>1시간 안 승인 · 미승인 시 전액 환불</span></p></div>
+    <div class="step"><div class="phone"><img src="../../img/ieum/D-S08-Mobile.jpg" alt=""></div><p class="lbl">참가 확정<span>참가자 명단 · 상세 열람</span></p></div>
+    <div class="step"><div class="phone"><img src="../../img/ieum/D-S16-Mobile.jpg" alt=""></div><p class="lbl">행사 당일<span>QR 체크인 · 로테이션 메모</span></p></div>
+    <div class="step after"><div class="phone"><img src="../../img/ieum/D-S11-Mobile.jpg" alt=""></div><p class="lbl">애프터 · 매칭<span>서로 선택 시 대화 시작</span></p></div>
+  </div>
+</div></section>
+
+<section class="block" id="policy"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">05 · 서비스 정책</span><div><h2>화면보다 먼저 정한 규칙들</h2></div>
+    <p class="lead">오프라인 행사는 취소, 노쇼, 성비가 경험을 좌우합니다. 화면을 그리기 전에 규칙부터 정하고, 그 규칙이 화면 곳곳에서 같은 말로 안내되도록 했습니다.</p></div>
+  <div class="tbl"><table>
+    <thead><tr><th>항목</th><th>규칙</th><th>의도</th></tr></thead>
+    <tbody>
+      <tr><td>신청 확인</td><td>결제 후 업체가 <span class="num">1</span>시간 안에 확인 (밤 11시~아침 8시는 8시부터)</td><td>확인되지 않으면 자동 취소 · 전액 환불<span class="why">기다리는 시간을 예측할 수 있게</span></td></tr>
+      <tr><td>취소 · 환불</td><td>전날까지 전액 · 당일 <span class="num">50</span>% · 노쇼 환불 없음</td><td>업체 미승인 · 행사 취소는 전액 환불<span class="why">취소 시점을 화면마다 같은 표로 안내</span></td></tr>
+      <tr><td>노쇼</td><td><span class="num">1</span>회 경고, <span class="num">2</span>회째 <span class="num">7</span>일 신청 제한</td><td>제한 중에도 둘러보기와 관심 저장은 가능<span class="why">벌보다 다시 돌아올 길을 함께 보여줌</span></td></tr>
+      <tr><td>대기 신청</td><td>내 성별이 마감되면 무료 대기 · 자리가 나면 순서대로 알림</td><td>알림 후 <span class="num">1</span>시간 안에 결제하면 확정<span class="why">자리가 비어도 다음 사람이 바로 채움</span></td></tr>
+      <tr><td>상세 열람</td><td>지역 · 직업군 · 취미는 크레딧으로 열람</td><td>열람하면 상대에게 알림<span class="why">일방적인 정보 탐색을 막는 장치</span></td></tr>
+      <tr><td>애프터</td><td>참석 인원의 <span class="num">15</span>%까지 선택 · 종료 후 <span class="num">24</span>시간</td><td>서로 선택한 경우에만 매칭 · 실명 공개<span class="why">거절의 부담 없이 마음을 표현</span></td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="block" id="ia"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">06 · 정보 구조</span><div><h2>네 개의 탭, 하나의 여정</h2></div>
+    <p class="lead">하단 탭(모바일)과 상단 메뉴(PC)를 같은 구조로 맞췄습니다. 애프터는 시간이 걸린 관계의 순간이라 별도 탭으로 꺼냈습니다.</p></div>
+  <div class="ia">
+    <div class="ia-col"><h4>탐색</h4><ul><li>마감 임박 소개팅</li><li>테마 <small>결혼관 · 파티 · 업계 · 취향</small></li><li>새로 열린 테마</li><li>리스트 / 달력 보기</li><li>소개팅 상세 → 참가 신청 · 대기 신청</li></ul></div>
+    <div class="ia-col"><h4>내 소개팅</h4><ul><li>예정 <small>접수중 · 확정 · 대기 · 미승인</small></li><li>지난 소개팅</li><li>리스트 / 달력 보기</li><li>참가자 명단 · 상세 열람</li><li>행사 당일 · 로테이션 메모</li><li>참가 취소</li></ul></div>
+    <div class="ia-col t"><h4>애프터</h4><ul><li>진행 중인 선택</li><li>애프터 선택 · 선택 완료</li><li>매칭 결과 <small>성공 · 이어지지 않음</small></li><li>매칭 대화방</li></ul></div>
+    <div class="ia-col"><h4>마이</h4><ul><li>프로필 · 인증 상태</li><li>이용 현황 · 노쇼 기록</li><li>크레딧 · 결제 · 환불 내역</li><li>차단 · 신고 내역</li></ul></div>
+  </div>
+  <div class="ia-foot"><span class="chip">공통 · 알림</span><span class="chip">공통 · 로그인 / 회원가입 4단계</span><span class="chip">알림창 · 비로그인 · 인증 확인 중 · 노쇼 제한</span></div>
+</div></section>
+
+<section class="block" id="states"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">07 · 상태 설계</span><div><h2>신청 상태를 색과 면으로 구분</h2></div>
+    <p class="lead">한 사람이 여러 소개팅을 동시에 신청할 수 있어, 상태가 한눈에 구분되어야 했습니다. 상태는 텍스트와 함께 배지의 면 색으로도 구분됩니다.</p></div>
+  <div class="states">
+    <div class="state"><span class="badge b-pending">접수중</span><p>업체가 신청을 확인하는 중. 1시간 안에 결과 알림.</p></div>
+    <div class="state"><span class="badge b-confirm">참가 확정</span><p>참가자 명단과 상세 주소 공개. D-day 표시.</p></div>
+    <div class="state"><span class="badge b-wait">대기 2번</span><p>내 성별 자리 마감. 자리가 나면 순서대로 알림.</p></div>
+    <div class="state"><span class="badge b-urgent">마감 임박</span><p>남은 자리가 적은 회차. 탐색에서 먼저 노출.</p></div>
+    <div class="state"><span class="badge b-off">미승인</span><p>이번 회차는 함께하지 못함. 전액 환불과 비슷한 소개팅 추천.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="design"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">08 · 디자인 시스템</span><div><h2>두 개의 원이 겹치는 자리</h2></div>
+    <p class="lead">서비스명 '이음'에서 출발해, 두 원이 맞물린 심볼을 만들었습니다. 이 심볼의 두 색이 그대로 서비스의 색 규칙이 됩니다.</p></div>
+  <div class="ds">
+    <div class="card">
+      <h3>컬러</h3>
+      <div class="swatches">
+        <div class="sw"><i class="sw-indigo"></i><div><b>인디고</b><span>#2F3B63 · 기본 흐름</span></div></div>
+        <div class="sw"><i class="sw-terra"></i><div><b>테라코타</b><span>#B5562F · 애프터 · 마감</span></div></div>
+        <div class="sw"><i class="sw-indigo-tint"></i><div><b>인디고 틴트</b><span>#EEF1F6</span></div></div>
+        <div class="sw"><i class="sw-terra-tint"></i><div><b>테라코타 틴트</b><span>#FBEDE6</span></div></div>
+        <div class="sw"><i class="sw-text"></i><div><b>텍스트</b><span>#24252B · #4A4D57</span></div></div>
+        <div class="sw"><i class="sw-surface"></i><div><b>서피스</b><span>#F4F5F7 · #E3E6EA</span></div></div>
+      </div>
+      <p class="rule"><b class="strong">색 규칙.</b> 탐색 · 신청 · 일반 액션은 인디고, 애프터 · 매칭 · 마감 임박처럼 시간이 걸린 관계의 순간에만 테라코타를 씁니다. 테라코타는 면이 아니라 점, 링, 버튼 하나처럼 작게 씁니다.</p>
+    </div>
+    <div class="card">
+      <h3>타이포그래피</h3>
+      <div class="type-row"><span class="s">Display</span><span class="t-display">만남이 관계로</span></div>
+      <div class="type-row"><span class="s">Number</span><span class="t-display t-num">11.12 · 03:48</span></div>
+      <div class="type-row"><span class="s">UI · Body</span><span class="t-body">IBM Plex Sans KR · 정보는 고딕으로 또렷하게</span></div>
+      <p class="rule">제목, 날짜, 번호, 한마디는 Noto Serif KR로 감성을 주고, 버튼과 정보는 IBM Plex Sans KR로 읽기 쉽게 나눴습니다.</p>
+    </div>
+    <div class="card">
+      <h3>컴포넌트</h3>
+      <div class="comp"><span class="btn p">참가 신청하기</span><span class="btn a">대화 시작하기</span><span class="btn g">상세 보기</span></div>
+      <div class="ticket"><div class="l"><b>시티팝 로테이션</b>오늘 19:00 · 체크인 19:15까지</div><div class="r">MY NO.<strong>7</strong></div></div>
+      <p class="rule">알약형 버튼, 티켓처럼 점선으로 나뉜 행사 카드, 완전한 원형의 프로필이 반복되는 기본 단위입니다.</p>
+    </div>
+    <div class="card">
+      <h3>이미지 톤</h3>
+      <div class="phones phones-left"><div class="phone phone-sm"><img src="../../img/ieum/D-S00-Login-Mobile.jpg" alt="로그인 화면"></div><div class="phone phone-sm"><img src="../../img/ieum/D-S19-Mobile.jpg" alt="애프터 홈 화면"></div></div>
+      <p class="rule">일러스트 대신 실제 장소와 사물 사진을 쓰고, 사진 위 글씨는 어두운 딤으로 대비를 확보했습니다. 배경은 흰색과 차가운 회색으로 깔끔하게 유지합니다.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="screens"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">09 · 주요 화면</span><div><h2>모바일 · PC 반응형 60화면</h2></div>
+    <p class="lead">같은 구조를 유지하되, PC에서는 넓은 화면을 살려 정보를 나란히 보여줍니다.</p></div>
+  <div class="gal-m">
+    <figure><div class="phone"><img src="../../img/ieum/D-S04-Mobile.jpg" alt=""></div><figcaption><b>소개팅 상세</b>남녀 자리 현황을 좌석 점으로 시각화</figcaption></figure>
+    <figure><div class="phone"><img src="../../img/ieum/D-S07-Mobile.jpg" alt=""></div><figcaption><b>내 소개팅</b>오늘의 행사를 티켓으로, 상태는 배지로</figcaption></figure>
+    <figure><div class="phone"><img src="../../img/ieum/D-S08-Mobile.jpg" alt=""></div><figcaption><b>참가자 명단</b>기본 정보 무료, 상세는 크레딧 열람</figcaption></figure>
+    <figure><div class="phone"><img src="../../img/ieum/D-S19-Mobile.jpg" alt=""></div><figcaption><b>애프터 홈</b>진행 중인 선택과 매칭 대화를 한곳에</figcaption></figure>
+  </div>
+  <div class="gal-p">
+    <figure><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="../../img/ieum/D-S01-PC.jpg" alt=""></div><figcaption><b>탐색 · PC</b>곧 마감되는 소개팅을 첫 화면에</figcaption></figure>
+    <figure><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="../../img/ieum/D-S04-PC.jpg" alt=""></div><figcaption><b>소개팅 상세 · PC</b>신청 정보는 오른쪽에 고정</figcaption></figure>
+    <figure><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="../../img/ieum/D-S10-PC.jpg" alt=""></div><figcaption><b>애프터 선택 · PC</b>메모와 함께 후보를 카드로 비교</figcaption></figure>
+    <figure><div class="browser"><div class="bar"><i></i><i></i><i></i></div><img src="../../img/ieum/D-S11-PC.jpg" alt=""></div><figcaption><b>매칭 결과 · PC</b>함께한 소개팅과 그날의 메모를 다시 보여줌</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="block" id="retro"><div class="wrap">
+  <div class="sec-head"><span class="sec-num">10 · 회고</span><div><h2>다음에 더 풀고 싶은 것</h2></div></div>
+  <div class="retro">
+    <div class="card"><h3>잘된 점</h3><ul>
+      <li>정책을 먼저 정해, 60개 화면에서 취소 · 노쇼 · 대기 안내가 같은 말로 반복되도록 맞춤</li>
+      <li>메모 → 애프터 선택 → 매칭 대화로 이어지는 핵심 경험을 하나의 데이터 흐름으로 설계</li>
+      <li>색 규칙(인디고 / 테라코타)으로 화면이 늘어나도 의미가 흐트러지지 않게 함</li>
+    </ul></div>
+    <div class="card"><h3>다음 단계</h3><ul>
+      <li>실제 참가 경험이 있는 사용자 인터뷰와 사용성 테스트로 가설 검증</li>
+      <li>행사 중 메모 시점 검증 · 자리 이동 시간에 쓰도록 안내하는 방식 실험</li>
+      <li>성비 불균형 대응과 업체(주최자) 관리 화면 설계</li>
+      <li>결혼중개업법 등 관련 법규 검토</li>
+    </ul></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">이음 · 오프라인 로테이션 소개팅 · 포트폴리오 프로젝트 · 인물 사진은 AI로 생성한 이미지입니다.</div></footer>
+</div>
+
+</body>
+</html>

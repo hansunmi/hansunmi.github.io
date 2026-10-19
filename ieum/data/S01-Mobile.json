@@ -1,0 +1,62 @@
+{
+  "cards": [
+    {
+      "id": "film",
+      "img": "images/photo-film-camera.jpg",
+      "badge": "신청함 · 업체 검토 중",
+      "kind": "mine",
+      "tag": "취향",
+      "size": "16명",
+      "title": "이런 사진 어때요? 필름카메라 로테이션",
+      "meta": "11.08 (토) 15:00 · 서울 성동구 · 남녀 25~34세",
+      "seats": "남 3자리 · 여 1자리",
+      "href": "#",
+      "hasBadge": true,
+      "badgeBg": "#FFFFFF",
+      "badgeFg": "#2F3B63",
+      "ineligible": false,
+      "opacity": 1,
+      "seatFg": "#4A4D57",
+      "seatWeight": 400
+    },
+    {
+      "id": "calm",
+      "img": "images/photo-candle.jpg",
+      "badge": "마감 임박",
+      "kind": "urgent",
+      "tag": "차분한",
+      "size": "20명",
+      "title": "금요일 저녁, 차분한 로테이션",
+      "meta": "11.14 (금) 19:30 · 서울 강남구 · 남 30~37세 · 여 28~35세",
+      "seats": "여성 대기 신청 가능",
+      "seatHot": true,
+      "href": "event.html?id=calm",
+      "hasBadge": true,
+      "badgeBg": "#B5562F",
+      "badgeFg": "#FFFFFF",
+      "ineligible": false,
+      "opacity": 1,
+      "seatFg": "#B5562F",
+      "seatWeight": 600
+    },
+    {
+      "id": "wine36",
+      "img": "images/photo-window.jpg",
+      "badge": "",
+      "kind": "",
+      "tag": "파티",
+      "size": "30명",
+      "title": "30대 후반, 와인 한 잔 파티",
+      "meta": "11.15 (토) 19:00 · 서울 종로구 · 남녀 36~42세",
+      "seats": "남 6자리 · 여 5자리",
+      "ineligible": true,
+      "href": "#",
+      "hasBadge": false,
+      "badgeBg": "#FFFFFF",
+      "badgeFg": "#2F3B63",
+      "opacity": 0.5,
+      "seatFg": "#4A4D57",
+      "seatWeight": 400
+    }
+  ]
+}

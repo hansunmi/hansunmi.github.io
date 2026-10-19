@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이음 · 소개팅 탐색</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/tokens.css">
+<link rel="stylesheet" href="style/base.css">
+<link rel="stylesheet" href="style/layout.css">
+<link rel="stylesheet" href="style/components.css">
+<link rel="stylesheet" href="style/pages.css">
+<link rel="stylesheet" href="style/utilities.css">
+</head>
+<body class="p-s01">
+
+<!-- S01 · PC 오늘 소개팅 띠 -->
+<a class="p-s01-todaybar l-only-pc" href="today.html?id=citypop">
+  <span class="p-s01-todaybar__inner">
+    <span class="p-s01-todaybar__time">오늘 19:00</span>
+    <span>이런 음악 어때요? 시티팝 로테이션 · 입장 안내 보기</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+  </span>
+</a>
+
+<header data-pc-header data-current="explore" data-bell="new" data-profile="empty"></header>
+<header data-m-home data-bell="new"></header>
+
+<main class="l-main">
+
+  <!-- S01 · 모바일 오늘 소개팅 -->
+  <a class="p-s01-today l-only-mobile" href="today.html?id=citypop" aria-label="오늘 19시 시티팝 로테이션, 입장 안내 보기">
+    <span class="p-s01-today__time">오늘 19:00</span>
+    <span class="p-s01-today__text">시티팝 로테이션 · 입장 안내</span>
+    <span class="p-s01-today__go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span>
+  </a>
+
+  <!-- ========== 곧 마감되는 소개팅 · 모바일 ========== -->
+  <section class="p-s01-closing l-only-mobile" aria-label="곧 마감되는 소개팅">
+    <div class="p-s01-closing__head">
+      <span class="p-s01-eyebrow">CLOSING SOON</span>
+      <h1 class="p-s01-closing__title">곧 마감되는 소개팅</h1>
+    </div>
+    <div class="p-s01-closing__track">
+      <a class="p-s01-arch" href="event.html?id=book">
+        <img src="images/photo-book.jpg" alt="">
+        <span class="p-s01-arch__dim"></span>
+        <span class="p-s01-arch__text">
+          <span class="p-s01-arch__title">이런 책 어때요?<br>북클럽 로테이션</span>
+          <span class="p-s01-arch__meta">11.09 (일) 16:00 · 마포구</span>
+        </span>
+        <span class="p-s01-arch__seat">여 1자리 남음</span>
+      </a>
+      <a class="p-s01-peek" href="event.html?id=wine">
+        <img src="images/photo-wine.jpg" alt="">
+        <span class="p-s01-peek__dim"></span>
+        <span class="p-s01-peek__text">
+          <span class="p-s01-peek__title">토요일 와인 파티</span>
+          <span class="p-s01-peek__meta">신청률 92%</span>
+        </span>
+      </a>
+      <span class="p-s01-peek p-s01-peek--ghost" aria-hidden="true"><img src="images/photo-city.jpg" alt=""></span>
+    </div>
+    <div class="p-s01-pager">
+      <button class="c-icon-btn p-s01-pager__prev" type="button" aria-label="이전"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+      <span><b class="p-s01-pager__now">01</b> · 05</span>
+      <button class="c-icon-btn" type="button" aria-label="다음"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+      <span class="p-s01-pager__line"></span>
+      <button class="c-icon-btn p-s01-pager__pause" type="button" aria-label="자동 넘김 일시정지"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6v12M15 6v12"></path></svg></button>
+    </div>
+  </section>
+
+  <!-- ========== 곧 마감되는 소개팅 · PC ========== -->
+  <section class="p-s01-hero l-only-pc" aria-label="곧 마감되는 소개팅">
+    <svg class="p-s01-hero__circle" width="900" height="640" viewBox="0 0 900 640" aria-hidden="true"><circle cx="560" cy="320" r="320"></circle></svg>
+    <div class="p-s01-hero__inner">
+      <div class="p-s01-hero__copy">
+        <span class="p-s01-eyebrow-pc">Closing soon</span>
+        <h1 class="p-s01-hero__title">곧 마감되는<br>소개팅</h1>
+        <p class="p-s01-hero__desc">자리가 얼마 남지 않은 회차예요.<br>마음에 드는 만남이 있다면 서둘러 신청해 보세요.</p>
+        <a class="p-s01-hero__more" href="event.html?id=book">자세히 보기<span class="p-s01-hero__more-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></a>
+        <div class="p-s01-hero__pager">
+          <button class="c-icon-btn p-s01-hero__prev" type="button" aria-label="이전"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+          <b class="p-s01-pager__now">01</b><span class="p-s01-hero__sep" aria-hidden="true">·</span><span>05</span>
+          <button class="c-icon-btn" type="button" aria-label="다음"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+        </div>
+      </div>
+      <div class="p-s01-hero__track">
+        <a class="p-s01-arch p-s01-arch--pc" href="event.html?id=book">
+          <img src="images/photo-book.jpg" alt="">
+          <span class="p-s01-arch__dim p-s01-arch__dim--flat"></span>
+          <span class="p-s01-arch__text">
+            <span class="p-s01-arch__title">이런 책 어때요?<br>북클럽 로테이션</span>
+            <span class="p-s01-arch__meta">11.09 (일) 16:00 · 마포구</span>
+          </span>
+          <span class="p-s01-arch__seat">여 1자리 남음</span>
+        </a>
+        <a class="p-s01-peek p-s01-peek--pc" href="event.html?id=wine">
+          <img src="images/photo-wine.jpg" alt="">
+          <span class="p-s01-peek__dim"></span>
+          <span class="p-s01-peek__text">
+            <span class="p-s01-peek__title">토요일 와인 파티</span>
+            <span class="p-s01-peek__meta">11.15 (토) 19:00 · 신청률 92%</span>
+          </span>
+        </a>
+        <span class="p-s01-peek p-s01-peek--pc p-s01-peek--ghost" aria-hidden="true"><img src="images/photo-city.jpg" alt=""></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 테마 · 모바일 ========== -->
+  <section class="p-s01-themes l-only-mobile" aria-label="테마">
+    <h2 class="p-s01-themes__title">어떤 만남을 찾으세요?</h2>
+    <div class="p-s01-themes__row">
+      <a class="p-s01-theme-chip" href="#"><img class="c-avatar c-avatar--40" src="images/photo-couple.jpg" alt="">결혼을 생각하는</a>
+      <a class="p-s01-theme-chip" href="#"><img class="c-avatar c-avatar--40" src="images/photo-fireworks.jpg" alt="">파티 · 이벤트</a>
+      <a class="p-s01-theme-chip" href="#"><img class="c-avatar c-avatar--40" src="images/photo-typewriter.jpg" alt="">같은 업계</a>
+      <a class="p-s01-theme-chip" href="#"><img class="c-avatar c-avatar--40" src="images/photo-piano.jpg" alt="">취향이 겹치는</a>
+    </div>
+  </section>
+
+  <!-- ========== 테마 · PC (data/S01-PC.json themes) ========== -->
+  <section class="p-s01-themes-pc l-only-pc" aria-label="테마">
+    <div class="p-s01-head-center">
+      <span class="p-s01-eyebrow-pc">Theme</span>
+      <h2 class="p-s01-h2-pc">어떤 만남을 찾으세요?</h2>
+    </div>
+    <div class="p-s01-themes-pc__grid" id="themes-pc"></div>
+  </section>
+
+  <!-- ========== 새로 열린 테마 · 모바일 ========== -->
+  <section class="p-s01-new l-only-mobile" aria-label="새로 열린 테마">
+    <div class="p-s01-new__head"><h2 class="p-s01-new__title">새로 열린 테마</h2><span class="p-s01-new__count">3개</span></div>
+    <div class="p-s01-new__row">
+      <a class="p-s01-newcard" href="#">
+        <span class="p-s01-newcard__media">
+          <img src="images/map-mangwon.png" alt="">
+          <span class="p-s01-pin"><span class="p-s01-pin__ring"><svg width="26" height="32" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 29s9-9.2 9-16a9 9 0 0 0-18 0c0 6.8 9 16 9 16z" fill="#2F3B63"></path><circle cx="12" cy="12.5" r="3.6" fill="#FFFFFF"></circle></svg></span><span class="p-s01-pin__label">우리 동네</span></span>
+          <span class="p-s01-new-tag">NEW</span>
+        </span>
+        <span class="p-s01-newcard__body"><span class="p-s01-newcard__title">우리 동네 로테이션</span><span class="p-s01-newcard__desc">같은 구에 사는 사람끼리, 만나기 편한 거리에서</span><span class="p-s01-newcard__date">11.22 (토) 15:00 · 마포구</span></span>
+      </a>
+      <a class="p-s01-newcard" href="#">
+        <span class="p-s01-newcard__media"><img src="images/photo-pet.jpg" alt=""><span class="p-s01-new-tag">NEW</span></span>
+        <span class="p-s01-newcard__body"><span class="p-s01-newcard__title">집사 로테이션</span><span class="p-s01-newcard__desc">반려동물 사진 한 장으로 자연스럽게 시작하는 대화</span><span class="p-s01-newcard__date">11.23 (일) 14:00 · 성동구</span></span>
+      </a>
+      <a class="p-s01-newcard" href="#">
+        <span class="p-s01-newcard__media"><img src="images/photo-scent.jpg" alt=""><span class="p-s01-new-tag">NEW</span></span>
+        <span class="p-s01-newcard__body"><span class="p-s01-newcard__title">향 고르기 로테이션</span><span class="p-s01-newcard__desc">시향지를 고르며 서로에게 어울리는 향 찾기</span><span class="p-s01-newcard__date">11.29 (토) 16:00 · 종로구</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== 새로 열린 테마 · PC ========== -->
+  <section class="p-s01-new-pc l-only-pc" aria-label="새로 열린 테마">
+    <div class="p-s01-head-split">
+      <div class="p-s01-head-stack"><span class="p-s01-eyebrow-pc">New themes</span><h2 class="p-s01-h2-pc">이번 달 새로 열린 테마</h2></div>
+      <span class="p-s01-head-split__aside">대화거리가 먼저 준비된 로테이션이에요</span>
+    </div>
+    <div class="p-s01-new-pc__grid">
+      <a class="p-s01-newrow" href="#">
+        <span class="p-s01-newrow__media">
+          <img src="images/map-mangwon.png" alt="">
+          <span class="p-s01-pin"><span class="p-s01-pin__ring"><svg width="26" height="32" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 29s9-9.2 9-16a9 9 0 0 0-18 0c0 6.8 9 16 9 16z" fill="#2F3B63"></path><circle cx="12" cy="12.5" r="3.6" fill="#FFFFFF"></circle></svg></span><span class="p-s01-pin__label">우리 동네</span></span>
+          <span class="p-s01-new-tag p-s01-new-tag--pc">NEW</span>
+        </span>
+        <span class="p-s01-newrow__body">
+          <span class="p-s01-newrow__title">우리 동네 로테이션</span>
+          <span class="p-s01-newrow__desc">같은 구에 사는 사람끼리,<br>만나기 편한 거리에서</span>
+          <span class="p-s01-newrow__foot"><span class="p-s01-newrow__next">다음 회차 · 16명</span><span class="p-s01-newrow__date">11.22 (토) 15:00 · 마포구<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span></span>
+        </span>
+      </a>
+      <a class="p-s01-newrow" href="#">
+        <span class="p-s01-newrow__media"><img src="images/photo-pet.jpg" alt=""><span class="p-s01-new-tag p-s01-new-tag--pc">NEW</span></span>
+        <span class="p-s01-newrow__body">
+          <span class="p-s01-newrow__title">집사 로테이션</span>
+          <span class="p-s01-newrow__desc">반려동물 사진 한 장으로<br>자연스럽게 시작하는 대화</span>
+          <span class="p-s01-newrow__foot"><span class="p-s01-newrow__next">다음 회차 · 16명</span><span class="p-s01-newrow__date">11.23 (일) 14:00 · 성동구<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span></span>
+        </span>
+      </a>
+      <a class="p-s01-newrow" href="#">
+        <span class="p-s01-newrow__media"><img src="images/photo-scent.jpg" alt=""><span class="p-s01-new-tag p-s01-new-tag--pc">NEW</span></span>
+        <span class="p-s01-newrow__body">
+          <span class="p-s01-newrow__title">향 고르기 로테이션</span>
+          <span class="p-s01-newrow__desc">시향지를 고르며<br>서로에게 어울리는 향 찾기</span>
+          <span class="p-s01-newrow__foot"><span class="p-s01-newrow__next">다음 회차 · 12명</span><span class="p-s01-newrow__date">11.29 (토) 16:00 · 종로구<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span></span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== 전체 소개팅 · 모바일 (data/S01-Mobile.json) ========== -->
+  <section class="p-s01-all l-only-mobile" aria-label="전체 소개팅">
+    <div class="p-s01-all__head">
+      <h2 class="p-s01-all__title">전체 소개팅</h2>
+      <div class="c-segment">
+        <button class="c-segment__item" type="button" aria-pressed="true">리스트</button>
+        <a class="c-segment__item" href="calendar.html">달력</a>
+      </div>
+    </div>
+    <div class="p-s01-filters">
+      <button class="c-chip c-chip--dark" type="button"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"></path></svg>필터 3</button>
+      <button class="c-chip" type="button" aria-pressed="false" data-toggle>내 성별 자리만</button>
+      <span class="c-chip">이번 주</span>
+      <span class="c-chip">서울</span>
+    </div>
+    <div class="p-s01-all__count">
+      <span>소개팅 <b>12</b>개</span>
+      <span>날짜 가까운 순</span>
+    </div>
+    <div class="p-s01-list" id="list-mobile"></div>
+  </section>
+
+  <!-- ========== 전체 소개팅 · PC (data/S01-PC.json) ========== -->
+  <section class="p-s01-all-pc l-only-pc" aria-label="전체 소개팅">
+    <div class="p-s01-all-pc__inner">
+      <div class="p-s01-head-split">
+        <div class="p-s01-head-stack"><span class="p-s01-eyebrow-pc">All</span><h2 class="p-s01-h2-pc">전체 소개팅 <span class="p-s01-h2-pc__count">12개</span></h2></div>
+        <div class="c-segment">
+          <button class="c-segment__item" type="button" aria-pressed="true">리스트</button>
+          <a class="c-segment__item" href="calendar.html">달력</a>
+        </div>
+      </div>
+      <div class="p-s01-filters p-s01-filters--pc">
+        <button class="c-chip c-chip--dark" type="button"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"></path></svg>필터 3</button>
+        <button class="c-chip" type="button" aria-pressed="false" data-toggle>내 성별 자리만</button>
+        <span class="c-chip">이번 주</span>
+        <span class="c-chip">서울</span>
+        <span class="c-chip">20~30명</span>
+        <span class="p-s01-filters__sort">날짜 가까운 순</span>
+      </div>
+      <div class="p-s01-grid" id="list-pc"></div>
+    </div>
+  </section>
+
+</main>
+
+<nav data-tabbar data-current="explore"></nav>
+
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
