@@ -17,7 +17,7 @@
 </head>
 <body class="p-page">
 
-<header data-pc-header data-current="explore" data-profile="empty" class="l-header--line"></header>
+<header data-pc-header data-current="explore" data-current-when="id=it:my" class="l-header--line"></header>
 <div class="l-main">
 
 <!-- S04-Mobile · S04 소개팅 상세 · 모바일 -->
@@ -48,10 +48,10 @@
     </div>
     <h1 class="p-s04-m-15">이런 책 어때요?<br>북클럽 로테이션</h1>
     <p class="p-s04-m-16">좋아하는 책 한 권을 들고 와 마음에 남은 문장으로 대화를 시작해요. 조용한 북카페에서 차분하게 한 사람씩 이야기 나누는 자리예요.</p>
-    <a href="#" class="p-s04-m-17">
-    <span aria-hidden="true" class="p-s04-m-18">업</span>
-    <span class="p-s04-m-19"><span class="p-s04-m-20">모먼트 라운지</span><span class="p-s04-m-14">후기 4.8 · 진행 42회</span></span>
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+    <a href="#" class="p-s04-host">
+    <span aria-hidden="true" class="p-s04-host__logo">M</span>
+    <span class="p-s04-host__info"><span class="p-s04-host__label">주최 업체</span><span class="p-s04-host__name">모먼트 라운지</span><span class="p-s04-host__meta"><span class="p-s04-host__star">★ 4.8</span> · 후기 128개 · 진행 42회</span></span>
+    <span class="p-s04-host__go">업체 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A4D57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span>
     </a>
     </section>
 
@@ -109,15 +109,15 @@
     </div>
     <div class="p-s04-m-50">
     <div class="p-s04-m-51">
-    <div aria-hidden="true" class="p-s04-m-52"><span class="p-s04-m-53">책 표지</span></div>
+    <div aria-hidden="true" class="p-s04-m-52 p-s04-cover"><img src="images/book_cover/convinience.jpg" alt="" class="p-s04-cover__img"></div>
     <span class="p-s04-m-54">불편한 편의점</span><span class="p-s04-m-55">김호연</span>
     </div>
     <div class="p-s04-m-51">
-    <div aria-hidden="true" class="p-s04-m-56"><span class="p-s04-m-53">책 표지</span></div>
+    <div aria-hidden="true" class="p-s04-m-56 p-s04-cover"><img src="images/book_cover/amond.jpg" alt="" class="p-s04-cover__img"></div>
     <span class="p-s04-m-54">아몬드</span><span class="p-s04-m-55">손원평</span>
     </div>
     <div class="p-s04-m-51">
-    <div aria-hidden="true" class="p-s04-m-56"><span class="p-s04-m-53">책 표지</span></div>
+    <div aria-hidden="true" class="p-s04-m-56 p-s04-cover"><img src="images/book_cover/bye.jpg" alt="" class="p-s04-cover__img"></div>
     <span class="p-s04-m-54">작별하지 않는다</span><span class="p-s04-m-55">한강</span>
     </div>
     </div>
@@ -125,24 +125,21 @@
 
     <section aria-label="진행 방식" class="p-s04-m-21">
     <h2 class="p-s04-m-37">진행 방식</h2>
-    <ol class="p-s04-m-57">
-    <li class="p-s04-m-58">
-    <span class="p-s04-m-59">1</span>
-    <span class="p-s04-m-60">입장 · 명찰 받기</span><span class="p-s04-m-61">16:00</span>
-    </li>
-    <li class="p-s04-m-62">
-    <span class="p-s04-m-63">2</span>
-    <span class="p-s04-m-60">1:1 대화 7분씩 10번 로테이션</span><span class="p-s04-m-61">16:15</span>
-    </li>
-    <li class="p-s04-m-62">
-    <span class="p-s04-m-63">3</span>
-    <span class="p-s04-m-60">좋아하는 문장 나누며 자유 대화</span><span class="p-s04-m-61">17:40</span>
-    </li>
-    <li class="p-s04-m-64">
-    <span class="p-s04-m-65">4</span>
-    <span class="p-s04-m-66"><span>종료 후 24시간 동안 애프터 선택</span><span class="p-s04-m-14">서로 고르면 대화방이 열려요</span></span><span class="p-s04-m-61">18:30~</span>
-    </li>
+    <ol class="p-s04-flow">
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">16:00</span><span class="p-s04-flow__num">1</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">입장 · 명찰 받기</span><span class="p-s04-flow__desc">이름을 확인하고 명찰과 자리를 안내받아요</span></span></li>
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">16:15</span><span class="p-s04-flow__num">2</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">1:1 대화 7분씩 10번</span><span class="p-s04-flow__desc">가져온 책 이야기로 시작해, 7분마다 자리를 옮겨요</span></span></li>
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">17:40</span><span class="p-s04-flow__num">3</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">좋아하는 문장 나누며 자유 대화</span><span class="p-s04-flow__desc">마음에 남은 문장을 돌아가며 소개해요</span></span></li>
+    <li class="p-s04-flow__step p-s04-flow__step--after"><span class="p-s04-flow__time">18:30~</span><span class="p-s04-flow__num">4</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">종료 후 24시간 동안 애프터 선택</span><span class="p-s04-flow__desc">서로 고르면 대화방이 열려요</span></span></li>
     </ol>
+    </section>
+
+    <section aria-label="준비물" class="p-s04-m-21">
+    <h2 class="p-s04-m-37">이렇게 준비해 주세요</h2>
+    <ul class="p-s04-prep">
+    <li class="p-s04-prep__item"><span class="p-s04-prep__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"></path><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"></path></svg></span><span class="p-s04-prep__text"><span class="p-s04-prep__title">좋아하는 책 한 권</span><span class="p-s04-prep__desc">장르는 상관없어요. 오래 아껴 온 책이면 더 좋아요.</span></span></li>
+    <li class="p-s04-prep__item"><span class="p-s04-prep__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5562F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v16l-5-4-5 4z"></path></svg></span><span class="p-s04-prep__text"><span class="p-s04-prep__title">마음에 남은 문장 하나</span><span class="p-s04-prep__desc">포스트잇으로 표시해 오면 대화를 쉽게 시작할 수 있어요.</span></span></li>
+    <li class="p-s04-prep__item"><span class="p-s04-prep__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><span class="p-s04-prep__text"><span class="p-s04-prep__title">10분 일찍 도착</span><span class="p-s04-prep__desc">15:50부터 입장할 수 있어요. 도착하면 명찰을 드려요.</span></span></li>
+    </ul>
     </section>
 
     <section aria-label="참가자" class="p-s04-m-67">
@@ -167,28 +164,24 @@
     </section>
 
     <section aria-label="업체 후기" class="p-s04-m-21">
-    <div class="p-s04-m-68">
+    <div class="p-s04-review__head">
     <h2 class="p-s04-m-37">모먼트 라운지 후기</h2>
-    <a href="#" class="p-s04-m-78">전체 보기</a>
+    <a href="#" class="p-s04-review__all">전체 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
     </div>
-    <div class="p-s04-m-79">
-    <div class="p-s04-m-80">
-    <span class="p-s04-m-81">4.8</span>
-    <span class="p-s04-m-14">후기 128개</span>
-    </div>
-    <div class="p-s04-m-82">
-    <div class="p-s04-m-83"><span>진행</span><div class="p-s04-m-84"><div class="p-s04-m-85"></div></div><span>4.6</span></div>
-    <div class="p-s04-m-83"><span>분위기</span><div class="p-s04-m-84"><div class="p-s04-m-86"></div></div><span>4.8</span></div>
-    <div class="p-s04-m-83"><span>성비</span><div class="p-s04-m-84"><div class="p-s04-m-87"></div></div><span>4.4</span></div>
+    <div class="p-s04-review">
+    <div class="p-s04-review__summary">
+    <div class="p-s04-review__score"><span class="p-s04-review__num">4.8</span><span class="p-s04-review__total"><span aria-label="별점 4.8점" class="p-s04-review__stars">★★★★★</span><span>후기 128개</span></span></div>
+    <div class="p-s04-review__bars">
+    <div class="p-s04-review__bar"><span>진행</span><span class="p-s04-review__track"><span class="p-s04-review__fill p-s04-review__fill--92"></span></span><span>4.6</span></div>
+    <div class="p-s04-review__bar"><span>분위기</span><span class="p-s04-review__track"><span class="p-s04-review__fill p-s04-review__fill--96"></span></span><span>4.8</span></div>
+    <div class="p-s04-review__bar"><span>성비</span><span class="p-s04-review__track"><span class="p-s04-review__fill p-s04-review__fill--88"></span></span><span>4.4</span></div>
     </div>
     </div>
-    <div class="p-s04-m-88">
-    <div class="p-s04-m-89"><span><span aria-label="별점 5점" class="p-s04-m-90">★★★★★</span> · 20대 후반 여성</span><span>2주 전</span></div>
-    <p class="p-s04-m-91">진행이 매끄럽고 대화 시간이 넉넉했어요</p>
-    </div>
-    <div class="p-s04-m-88">
-    <div class="p-s04-m-89"><span><span aria-label="별점 4점" class="p-s04-m-90">★★★★☆</span> · 30대 초반 남성</span><span>2주 전</span></div>
-    <p class="p-s04-m-91">장소가 조용해서 대화에 집중할 수 있었어요</p>
+    <ul class="p-s04-review__list">
+    <li class="p-s04-review__item"><span aria-label="별점 5점" class="p-s04-review__rate">★★★★★</span><p class="p-s04-review__text">진행이 매끄럽고 대화 시간이 넉넉했어요</p><span class="p-s04-review__meta">20대 후반 여성 · 2주 전</span></li>
+    <li class="p-s04-review__item"><span aria-label="별점 4점" class="p-s04-review__rate">★★★★☆</span><p class="p-s04-review__text">장소가 조용해서 대화에 집중할 수 있었어요</p><span class="p-s04-review__meta">30대 초반 남성 · 2주 전</span></li>
+    <li class="p-s04-review__item"><span aria-label="별점 5점" class="p-s04-review__rate">★★★★★</span><p class="p-s04-review__text">책 이야기로 시작하니 어색할 틈이 없었어요</p><span class="p-s04-review__meta">30대 초반 여성 · 3주 전</span></li>
+    </ul>
     </div>
     </section>
 
@@ -241,41 +234,54 @@
     </div>
     <h1 class="p-s04-pc-18">이런 책 어때요? 북클럽 로테이션</h1>
     <p class="p-s04-pc-19">좋아하는 책 한 권을 들고 와 마음에 남은 문장으로 대화를 시작해요. 조용한 북카페에서 차분하게 한 사람씩 이야기 나누는 자리예요.</p>
-    <a href="#" class="p-s04-pc-20">
-    <span aria-hidden="true" class="p-s04-pc-21">업</span>
-    <span class="p-s04-pc-22"><span class="p-s04-pc-23">모먼트 라운지</span><span class="p-s04-pc-17">후기 4.8 · 진행 42회</span></span>
+    <a href="#" class="p-s04-host">
+    <span aria-hidden="true" class="p-s04-host__logo">M</span>
+    <span class="p-s04-host__info"><span class="p-s04-host__label">주최 업체</span><span class="p-s04-host__name">모먼트 라운지</span><span class="p-s04-host__meta"><span class="p-s04-host__star">★ 4.8</span> · 후기 128개 · 진행 42회</span></span>
+    <span class="p-s04-host__go">업체 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A4D57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></span>
     </a>
     </section>
 
     <div class="p-s04-pc-24">
-    <section aria-label="이런 책 어때요" class="p-s04-pc-25">
+    <section aria-label="이런 책 어때요" class="p-s04-pc-25 p-s04-sec--warm">
     <div class="p-s04-pc-26">
     <h2 class="p-s04-pc-27">이런 책 어때요?</h2>
     <span class="p-s04-pc-28">이 책들을 좋아하는 사람들이 모여요</span>
     </div>
     <div class="p-s04-pc-29">
-    <div class="p-s04-pc-30"><div aria-hidden="true" class="p-s04-pc-31"><span class="p-s04-pc-32">책 표지</span></div><span class="p-s04-pc-33">불편한 편의점</span><span class="p-s04-pc-34">김호연</span></div>
-    <div class="p-s04-pc-30"><div aria-hidden="true" class="p-s04-pc-35"><span class="p-s04-pc-32">책 표지</span></div><span class="p-s04-pc-33">아몬드</span><span class="p-s04-pc-34">손원평</span></div>
-    <div class="p-s04-pc-30"><div aria-hidden="true" class="p-s04-pc-35"><span class="p-s04-pc-32">책 표지</span></div><span class="p-s04-pc-33">작별하지 않는다</span><span class="p-s04-pc-34">한강</span></div>
+    <div class="p-s04-pc-30"><div aria-hidden="true" class="p-s04-pc-31 p-s04-cover"><img src="images/book_cover/convinience.jpg" alt="" class="p-s04-cover__img"></div><span class="p-s04-pc-33">불편한 편의점</span><span class="p-s04-pc-34">김호연</span></div>
+    <div class="p-s04-pc-30"><div aria-hidden="true" class="p-s04-pc-35 p-s04-cover"><img src="images/book_cover/amond.jpg" alt="" class="p-s04-cover__img"></div><span class="p-s04-pc-33">아몬드</span><span class="p-s04-pc-34">손원평</span></div>
+    <div class="p-s04-pc-30"><div aria-hidden="true" class="p-s04-pc-35 p-s04-cover"><img src="images/book_cover/bye.jpg" alt="" class="p-s04-cover__img"></div><span class="p-s04-pc-33">작별하지 않는다</span><span class="p-s04-pc-34">한강</span></div>
     </div>
     </section>
 
     <section aria-label="진행 방식" class="p-s04-pc-25">
     <h2 class="p-s04-pc-27">진행 방식</h2>
-    <ol class="p-s04-pc-36">
-    <li class="p-s04-pc-37"><span class="p-s04-pc-38">1</span><span class="p-s04-pc-39">입장 · 명찰 받기</span><span class="p-s04-pc-28">16:00</span></li>
-    <li class="p-s04-pc-37"><span class="p-s04-pc-38">2</span><span class="p-s04-pc-39">1:1 대화 7분씩 10번</span><span class="p-s04-pc-28">16:15</span></li>
-    <li class="p-s04-pc-37"><span class="p-s04-pc-38">3</span><span class="p-s04-pc-39">좋아하는 문장 나누며 자유 대화</span><span class="p-s04-pc-28">17:40</span></li>
-    <li class="p-s04-pc-37"><span class="p-s04-pc-40">4</span><span class="p-s04-pc-39">종료 후 24시간 애프터 선택</span><span class="p-s04-pc-28">18:30~</span></li>
+    <ol class="p-s04-flow">
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">16:00</span><span class="p-s04-flow__num">1</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">입장 · 명찰 받기</span><span class="p-s04-flow__desc">이름을 확인하고 명찰과 자리를 안내받아요</span></span></li>
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">16:15</span><span class="p-s04-flow__num">2</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">1:1 대화 7분씩 10번</span><span class="p-s04-flow__desc">가져온 책 이야기로 시작해, 7분마다 자리를 옮겨요</span></span></li>
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">17:40</span><span class="p-s04-flow__num">3</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">좋아하는 문장 나누며 자유 대화</span><span class="p-s04-flow__desc">마음에 남은 문장을 돌아가며 소개해요</span></span></li>
+    <li class="p-s04-flow__step p-s04-flow__step--after"><span class="p-s04-flow__time">18:30~</span><span class="p-s04-flow__num">4</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">종료 후 24시간 동안 애프터 선택</span><span class="p-s04-flow__desc">서로 고르면 대화방이 열려요</span></span></li>
     </ol>
     </section>
     </div>
 
+    <section aria-label="준비물" class="p-s04-pc-25 p-s04-sec--line">
+    <h2 class="p-s04-pc-27">이렇게 준비해 주세요</h2>
+    <ul class="p-s04-prep">
+    <li class="p-s04-prep__item"><span class="p-s04-prep__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"></path><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"></path></svg></span><span class="p-s04-prep__text"><span class="p-s04-prep__title">좋아하는 책 한 권</span><span class="p-s04-prep__desc">장르는 상관없어요. 오래 아껴 온 책이면 더 좋아요.</span></span></li>
+    <li class="p-s04-prep__item"><span class="p-s04-prep__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5562F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v16l-5-4-5 4z"></path></svg></span><span class="p-s04-prep__text"><span class="p-s04-prep__title">마음에 남은 문장 하나</span><span class="p-s04-prep__desc">포스트잇으로 표시해 오면 대화를 쉽게 시작할 수 있어요.</span></span></li>
+    <li class="p-s04-prep__item"><span class="p-s04-prep__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><span class="p-s04-prep__text"><span class="p-s04-prep__title">10분 일찍 도착</span><span class="p-s04-prep__desc">15:50부터 입장할 수 있어요. 도착하면 명찰을 드려요.</span></span></li>
+    </ul>
+    </section>
+
     <section aria-label="참가자" class="p-s04-pc-41">
-    <div class="p-s04-pc-42">
+    <div class="p-s04-people__head">
     <h2 class="p-s04-pc-27">함께할 사람들</h2>
+    <span class="p-s04-pc-28">지금 12명 신청 · 남 5 · 여 7</span>
+    </div>
+    <div class="p-s04-people__row">
     <div aria-label="신청한 참가자 12명" class="p-s04-pc-43"><img src="images/profile-w2.jpg" alt="" class="p-s04-pc-44"><img src="images/profile-m2.jpg" alt="" class="p-s04-pc-45"><img src="images/profile-w3.jpg" alt="" class="p-s04-pc-45"><img src="images/profile-m1.jpg" alt="" class="p-s04-pc-45"><img src="images/profile-w4.jpg" alt="" class="p-s04-pc-45"><span class="p-s04-pc-46">+7</span></div>
-    <p class="p-s04-pc-47">참가가 확정되면 같은 회차 참가자의 사진, 이름, 한마디를 볼 수 있어요.</p>
+    <p class="p-s04-people__lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>참가가 확정되면 같은 회차 참가자의 사진, 이름, 한마디를 볼 수 있어요.</p>
     </div>
     <div class="p-s04-pc-48">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5562F" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" class="p-s04-pc-49"><circle cx="9" cy="12" r="5"></circle><circle cx="15" cy="12" r="5"></circle></svg>
@@ -284,23 +290,24 @@
     </section>
 
     <section aria-label="업체 후기" class="p-s04-pc-52">
-    <div class="p-s04-pc-53">
+    <div class="p-s04-review__head">
     <h2 class="p-s04-pc-27">모먼트 라운지 후기</h2>
-    <a href="#" class="p-s04-pc-54">전체 보기</a>
+    <a href="#" class="p-s04-review__all">전체 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
     </div>
-    <div class="p-s04-pc-55">
-    <div class="p-s04-pc-56">
-    <div class="p-s04-pc-57"><span class="p-s04-pc-58">4.8</span><span class="p-s04-pc-17">후기 128개</span></div>
-    <div class="p-s04-pc-59">
-    <div class="p-s04-pc-60"><span>진행</span><div class="p-s04-pc-61"><div class="p-s04-pc-62"></div></div><span>4.6</span></div>
-    <div class="p-s04-pc-60"><span>분위기</span><div class="p-s04-pc-61"><div class="p-s04-pc-63"></div></div><span>4.8</span></div>
-    <div class="p-s04-pc-60"><span>성비</span><div class="p-s04-pc-61"><div class="p-s04-pc-64"></div></div><span>4.4</span></div>
+    <div class="p-s04-review">
+    <div class="p-s04-review__summary">
+    <div class="p-s04-review__score"><span class="p-s04-review__num">4.8</span><span class="p-s04-review__total"><span aria-label="별점 4.8점" class="p-s04-review__stars">★★★★★</span><span>후기 128개</span></span></div>
+    <div class="p-s04-review__bars">
+    <div class="p-s04-review__bar"><span>진행</span><span class="p-s04-review__track"><span class="p-s04-review__fill p-s04-review__fill--92"></span></span><span>4.6</span></div>
+    <div class="p-s04-review__bar"><span>분위기</span><span class="p-s04-review__track"><span class="p-s04-review__fill p-s04-review__fill--96"></span></span><span>4.8</span></div>
+    <div class="p-s04-review__bar"><span>성비</span><span class="p-s04-review__track"><span class="p-s04-review__fill p-s04-review__fill--88"></span></span><span>4.4</span></div>
     </div>
     </div>
-    <div class="p-s04-pc-65">
-    <div class="p-s04-pc-66"><div class="p-s04-pc-67"><span><span aria-label="별점 5점" class="p-s04-pc-68">★★★★★</span> · 20대 후반 여성</span><span>2주 전</span></div><p class="p-s04-pc-69">진행이 매끄럽고 대화 시간이 넉넉했어요</p></div>
-    <div class="p-s04-pc-66"><div class="p-s04-pc-67"><span><span aria-label="별점 4점" class="p-s04-pc-68">★★★★☆</span> · 30대 초반 남성</span><span>2주 전</span></div><p class="p-s04-pc-69">장소가 조용해서 대화에 집중할 수 있었어요</p></div>
-    </div>
+    <ul class="p-s04-review__list">
+    <li class="p-s04-review__item"><span aria-label="별점 5점" class="p-s04-review__rate">★★★★★</span><p class="p-s04-review__text">진행이 매끄럽고 대화 시간이 넉넉했어요</p><span class="p-s04-review__meta">20대 후반 여성 · 2주 전</span></li>
+    <li class="p-s04-review__item"><span aria-label="별점 4점" class="p-s04-review__rate">★★★★☆</span><p class="p-s04-review__text">장소가 조용해서 대화에 집중할 수 있었어요</p><span class="p-s04-review__meta">30대 초반 남성 · 2주 전</span></li>
+    <li class="p-s04-review__item"><span aria-label="별점 5점" class="p-s04-review__rate">★★★★★</span><p class="p-s04-review__text">책 이야기로 시작하니 어색할 틈이 없었어요</p><span class="p-s04-review__meta">30대 초반 여성 · 3주 전</span></li>
+    </ul>
     </div>
     </section>
     </main>
@@ -354,8 +361,130 @@
     </div>
   </div>
 
-<!-- S04-IT-Mobile · S04 소개팅 상세 · 같은 업계 테마 · 모바일 -->
-  <div class="p-cb p-s04-it-m-root p-frame l-narrow" data-when="id=it">
+<!-- S04-IT-PC · S04 소개팅 상세 · 같은 업계 테마 (참가 확정) · PC — 북클럽 상세 PC 구성을 따름 -->
+  <div class="p-cb p-s04-pc-root l-only-pc" data-when="id=it">
+    <div class="p-s04-pc-1">
+    <nav aria-label="경로" class="p-s04-pc-2">
+    <a href="my.html" class="p-s04-pc-3">내 소개팅</a><span aria-hidden="true">/</span><span class="p-s04-pc-4">IT 업계 로테이션 소개팅</span>
+    </nav>
+
+    <div class="p-s04-pc-5">
+    <main class="p-s04-pc-6">
+
+    <div class="p-s04-pc-7">
+    <img src="images/photo-city.jpg" alt="야경이 보이는 도시 사진" class="p-s04-pc-8">
+    <span class="p-s04-pc-9"></span>
+    <div class="p-s04-pc-10">
+    <button type="button" aria-label="공유" class="p-s04-pc-11"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M8 8l4-4 4 4M5 14v5h14v-5"></path></svg></button>
+    </div>
+    <span class="p-s04-it-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>참가 확정 · D-11</span>
+    </div>
+
+    <section class="p-s04-pc-12">
+    <div class="p-s04-pc-13">
+    <span class="p-s04-pc-15">같은 업계</span>
+    <span class="p-s04-pc-16">20명</span>
+    <span class="p-s04-pc-17">#개발 #기획 #디자인</span>
+    </div>
+    <h1 class="p-s04-pc-18">IT 업계 로테이션 소개팅</h1>
+    <p class="p-s04-pc-19">야근, 배포, 사이드 프로젝트 이야기가 통하는 사람들과 편하게 대화하는 자리예요. 업계 이야기로 어색함 없이 시작해 보세요.</p>
+    </section>
+
+    <section aria-label="모집 현황과 직군 구성" class="p-s04-pc-25">
+    <div class="p-s04-people__head">
+    <h2 class="p-s04-pc-27">이런 분들이 모여요</h2>
+    <span class="p-s04-pc-28">신청자 12명 기준</span>
+    </div>
+    <div class="p-s04-it-who">
+    <div class="p-s04-it-m-40">
+    <div class="p-s04-it-m-41"><span class="p-s04-it-m-13">남성</span><span class="p-s04-it-m-42">6<span class="p-s04-it-m-43"> / 10</span></span></div>
+    <div class="p-s04-it-m-41"><span class="p-s04-it-m-13">여성</span><span class="p-s04-it-m-42">6<span class="p-s04-it-m-43"> / 10</span></span></div>
+    </div>
+    <div class="p-s04-it-who__bars">
+    <div class="p-s04-it-m-44">
+    <div class="p-s04-it-m-45"><span>개발</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-47"></span></span><span class="p-s04-it-m-48">5명</span></div>
+    <div class="p-s04-it-m-45"><span>기획 · PM</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-49"></span></span><span class="p-s04-it-m-48">3명</span></div>
+    <div class="p-s04-it-m-45"><span>디자인</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-50"></span></span><span class="p-s04-it-m-48">2명</span></div>
+    <div class="p-s04-it-m-45"><span>데이터</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-51"></span></span><span class="p-s04-it-m-48">1명</span></div>
+    <div class="p-s04-it-m-45"><span>마케팅</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-52"></span></span><span class="p-s04-it-m-48">1명</span></div>
+    </div>
+    <div class="p-s04-it-m-53">
+    <span class="p-s04-it-m-54">#재택과출근</span>
+    <span class="p-s04-it-m-54">#사이드프로젝트</span>
+    <span class="p-s04-it-m-54">#커리어고민</span>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section aria-label="같은 회사 배정 제외" class="p-s04-it-m-55">
+    <span class="p-s04-it-m-56"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+    <span class="p-s04-it-m-22"><span class="p-s04-it-m-31">같은 회사 사람과 마주치지 않아요</span><span class="p-s04-it-m-57">신청할 때 입력한 회사가 같은 사람은 같은 회차에 배정되지 않아요. 회사명은 다른 참가자에게 공개되지 않아요.</span></span>
+    </section>
+
+    <section aria-label="진행 방식" class="p-s04-pc-25 p-s04-sec--line">
+    <h2 class="p-s04-pc-27">진행 방식</h2>
+    <ol class="p-s04-flow">
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">20:00</span><span class="p-s04-flow__num">1</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">입장 · 명찰 받기</span><span class="p-s04-flow__desc">이름과 직군이 적힌 명찰을 받아요</span></span></li>
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">20:15</span><span class="p-s04-flow__num">2</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">1:1 대화 7분씩 10번</span><span class="p-s04-flow__desc">업계 이야기로 시작해, 7분마다 자리를 옮겨요</span></span></li>
+    <li class="p-s04-flow__step"><span class="p-s04-flow__time">21:30</span><span class="p-s04-flow__num">3</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">자유 대화</span><span class="p-s04-flow__desc">더 이야기 나누고 싶은 사람과 편하게 대화해요</span></span></li>
+    <li class="p-s04-flow__step p-s04-flow__step--after"><span class="p-s04-flow__time">22:00~</span><span class="p-s04-flow__num">4</span><span class="p-s04-flow__body"><span class="p-s04-flow__title">종료 후 24시간 동안 애프터 선택</span><span class="p-s04-flow__desc">서로 고르면 대화방이 열려요</span></span></li>
+    </ol>
+    </section>
+
+    <section aria-label="참가자" class="p-s04-pc-41">
+    <div class="p-s04-people__head">
+    <h2 class="p-s04-pc-27">함께할 사람들</h2>
+    <a href="participants.html?id=it" class="p-s04-review__all">명단 보기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div class="p-s04-people__row">
+    <div aria-label="참가 확정된 사람 12명" class="p-s04-pc-43"><img src="images/profile-m1.jpg" alt="" class="p-s04-pc-44"><img src="images/profile-w2.jpg" alt="" class="p-s04-pc-45"><img src="images/profile-m2.jpg" alt="" class="p-s04-pc-45"><img src="images/profile-w3.jpg" alt="" class="p-s04-pc-45"><span class="p-s04-pc-46">+8</span></div>
+    <p class="p-s04-people__lock">참가가 확정되어 같은 회차 참가자의 사진, 이름, 한마디를 볼 수 있어요.</p>
+    </div>
+    </section>
+    </main>
+
+    <aside aria-label="참가 정보" class="p-s04-pc-70">
+    <div class="p-s04-pc-71">
+    <div class="p-s04-it-status"><span class="p-s04-it-status__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>참가가 확정됐어요</span><span aria-hidden="true" class="p-s04-it-status__sep"></span><span class="p-s04-it-status__d">D-11</span></div>
+    <div class="p-s04-pc-72">
+    <div class="p-s04-pc-73 p-s04-it-date">
+    <span class="p-s04-pc-74">11월</span>
+    <span class="p-s04-pc-75">12</span>
+    <span class="p-s04-pc-76">수요일</span>
+    </div>
+    <div class="p-s04-pc-26"><span class="p-s04-pc-77">20:00 ~ 22:00</span><span class="p-s04-pc-17">체크인 20:15까지</span></div>
+    </div>
+    <div class="p-s04-pc-78">
+    <img src="images/map-mangwon.png" alt="라운지 이음 주변 지도" class="p-s04-pc-8">
+    <span aria-hidden="true" class="p-s04-it-m-26"><span class="p-s04-it-m-27">라운지 이음</span><span class="p-s04-it-m-28"></span><span class="p-s04-it-m-29"></span></span>
+    </div>
+    <div class="p-s04-pc-81">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+    <span class="p-s04-pc-82"><span>서울 마포구 와우산로 21, 3층</span><span class="p-s04-pc-34">참가 확정되어 상세 주소가 공개됐어요</span></span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c1-3.5 3.3-5 6-5s5 1.5 6 5"></path><path d="M16 11l2 2 4-4" stroke="#B5562F"></path></svg>
+    <span class="p-s04-pc-82"><span>남 29~37세 · 여 27~35세</span><span class="p-s04-pc-34">IT 업계 재직 인증 필수</span></span>
+    </div>
+    <div class="p-s04-pc-93"><span class="p-s04-pc-28">참가비</span><span class="p-s04-it-paid"><span class="p-s04-pc-94">39,000원</span><span class="p-s04-it-paid__tag">결제 완료</span></span></div>
+    <a href="participants.html?id=it" class="p-s04-pc-95">참가자 명단 보기</a>
+    <span class="p-s04-pc-96">당일에는 내 소개팅의 오늘 배너에서 입장 안내를 볼 수 있어요</span>
+    </div>
+    <div class="p-s04-pc-97">
+    <span class="p-s04-pc-23">취소 · 환불 규정</span>
+    <div class="p-s04-pc-98">
+    <span class="p-s04-pc-99">행사 전날까지</span><span class="p-s04-pc-100">전액 환불</span>
+    <span class="p-s04-pc-99">행사 당일</span><span class="p-s04-pc-87">50% 환불</span>
+    <span class="p-s04-pc-99">노쇼</span><span class="p-s04-pc-91">환불 없음</span>
+    </div>
+    <a href="cancel.html?id=a-film" class="p-s04-it-cancel">참가 취소하기</a>
+    </div>
+    </aside>
+    </div>
+    </div>
+  </div>
+
+<!-- S04-IT-Mobile · S04 소개팅 상세 · 같은 업계 테마 (참가 확정) · 모바일 -->
+  <div class="p-cb p-s04-it-m-root p-frame l-only-mobile" data-when="id=it">
     <div class="p-s04-it-m-1">
     <img src="images/photo-city.jpg" alt="야경이 보이는 도시 사진" class="p-s04-it-m-2">
     <span class="p-s04-it-m-3"></span>
@@ -408,11 +537,11 @@
     <div class="p-s04-it-m-41"><span class="p-s04-it-m-13">여성</span><span class="p-s04-it-m-42">6<span class="p-s04-it-m-43"> / 10</span></span></div>
     </div>
     <div class="p-s04-it-m-44">
-    <div class="p-s04-it-m-45"><span>개발</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-47"></span></span><span class="p-s04-it-m-48">20명</span></div>
-    <div class="p-s04-it-m-45"><span>기획 · PM</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-49"></span></span><span class="p-s04-it-m-48">20명</span></div>
-    <div class="p-s04-it-m-45"><span>디자인</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-50"></span></span><span class="p-s04-it-m-48">20명</span></div>
-    <div class="p-s04-it-m-45"><span>데이터</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-51"></span></span><span class="p-s04-it-m-48">20명</span></div>
-    <div class="p-s04-it-m-45"><span>마케팅</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-52"></span></span><span class="p-s04-it-m-48">20명</span></div>
+    <div class="p-s04-it-m-45"><span>개발</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-47"></span></span><span class="p-s04-it-m-48">5명</span></div>
+    <div class="p-s04-it-m-45"><span>기획 · PM</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-49"></span></span><span class="p-s04-it-m-48">3명</span></div>
+    <div class="p-s04-it-m-45"><span>디자인</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-50"></span></span><span class="p-s04-it-m-48">2명</span></div>
+    <div class="p-s04-it-m-45"><span>데이터</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-51"></span></span><span class="p-s04-it-m-48">1명</span></div>
+    <div class="p-s04-it-m-45"><span>마케팅</span><span class="p-s04-it-m-46"><span class="p-s04-it-m-52"></span></span><span class="p-s04-it-m-48">1명</span></div>
     </div>
     <div class="p-s04-it-m-53">
     <span class="p-s04-it-m-54">#재택과출근</span>

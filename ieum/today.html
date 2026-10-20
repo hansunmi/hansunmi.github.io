@@ -18,11 +18,11 @@
 <body class="p-page">
 
 <header data-pc-header data-current="my" data-after-count="2" class="l-header--line"></header>
-<!-- 이 화면은 PC 시안이 없어 PC 헤더 아래에 모바일 레이아웃을 가운데 정렬로 보여준다 (6.1 · 임시안) -->
+<!-- PC 시안이 없어 모바일 화면을 반응형으로 넓혀 쓴다 (pages.css · S16 PC 반응형) -->
 <div class="l-main">
 
 <!-- S16-Mobile · S16 행사 당일 · 모바일 -->
-  <div class="p-cb p-s16-m-root p-frame l-narrow">
+  <div class="p-cb p-s16-m-root p-frame">
     <section class="p-s16-m-1">
     <img src="images/photo-city.jpg" alt="" class="p-s16-m-2">
     <span class="p-s16-m-3"></span>
@@ -33,7 +33,7 @@
     </div>
     <div class="p-s16-m-8">
     <span class="p-s16-m-9">시작까지 1시간 20분</span>
-    <h1 class="p-s16-m-10">이런 음악 어때요?<br>시티팝 로테이션</h1>
+    <h1 class="p-s16-m-10">이런 음악 어때요? <br>시티팝 로테이션</h1>
     <span class="p-s16-m-11">오늘 19:00 ~ 21:30 · 서울 용산구</span>
     </div>
     </section>
@@ -51,6 +51,10 @@
     <span class="p-s16-m-20"><span class="p-s16-m-21"></span>아직 체크인 전</span>
     <span class="p-s16-m-19">19:15까지 체크인해 주세요</span>
     </div>
+    </div>
+    <div class="p-s16-pc-mobile l-only-pc">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg>
+    <span class="p-s16-pc-mobile__text"><b>체크인과 로테이션 메모는 모바일에서 해주세요</b>현장 QR 체크인과 대화 중 메모는 휴대폰의 이음에서 할 수 있어요.</span>
     </div>
     <div aria-hidden="true" class="p-s16-m-22"></div>
     <div class="p-s16-m-23">

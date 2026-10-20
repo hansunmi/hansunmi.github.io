@@ -8,6 +8,9 @@
 
   /* 컬러 · 테라코타 (애프터 · 매칭 · 마감 임박에만) */
   --color-accent: #B5562F;
+  --color-online: #3AAE6A;        /* 접속 중 점 (애프터 대화 목록) */
+  --color-ok: #2B8A52;            /* 인증 완료 배지 글자 */
+  --color-ok-tint: #E6F5EC;       /* 인증 완료 배지 면 */
   --color-accent-ink: #8A3D1F;
   --color-accent-ink-strong: #6B2F17;
   --color-accent-tint: #FBEDE6;

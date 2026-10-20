@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이음 · 열람 기록</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/tokens.css">
+<link rel="stylesheet" href="style/base.css">
+<link rel="stylesheet" href="style/layout.css">
+<link rel="stylesheet" href="style/components.css">
+<link rel="stylesheet" href="style/pages.css">
+<link rel="stylesheet" href="style/utilities.css">
+</head>
+<body class="p-page">
+
+<header data-pc-header data-current="me" class="l-header--line"></header>
+
+<!-- 열람 기록 (시안 없음) — ?tab=mine이면 '내가 열람한 사람'. 목록은 js/views.js (data/participants.json + 이 탭의 열람 상태) -->
+<main class="l-main">
+  <div class="p-vw">
+    <a class="p-vw__back" href="mypage.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>마이</a>
+
+    <header class="p-vw__head">
+      <span class="p-vw__eyebrow">VIEW HISTORY</span>
+      <h1 class="p-vw__title">열람 기록</h1>
+      <p class="p-vw__desc">크레딧으로 서로의 지역 · 직업 · 취미를 열람한 기록이에요.</p>
+    </header>
+
+    <div class="p-vw__layout">
+      <div class="p-vw__main">
+        <div class="p-vw__tabs" role="tablist" aria-label="열람 기록 구분">
+          <button type="button" class="p-vw__tab" role="tab" id="vw-tab-me" aria-controls="vw-panel-me" aria-selected="true">내 정보를 열람한 사람 <b data-vw-count="me">0</b></button>
+          <button type="button" class="p-vw__tab" role="tab" id="vw-tab-mine" aria-controls="vw-panel-mine" aria-selected="false" tabindex="-1">내가 열람한 사람 <b data-vw-count="mine">0</b></button>
+        </div>
+
+        <section class="p-vw__panel" role="tabpanel" id="vw-panel-me" aria-labelledby="vw-tab-me">
+          <ul class="p-vw__list" data-vw-list="me"></ul>
+        </section>
+        <section class="p-vw__panel" role="tabpanel" id="vw-panel-mine" aria-labelledby="vw-tab-mine" hidden>
+          <ul class="p-vw__list" data-vw-list="mine"></ul>
+        </section>
+
+        <p class="p-vw__note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16.5v.01"></path></svg>열람하면 상대에게 알림이 가요. 열람 기록은 소개팅이 끝난 뒤 30일까지 보여요.</p>
+      </div>
+      <!-- PC: 목록에서 고른 사람 상세 (모바일은 participant.html로 이동) -->
+      <aside class="p-vw__detail l-only-pc" aria-label="선택한 사람 상세" aria-live="polite" data-vw-detail></aside>
+    </div>
+  </div>
+</main>
+
+<nav data-tabbar data-current="me"></nav>
+
+<script src="js/common.js"></script>
+<script src="js/views.js"></script>
+</body>
+</html>

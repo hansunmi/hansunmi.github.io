@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이음 · 매칭 상대 프로필</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/tokens.css">
+<link rel="stylesheet" href="style/base.css">
+<link rel="stylesheet" href="style/layout.css">
+<link rel="stylesheet" href="style/components.css">
+<link rel="stylesheet" href="style/pages.css">
+<link rel="stylesheet" href="style/utilities.css">
+</head>
+<body class="p-page">
+
+<header data-pc-header data-current="after" data-after-count="2" class="l-header--line"></header>
+
+<!-- 매칭 상대 프로필 (시안 없음 · 참가자 상세 S09를 바탕으로 구성) — ?id=m1|m2|m3, 내용은 data/matches.json -->
+<main class="l-main">
+  <div class="p-pf" id="profile" aria-live="polite"></div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/match-actions.js"></script>
+</body>
+</html>

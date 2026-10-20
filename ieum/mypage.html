@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이음 · 마이</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/tokens.css">
+<link rel="stylesheet" href="style/base.css">
+<link rel="stylesheet" href="style/layout.css">
+<link rel="stylesheet" href="style/components.css">
+<link rel="stylesheet" href="style/pages.css">
+<link rel="stylesheet" href="style/utilities.css">
+</head>
+<body class="p-page">
+
+<header data-pc-header data-current="me" class="l-header--line"></header>
+
+<!-- 마이 (시안 범위 밖 6.2 · 사용자 시안 이미지 기준) — PC는 헤더 프로필 사진, 모바일은 하단 탭 '마이'로 들어온다.
+     모든 섹션은 '제목(카드 밖) + 카드' 한 가지 구조. 값(이름 · 크레딧 · 횟수 등)은 임시 목업 값 -->
+<main class="l-main">
+  <div class="p-me">
+
+    <header class="p-me-head">
+      <div class="p-me-head__title">
+        <span class="p-me-head__eyebrow"><span class="l-only-pc">PROFILE</span><span class="l-only-mobile">MY PAGE</span></span>
+        <h1 class="p-me-head__h1"><span class="l-only-pc">프로필</span><span class="l-only-mobile">마이</span></h1>
+      </div>
+      <a class="c-icon-btn l-only-mobile" href="notifications.html" aria-label="알림"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg></a>
+      <div class="p-me-badges">
+        <span class="p-me-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>본인 인증</span>
+        <span class="p-me-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>직업 인증</span>
+      </div>
+    </header>
+
+    <div class="p-me-grid">
+      <div class="p-me-col">
+
+        <!-- 다른 참가자에게 보이는 모습 — 내 카드 한 장. 아직 안 보이는 정보는 흐리게 가리고 자물쇠로 언제 열리는지만 알려 준다 -->
+        <section class="p-me-sec" aria-labelledby="me-look-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-look-title">다른 참가자에게 이렇게 보여요</h2>
+          </div>
+          <div class="p-me-peek">
+            <img class="p-me-peek__photo" src="images/profile-me-tall.jpg" alt="내 프로필 사진">
+            <div class="p-me-peek__body">
+              <p class="p-me-peek__eyebrow">참가가 확정되면 같은 회차 참가자에게</p>
+              <p class="p-me-peek__name"><b>한○○</b><span>여성 · 30대 초반</span></p>
+              <p class="p-me-peek__quote">"주말엔 필름 들고 골목 산책해요"</p>
+              <div class="p-me-peek__lock">
+                <dl class="p-me-peek__list">
+                  <div><dt>사는 곳</dt><dd>마포구</dd></div>
+                  <div><dt>취미</dt><dd>사진 · 음악 감상 · 독서</dd></div>
+                  <div><dt>직업</dt><dd>IT · 개발</dd></div>
+                </dl>
+                <span class="p-me-peek__pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>크레딧으로 열람하면 보여요</span>
+              </div>
+            </div>
+          </div>
+          <ul class="p-me-look-notes">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>매칭되면 실명이 보이고 앱 안에서 대화할 수 있어요</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>회사명 · 상세 주소 · 연락처는 끝까지 공개되지 않아요</li>
+          </ul>
+        </section>
+
+        <!-- 프로필 정보 — 수정 가능한 줄 + 바꿀 수 없는 본인 인증 정보를 한 카드에 -->
+        <section class="p-me-sec" aria-labelledby="me-info-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-info-title">프로필 정보</h2>
+            <span class="p-me-sec-aside">눌러서 수정</span>
+          </div>
+          <div class="p-me-card p-me-info">
+            <ul class="p-me-rows">
+              <li><a class="p-me-row" href="#">
+                <span class="p-me-row__label">사진</span>
+                <span class="p-me-row__value p-me-photos">
+                  <img src="images/profile-me.jpg" alt="등록한 사진 1">
+                  <span class="p-me-photos__add" aria-hidden="true">+</span>
+                  <span class="p-me-photos__add" aria-hidden="true">+</span>
+                  <span class="p-me-photos__count">1 / 3장</span>
+                </span>
+                <svg class="p-me-row__go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+              </a></li>
+              <li><a class="p-me-row" href="#">
+                <span class="p-me-row__label">한마디</span>
+                <span class="p-me-row__value p-me-row__value--quote">"주말엔 필름 들고 골목 산책해요"</span>
+                <svg class="p-me-row__go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+              </a></li>
+              <li><a class="p-me-row" href="#">
+                <span class="p-me-row__label">사는 곳</span>
+                <span class="p-me-row__value">서울 마포구 망원동<small>다른 참가자에게는 구까지만 보여요</small></span>
+                <svg class="p-me-row__go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+              </a></li>
+              <li><a class="p-me-row" href="#">
+                <span class="p-me-row__label">취미</span>
+                <span class="p-me-row__value">사진 · 음악 감상 · 독서</span>
+                <svg class="p-me-row__go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+              </a></li>
+              <li><a class="p-me-row" href="#">
+                <span class="p-me-row__label">직업</span>
+                <span class="p-me-row__value"><span class="p-me-row__line">IT · 개발<span class="p-me-badge p-me-badge--sm"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>인증 완료</span></span><small>회사명 이음랩스 · 다른 참가자에게 비공개</small></span>
+                <svg class="p-me-row__go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+              </a></li>
+            </ul>
+            <p class="p-me-info__note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16.5v.01"></path></svg>여기서 바꾼 내용은 앞으로의 신청에 쓰여요. 이미 신청한 회차는 신청할 때의 프로필 그대로예요.</p>
+          </div>
+        </section>
+
+        <!-- 본인 인증 정보 — 바꿀 수 없는 값이라 선 없는 회색 면에 2×2로 -->
+        <section class="p-me-sec" aria-labelledby="me-verify-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-verify-title">본인 인증 정보</h2>
+            <span class="p-me-sec-aside p-me-sec-aside--lock"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>바꿀 수 없어요</span>
+          </div>
+          <dl class="p-me-idbox">
+            <div><dt>이름</dt><dd>한서윤</dd></div>
+            <div><dt>생년월일</dt><dd>1996.03.14 · 30세</dd></div>
+            <div><dt>성별</dt><dd>여성</dd></div>
+            <div><dt>휴대폰</dt><dd>010-****-1234</dd></div>
+          </dl>
+        </section>
+      </div>
+
+      <div class="p-me-col">
+
+        <section class="p-me-sec" aria-labelledby="me-credit-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-credit-title">크레딧 · 참가 기록</h2>
+          </div>
+          <div class="p-me-card p-me-credit">
+            <div class="p-me-credit__top">
+              <p class="p-me-credit__num"><b data-credit-value>5</b>크레딧</p>
+              <a class="c-btn c-btn--primary c-btn--44 p-me-credit__btn" href="#" data-credit-charge>충전하기</a>
+            </div>
+            <dl class="p-me-stats">
+              <div><dt>참가 완료</dt><dd>4회</dd></div>
+              <div><dt>매칭</dt><dd class="p-me-stats__accent">2건</dd></div>
+              <div><dt>노쇼 기록</dt><dd>1 / 2<span class="p-me-noshow" role="img" aria-label="2회 중 1회"><span class="is-on"></span><span></span></span></dd></div>
+            </dl>
+            <a class="p-me-credit__note" href="#"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16.5v.01"></path></svg><span>한 번 더 노쇼하면 <b>7일간 신청 제한</b></span><em>노쇼 정책</em><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+          </div>
+        </section>
+
+        <section class="p-me-sec" aria-labelledby="me-like-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-like-title">관심 소개팅</h2>
+            <span class="p-me-sec-aside">2개</span>
+          </div>
+          <ul class="p-me-likes">
+            <li class="p-me-like">
+              <a class="p-me-like__link" href="event.html?id=book">
+                <img src="images/photo-book.jpg" alt="">
+                <span class="p-me-like__text">
+                  <b>이런 책 어때요? 북클럽 로테이션</b>
+                  <span>11.09 (일) 16:00 · 마포구</span>
+                  <span class="p-me-like__urgent">여 1자리 남음</span>
+                </span>
+              </a>
+              <button type="button" class="p-me-like__heart" data-toggle aria-pressed="true" aria-label="관심 소개팅에서 빼기"><svg width="18" height="18" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
+            </li>
+            <li class="p-me-like">
+              <a class="p-me-like__link" href="event.html?id=calm">
+                <img src="images/photo-candle.jpg" alt="">
+                <span class="p-me-like__text">
+                  <b>시네마 로테이션</b>
+                  <span>11.15 (토) 15:00 · 마포구</span>
+                  <span>남 3자리 · 여 2자리</span>
+                </span>
+              </a>
+              <button type="button" class="p-me-like__heart" data-toggle aria-pressed="true" aria-label="관심 소개팅에서 빼기"><svg width="18" height="18" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="p-me-sec" aria-labelledby="me-view-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-view-title">열람 기록</h2>
+          </div>
+          <nav class="p-me-viewpair" aria-labelledby="me-view-title">
+            <a href="views.html"><span>내 정보를 열람한 사람</span><em class="p-me-menu__num"><span data-view-count="me">2</span><small>명</small></em><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="views.html?tab=mine"><span>내가 열람한 사람</span><em class="p-me-menu__num"><span data-view-count="mine">3</span><small>명</small></em><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+          </nav>
+        </section>
+
+        <section class="p-me-sec" aria-labelledby="me-set-title">
+          <div class="p-me-sec-head">
+            <h2 class="p-me-sec-title" id="me-set-title">설정</h2>
+          </div>
+          <nav class="p-me-card p-me-menu" aria-labelledby="me-set-title">
+            <a href="#"><span>알림 설정</span><em>푸시 · 카카오톡</em><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="#"><span>결제 · 환불 내역</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="#"><span>차단 목록</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="#"><span>신고 내역</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="#"><span>로그인 계정</span><em>카카오 연결됨</em><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="#"><span>약관 · 노쇼 정책</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+            <a href="#"><span>고객센터</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></a>
+          </nav>
+          <div class="p-me-account">
+            <a href="login.html">로그아웃</a>
+            <span aria-hidden="true"></span>
+            <a href="#">회원 탈퇴</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<nav data-tabbar data-current="me"></nav>
+
+<script src="js/common.js"></script>
+<script src="js/mypage.js"></script>
+</body>
+</html>

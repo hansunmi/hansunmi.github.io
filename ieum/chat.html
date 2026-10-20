@@ -21,24 +21,82 @@
 <div class="l-main">
 
 <!-- S15-Mobile · S15 매칭 대화방 · 모바일 -->
-  <div class="p-cb p-s15-m-root p-frame l-only-mobile">
+  <div class="p-cb p-s15-m-root p-frame l-only-mobile" data-when="id=m1" data-default>
     <header class="p-s15-m-1">
     <a href="after.html" aria-label="뒤로" class="p-s15-m-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
-    <img src="images/profile-m1.jpg" alt="" class="p-s15-m-3">
+    <span class="p-s15-m-avatar"><img src="images/profile-m1.jpg" alt="" class="p-s15-m-3"><span role="img" aria-label="접속 중" class="p-s15-m-online"></span></span>
     <span class="p-s15-m-4"><span class="p-s15-m-5">김도현</span><span class="p-s15-m-6">가을 피크닉 로테이션에서 만났어요</span></span>
-    <button type="button" aria-label="더 보기: 신고, 차단, 대화방 나가기" class="p-s15-m-7"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button>
+    <button type="button" aria-label="더 보기: 프로필, 알림, 신고, 차단, 대화방 나가기" aria-haspopup="menu" data-open="#ov-chat-sheet" class="p-s15-m-7"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button>
     </header>
+    <details class="p-s15-memo" open>
+    <summary class="p-s15-memo__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><b>내 메모</b><span class="p-s15-memo__private">나만 보여요</span><svg class="p-s15-memo__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+    <p class="p-s15-memo__body">고양이 키움, LP 수집</p>
+    </details>
     <main class="p-s15-m-8">
     <div class="p-s15-m-9"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-m-10"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg><span>처음 만날 땐 사람이 많은 곳에서 만나요. 연락처 교환은 충분히 대화한 뒤에 해도 늦지 않아요.</span></div>
-    <div class="p-s15-m-11">
-    <svg width="48" height="30" viewBox="0 0 340 212" aria-hidden="true"><circle cx="134" cy="106" r="60" fill="none" stroke="#2F3B63" stroke-width="22"></circle><path d="M156.9 71.6 A60 60 0 0 1 187.5 48.9" fill="none" stroke="#FBEDE6" stroke-width="40"></path><circle cx="206" cy="106" r="60" fill="none" stroke="#B5562F" stroke-width="22"></circle><path d="M183.1 140.4 A60 60 0 0 1 152.5 163.1" fill="none" stroke="#FBEDE6" stroke-width="40"></path><path d="M186.4 134.2 A60 60 0 0 1 149.5 164" fill="none" stroke="#2F3B63" stroke-width="22"></path></svg>
-    <span class="p-s15-m-12">서로 더 알아가고 싶어해요</span>
-    <span class="p-s15-m-13">10월 12일 · 매칭</span>
-    </div>
-    <div class="p-s15-m-14"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-m-10"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><span><b class="p-s15-m-15">나만 보여요</b> · 내 메모: 고양이 키움, LP 수집</span></div>
-    <div class="p-s15-m-16"><img src="images/profile-m1.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">안녕하세요 :)</span><span class="p-s15-m-19">21:42</span></div>
-    <div class="p-s15-m-20"><span class="p-s15-m-21">읽음<br>21:45</span><span class="p-s15-m-22">안녕하세요~ ㅎㅎ</span></div>
-    <div class="p-s15-m-16"><img src="images/profile-m1.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">당일에 긴장을 많이 해서,&nbsp;<br>대화를 많이 못 한 것 같아서 아쉬웠는데<br>다행이 연결됐네요.</span><span class="p-s15-m-19">13:02</span></div>
+    <span class="p-s15-m-11">서로 더 알아가고 싶어해요 · 10월 12일</span>
+    <div class="p-s15-m-16"><img src="images/profile-m1.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">안녕하세요! 피크닉 때 대화 즐거웠어요 :)</span><span class="p-s15-m-19">21:42</span></div>
+    <div class="p-s15-m-20"><span class="p-s15-m-21">읽음<br>21:45</span><span class="p-s15-m-22">저도요! 먼저 연락 주셔서 반가워요</span></div>
+    <div class="p-s15-m-16"><img src="images/profile-m1.jpg" alt="" class="p-s15-m-17"><img src="images/photo-window.jpg" alt="상대가 보낸 사진" class="p-s15-m-photo"><span class="p-s15-m-19">13:01</span></div>
+    <div class="p-s15-m-16"><img src="images/profile-m1.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">이번 주말에 전시 보러 가실래요?</span><span class="p-s15-m-19">13:02</span></div>
+    </main>
+    <form class="p-s15-m-23">
+    <button type="button" aria-label="사진 보내기" class="p-s15-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A4D57" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+    <input type="text" placeholder="메시지" aria-label="메시지" class="p-s15-m-25">
+    <button type="submit" aria-label="보내기" class="p-s15-m-26"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    </form>
+  </div>
+
+<!-- S15-Mobile · 박다훈 (?id=m2) -->
+  <div class="p-cb p-s15-m-root p-frame l-only-mobile" data-when="id=m2">
+    <header class="p-s15-m-1">
+    <a href="after.html" aria-label="뒤로" class="p-s15-m-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+    <span class="p-s15-m-avatar"><img src="images/profile-m2.jpg" alt="" class="p-s15-m-3"><span role="img" aria-label="접속 중" class="p-s15-m-online"></span></span>
+    <span class="p-s15-m-4"><span class="p-s15-m-5">박다훈</span><span class="p-s15-m-6">여름 루프탑 로테이션에서 만났어요</span></span>
+    <button type="button" aria-label="더 보기: 프로필, 알림, 신고, 차단, 대화방 나가기" aria-haspopup="menu" data-open="#ov-chat-sheet" class="p-s15-m-7"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button>
+    </header>
+    <details class="p-s15-memo" open>
+    <summary class="p-s15-memo__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><b>내 메모</b><span class="p-s15-memo__private">나만 보여요</span><svg class="p-s15-memo__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+    <p class="p-s15-memo__body">필름카메라 좋아함, 성수동 거주</p>
+    </details>
+    <main class="p-s15-m-8">
+    <div class="p-s15-m-9"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-m-10"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg><span>처음 만날 땐 사람이 많은 곳에서 만나요. 연락처 교환은 충분히 대화한 뒤에 해도 늦지 않아요.</span></div>
+    <span class="p-s15-m-11">서로 더 알아가고 싶어해요 · 8월 30일</span>
+    <div class="p-s15-m-16"><img src="images/profile-m2.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">안녕하세요, 루프탑에서 같은 테이블이었던 박다훈이에요 :)</span><span class="p-s15-m-19">20:14</span></div>
+    <div class="p-s15-m-20"><span class="p-s15-m-21">읽음<br>20:20</span><span class="p-s15-m-22">기억나요! 필름카메라 이야기 재밌었어요</span></div>
+    <div class="p-s15-m-16"><img src="images/profile-m2.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">그날 찍은 노을 사진, 현상 끝나면 보여드릴게요</span><span class="p-s15-m-19">20:25</span></div>
+    <span class="p-s15-m-11">9월 2일</span>
+    <div class="p-s15-m-16"><img src="images/profile-m2.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">사진 보내드릴게요!</span><span class="p-s15-m-19">18:40</span></div>
+    <div class="p-s15-m-16"><img src="images/profile-m2.jpg" alt="" class="p-s15-m-17"><img src="images/photo-city.jpg" alt="상대가 보낸 사진" class="p-s15-m-photo"><span class="p-s15-m-19">18:41</span></div>
+    </main>
+    <form class="p-s15-m-23">
+    <button type="button" aria-label="사진 보내기" class="p-s15-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A4D57" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+    <input type="text" placeholder="메시지" aria-label="메시지" class="p-s15-m-25">
+    <button type="submit" aria-label="보내기" class="p-s15-m-26"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    </form>
+  </div>
+
+<!-- S15-Mobile · 김동진 (?id=m3) -->
+  <div class="p-cb p-s15-m-root p-frame l-only-mobile" data-when="id=m3">
+    <header class="p-s15-m-1">
+    <a href="after.html" aria-label="뒤로" class="p-s15-m-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#24252B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+    <span class="p-s15-m-avatar"><img src="images/profile-m6.jpg" alt="" class="p-s15-m-3"></span>
+    <span class="p-s15-m-4"><span class="p-s15-m-5">김동진</span><span class="p-s15-m-6">보드게임 로테이션 파티에서 만났어요</span></span>
+    <button type="button" aria-label="더 보기: 프로필, 알림, 신고, 차단, 대화방 나가기" aria-haspopup="menu" data-open="#ov-chat-sheet" class="p-s15-m-7"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button>
+    </header>
+    <details class="p-s15-memo" open>
+    <summary class="p-s15-memo__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><b>내 메모</b><span class="p-s15-memo__private">나만 보여요</span><svg class="p-s15-memo__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+    <p class="p-s15-memo__body">보드게임 카페 추천해 줌, 강아지 키움</p>
+    </details>
+    <main class="p-s15-m-8">
+    <div class="p-s15-m-9"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-m-10"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg><span>처음 만날 땐 사람이 많은 곳에서 만나요. 연락처 교환은 충분히 대화한 뒤에 해도 늦지 않아요.</span></div>
+    <span class="p-s15-m-11">서로 더 알아가고 싶어해요 · 8월 16일</span>
+    <div class="p-s15-m-16"><img src="images/profile-m6.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">보드게임 파티에서 룰 설명해 드린 김동진이에요 ㅎㅎ</span><span class="p-s15-m-19">19:02</span></div>
+    <div class="p-s15-m-20"><span class="p-s15-m-21">읽음<br>19:10</span><span class="p-s15-m-22">덕분에 금방 배웠어요! 다음에 또 같이 해요</span></div>
+    <div class="p-s15-m-16"><img src="images/profile-m6.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">강남역 근처에 괜찮은 보드게임 카페 있어요</span><span class="p-s15-m-19">19:12</span></div>
+    <span class="p-s15-m-11">8월 20일</span>
+    <div class="p-s15-m-20"><span class="p-s15-m-21">읽음<br>21:03</span><span class="p-s15-m-22">주말에 시간 되시면 가 볼까요?</span></div>
+    <div class="p-s15-m-16"><img src="images/profile-m6.jpg" alt="" class="p-s15-m-17"><span class="p-s15-m-18">다음에 또 봬요 :)</span><span class="p-s15-m-19">21:30</span></div>
     </main>
     <form class="p-s15-m-23">
     <button type="button" aria-label="사진 보내기" class="p-s15-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A4D57" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
@@ -49,27 +107,94 @@
 
 <!-- S15-PC · S15 매칭 대화방 · PC -->
   <div class="p-cb p-s15-pc-root l-only-pc">
-    <div class="p-s15-pc-1"><div class="p-s15-pc-2"><span class="p-s15-pc-3">AFTER</span><h1 class="p-s15-pc-4">애프터</h1></div><div class="p-s15-pc-5"><aside aria-label="애프터 목록" class="p-s15-pc-6">
-    <a href="after-select.html?id=friwine" class="p-s15-pc-7">
-    <svg width="180" height="120" viewBox="0 0 340 212" aria-hidden="true" class="p-s15-pc-8"><circle cx="134" cy="106" r="60" fill="none" stroke="#FFFFFF" stroke-width="14"></circle><circle cx="206" cy="106" r="60" fill="none" stroke="#FFFFFF" stroke-width="14"></circle></svg>
-    <span class="p-s15-pc-9">진행 중인 선택 · 03:48:10 남음</span>
-    <span class="p-s15-pc-10">금요일 와인 로테이션 파티</span>
-    <span class="p-s15-pc-11">10.31 (금) · 2 / 3명 선택 · 결과 11.01 (토) 21:30</span>
-    <span class="p-s15-pc-12">선택 이어하기 ›</span>
+    <div class="p-s15-pc-1"><div class="p-after-top"><div class="p-s15-pc-2"><span class="p-s15-pc-3">AFTER</span><h1 class="p-s15-pc-4">애프터</h1></div>
+    <a href="after-select.html?id=friwine" class="p-s19-banner" aria-label="진행 중인 선택, 금요일 와인 로테이션 파티, 3시간 48분 남음, 3명 중 2명 선택, 선택 이어하기">
+    <img src="images/photo-wine.jpg" alt="" class="p-s19-banner__img">
+    <span aria-hidden="true" class="p-s19-banner__dim"></span>
+    <span class="p-s19-banner__zone p-s19-banner__zone--event">
+    <span class="p-s19-banner__label"><span aria-hidden="true" class="p-s19-banner__dot"></span>진행 중인 선택</span>
+    <span class="p-s19-banner__title">금요일 와인 로테이션 파티</span>
+    <span class="p-s19-banner__sub">10.31 (금) · 20명 참석</span>
+    </span>
+    <span class="p-s19-banner__zone">
+    <span class="p-s19-banner__label">남은 시간</span>
+    <span class="p-s19-banner__time">03:48:10</span>
+    <span class="p-s19-banner__sub">결과 발표 11.01 (토) 21:30</span>
+    </span>
+    <span class="p-s19-banner__zone">
+    <span class="p-s19-banner__label">내 선택<span><b>2</b> / 3명</span></span>
+    <span aria-hidden="true" class="p-s19-banner__faces"><img src="images/profile-m3.jpg" alt=""><img src="images/profile-m4.jpg" alt=""><span>+</span></span>
+    </span>
+    <span class="p-s19-banner__go"><span class="p-s19-banner__go-text">선택 이어하기</span><span aria-hidden="true" class="p-s19-banner__go-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
+    <span aria-hidden="true" class="p-s19-banner__progress"><span></span></span>
     </a>
-    <div class="p-s15-pc-13"><h2 class="p-s15-pc-14">매칭 대화 <span class="p-s15-pc-15">2</span></h2><span class="p-s15-pc-16">최근 대화 순</span></div>
-    <a href="chat.html?id=m1" class="p-s15-pc-17"><span class="p-s15-pc-18"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-19"><span class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김도현 <span class="p-s15-pc-23">가을 피크닉 로테이션</span></span><span class="p-s15-pc-24">다음 주 토요일 괜찮으세요?</span></span><span class="p-s15-pc-25"><span class="p-s15-pc-26">13:02</span><span class="p-s15-pc-27">2</span></span></a>
-    <a href="chat.html?id=m1" class="p-s15-pc-28"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-29"><span class="p-s15-pc-21"><span class="p-s15-pc-22">김도현 <span class="p-s15-pc-23">여름 루프탑 로테이션</span></span><span class="p-s15-pc-16">사진 보내드릴게요!</span></span><span class="p-s15-pc-26">09.02</span></a>
-    </aside><section aria-label="대화" class="p-s15-pc-30">
-    <header class="p-s15-pc-31"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-32"><span class="p-s15-pc-33"><span class="p-s15-pc-34">김도현</span><span class="p-s15-pc-16">가을 피크닉 로테이션에서 만났어요 · 10월 12일 매칭</span></span><button type="button" class="p-s15-pc-35">프로필 보기</button><button type="button" aria-label="더 보기: 신고, 차단, 대화방 나가기" class="p-s15-pc-36"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button></header>
+    </div><div class="p-s15-pc-5"><aside aria-label="애프터 목록" class="p-s15-pc-6">
+    <div class="p-s15-pc-13"><h2 class="p-s15-pc-14">매칭 대화 <span class="p-s15-pc-15">3</span></h2><span class="p-s15-pc-16">최근 대화 순</span></div>
+    <div class="p-s15-list" data-when="id=m1" data-default>
+    <a href="chat.html?id=m1" class="p-s15-pc-17" aria-current="page"><span class="p-s15-pc-18"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-19"><span role="img" aria-label="접속 중" class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김도현 <span class="p-s15-pc-23">가을 피크닉 로테이션</span></span><span class="p-s15-pc-16">다음 주 토요일 괜찮으세요?</span></span><span class="p-s15-pc-26">13:02</span></a>
+    <a href="chat.html?id=m2" class="p-s15-pc-28"><span class="p-s15-pc-18"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-19"><span role="img" aria-label="접속 중" class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">박다훈 <span class="p-s15-pc-23">여름 루프탑 로테이션</span></span><span class="p-s15-pc-16">사진 보내드릴게요!</span></span><span class="p-s15-pc-26">09.02</span></a>
+    <a href="chat.html?id=m3" class="p-s15-pc-28"><span class="p-s15-pc-18"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-19"></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김동진 <span class="p-s15-pc-23">보드게임 로테이션 파티</span></span><span class="p-s15-pc-16">다음에 또 봬요 :)</span></span><span class="p-s15-pc-26">08.20</span></a>
+    </div>
+    <div class="p-s15-list" data-when="id=m2">
+    <a href="chat.html?id=m1" class="p-s15-pc-28"><span class="p-s15-pc-18"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-19"><span role="img" aria-label="접속 중" class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김도현 <span class="p-s15-pc-23">가을 피크닉 로테이션</span></span><span class="p-s15-pc-24">다음 주 토요일 괜찮으세요?</span></span><span class="p-s15-pc-25"><span class="p-s15-pc-26">13:02</span><span class="p-s15-pc-27">2</span></span></a>
+    <a href="chat.html?id=m2" class="p-s15-pc-17" aria-current="page"><span class="p-s15-pc-18"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-19"><span role="img" aria-label="접속 중" class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">박다훈 <span class="p-s15-pc-23">여름 루프탑 로테이션</span></span><span class="p-s15-pc-16">사진 보내드릴게요!</span></span><span class="p-s15-pc-26">09.02</span></a>
+    <a href="chat.html?id=m3" class="p-s15-pc-28"><span class="p-s15-pc-18"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-19"></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김동진 <span class="p-s15-pc-23">보드게임 로테이션 파티</span></span><span class="p-s15-pc-16">다음에 또 봬요 :)</span></span><span class="p-s15-pc-26">08.20</span></a>
+    </div>
+    <div class="p-s15-list" data-when="id=m3">
+    <a href="chat.html?id=m1" class="p-s15-pc-28"><span class="p-s15-pc-18"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-19"><span role="img" aria-label="접속 중" class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김도현 <span class="p-s15-pc-23">가을 피크닉 로테이션</span></span><span class="p-s15-pc-24">다음 주 토요일 괜찮으세요?</span></span><span class="p-s15-pc-25"><span class="p-s15-pc-26">13:02</span><span class="p-s15-pc-27">2</span></span></a>
+    <a href="chat.html?id=m2" class="p-s15-pc-28"><span class="p-s15-pc-18"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-19"><span role="img" aria-label="접속 중" class="p-s15-pc-20"></span></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">박다훈 <span class="p-s15-pc-23">여름 루프탑 로테이션</span></span><span class="p-s15-pc-16">사진 보내드릴게요!</span></span><span class="p-s15-pc-26">09.02</span></a>
+    <a href="chat.html?id=m3" class="p-s15-pc-17" aria-current="page"><span class="p-s15-pc-18"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-19"></span><span class="p-s15-pc-21"><span class="p-s15-pc-22">김동진 <span class="p-s15-pc-23">보드게임 로테이션 파티</span></span><span class="p-s15-pc-16">다음에 또 봬요 :)</span></span><span class="p-s15-pc-26">08.20</span></a>
+    </div>
+    </aside><section aria-label="대화" class="p-s15-pc-30" data-when="id=m1" data-default>
+    <header class="p-s15-pc-31"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-32"><span class="p-s15-pc-33"><span class="p-s15-pc-34">김도현</span><span class="p-s15-pc-16">가을 피크닉 로테이션에서 만났어요 · 10월 12일 매칭</span></span><a href="profile.html?id=m1" class="p-s15-pc-35">프로필 보기</a><button type="button" aria-label="더 보기: 알림, 신고, 차단, 대화방 나가기" aria-haspopup="menu" aria-expanded="false" data-menu class="p-s15-pc-36"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button></header>
+
+    <details class="p-s15-memo" open>
+    <summary class="p-s15-memo__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><b>내 메모</b><span class="p-s15-memo__private">나만 보여요</span><svg class="p-s15-memo__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+    <p class="p-s15-memo__body">고양이 키움, LP 수집</p>
+    </details>
     <div class="p-s15-pc-37">
     <div class="p-s15-pc-38"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-pc-39"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>처음 만날 땐 사람이 많은 곳에서 만나요. 연락처 교환은 충분히 대화한 뒤에 해도 늦지 않아요.</div>
     <span class="p-s15-pc-40">서로 더 알아가고 싶어해요 · 10월 12일</span>
-    <span class="p-s15-pc-41"><b class="p-s15-pc-42">나만 보여요</b> · 내 메모: 고양이 키움, LP 수집</span>
     <div class="p-s15-pc-43"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">안녕하세요! 피크닉 때 대화 즐거웠어요 :)</span><span class="p-s15-pc-46">21:42</span></div>
     <div class="p-s15-pc-47"><span class="p-s15-pc-48">읽음<br>21:45</span><span class="p-s15-pc-49">저도요! 먼저 연락 주셔서 반가워요</span></div>
     <div class="p-s15-pc-43"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-44"><img src="images/photo-window.jpg" alt="상대가 보낸 사진" class="p-s15-pc-50"><span class="p-s15-pc-46">13:01</span></div>
     <div class="p-s15-pc-43"><img src="images/profile-m1.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">이번 주말에 전시 보러 가실래요?</span><span class="p-s15-pc-46">13:02</span></div>
+    </div>
+    <form class="p-s15-pc-51"><button type="button" aria-label="사진 보내기" class="p-s15-pc-52">+</button><input type="text" placeholder="메시지를 입력하세요" aria-label="메시지" class="p-s15-pc-53"><button type="submit" class="p-s15-pc-54">보내기</button></form>
+    </section><section aria-label="대화" class="p-s15-pc-30" data-when="id=m2">
+    <header class="p-s15-pc-31"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-32"><span class="p-s15-pc-33"><span class="p-s15-pc-34">박다훈</span><span class="p-s15-pc-16">여름 루프탑 로테이션에서 만났어요 · 8월 30일 매칭</span></span><a href="profile.html?id=m2" class="p-s15-pc-35">프로필 보기</a><button type="button" aria-label="더 보기: 알림, 신고, 차단, 대화방 나가기" aria-haspopup="menu" aria-expanded="false" data-menu class="p-s15-pc-36"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button></header>
+
+    <details class="p-s15-memo" open>
+    <summary class="p-s15-memo__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><b>내 메모</b><span class="p-s15-memo__private">나만 보여요</span><svg class="p-s15-memo__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+    <p class="p-s15-memo__body">필름카메라 좋아함, 성수동 거주</p>
+    </details>
+    <div class="p-s15-pc-37">
+    <div class="p-s15-pc-38"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-pc-39"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>처음 만날 땐 사람이 많은 곳에서 만나요. 연락처 교환은 충분히 대화한 뒤에 해도 늦지 않아요.</div>
+    <span class="p-s15-pc-40">서로 더 알아가고 싶어해요 · 8월 30일</span>
+    <div class="p-s15-pc-43"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">안녕하세요, 루프탑에서 같은 테이블이었던 박다훈이에요 :)</span><span class="p-s15-pc-46">20:14</span></div>
+    <div class="p-s15-pc-47"><span class="p-s15-pc-48">읽음<br>20:20</span><span class="p-s15-pc-49">기억나요! 필름카메라 이야기 재밌었어요</span></div>
+    <div class="p-s15-pc-43"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">그날 찍은 노을 사진, 현상 끝나면 보여드릴게요</span><span class="p-s15-pc-46">20:25</span></div>
+    <span class="p-s15-pc-40">9월 2일</span>
+    <div class="p-s15-pc-43"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">사진 보내드릴게요!</span><span class="p-s15-pc-46">18:40</span></div>
+    <div class="p-s15-pc-43"><img src="images/profile-m2.jpg" alt="" class="p-s15-pc-44"><img src="images/photo-city.jpg" alt="상대가 보낸 사진" class="p-s15-pc-50"><span class="p-s15-pc-46">18:41</span></div>
+    </div>
+    <form class="p-s15-pc-51"><button type="button" aria-label="사진 보내기" class="p-s15-pc-52">+</button><input type="text" placeholder="메시지를 입력하세요" aria-label="메시지" class="p-s15-pc-53"><button type="submit" class="p-s15-pc-54">보내기</button></form>
+    </section><section aria-label="대화" class="p-s15-pc-30" data-when="id=m3">
+    <header class="p-s15-pc-31"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-32"><span class="p-s15-pc-33"><span class="p-s15-pc-34">김동진</span><span class="p-s15-pc-16">보드게임 로테이션 파티에서 만났어요 · 8월 16일 매칭</span></span><a href="profile.html?id=m3" class="p-s15-pc-35">프로필 보기</a><button type="button" aria-label="더 보기: 알림, 신고, 차단, 대화방 나가기" aria-haspopup="menu" aria-expanded="false" data-menu class="p-s15-pc-36"><svg width="20" height="20" viewBox="0 0 24 24" fill="#24252B" aria-hidden="true"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg></button></header>
+
+    <details class="p-s15-memo" open>
+    <summary class="p-s15-memo__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19l1-4L16 5l3 3L9 18z"></path></svg><b>내 메모</b><span class="p-s15-memo__private">나만 보여요</span><svg class="p-s15-memo__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6F7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+    <p class="p-s15-memo__body">보드게임 카페 추천해 줌, 강아지 키움</p>
+    </details>
+    <div class="p-s15-pc-37">
+    <div class="p-s15-pc-38"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F3B63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="p-s15-pc-39"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>처음 만날 땐 사람이 많은 곳에서 만나요. 연락처 교환은 충분히 대화한 뒤에 해도 늦지 않아요.</div>
+    <span class="p-s15-pc-40">서로 더 알아가고 싶어해요 · 8월 16일</span>
+    <div class="p-s15-pc-43"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">보드게임 파티에서 룰 설명해 드린 김동진이에요 ㅎㅎ</span><span class="p-s15-pc-46">19:02</span></div>
+    <div class="p-s15-pc-47"><span class="p-s15-pc-48">읽음<br>19:10</span><span class="p-s15-pc-49">덕분에 금방 배웠어요! 다음에 또 같이 해요</span></div>
+    <div class="p-s15-pc-43"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">강남역 근처에 괜찮은 보드게임 카페 있어요</span><span class="p-s15-pc-46">19:12</span></div>
+    <span class="p-s15-pc-40">8월 20일</span>
+    <div class="p-s15-pc-47"><span class="p-s15-pc-48">읽음<br>21:03</span><span class="p-s15-pc-49">주말에 시간 되시면 가 볼까요?</span></div>
+    <div class="p-s15-pc-43"><img src="images/profile-m6.jpg" alt="" class="p-s15-pc-44"><span class="p-s15-pc-45">다음에 또 봬요 :)</span><span class="p-s15-pc-46">21:30</span></div>
     </div>
     <form class="p-s15-pc-51"><button type="button" aria-label="사진 보내기" class="p-s15-pc-52">+</button><input type="text" placeholder="메시지를 입력하세요" aria-label="메시지" class="p-s15-pc-53"><button type="submit" class="p-s15-pc-54">보내기</button></form>
     </section></div></div>
@@ -78,5 +203,6 @@
 </div>
 
 <script src="js/common.js"></script>
+<script src="js/match-actions.js"></script>
 </body>
 </html>

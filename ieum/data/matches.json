@@ -1,0 +1,50 @@
+{
+  "m1": {
+    "name": "김도현",
+    "age": "32세",
+    "gender": "남성",
+    "photo": "images/profile-m1-tall.jpg",
+    "thumb": "images/profile-m1.jpg",
+    "online": true,
+    "oneliner": "주말엔 한강에서 자전거 타요",
+    "event": "가을 피크닉 로테이션",
+    "matched": "10월 12일",
+    "memo": "고양이 키움, LP 수집",
+    "area": "서울 마포구",
+    "job": "IT · 개발",
+    "jobVerified": true,
+    "hobbies": ["자전거", "LP 수집", "전시 보기"]
+  },
+  "m2": {
+    "name": "박다훈",
+    "age": "31세",
+    "gender": "남성",
+    "photo": "images/profile-m2-tall.jpg",
+    "thumb": "images/profile-m2.jpg",
+    "online": true,
+    "oneliner": "필름카메라 들고 동네 산책해요",
+    "event": "여름 루프탑 로테이션",
+    "matched": "8월 30일",
+    "memo": "필름카메라 좋아함, 성수동 거주",
+    "area": "서울 성동구",
+    "job": "디자인 · 브랜딩",
+    "jobVerified": true,
+    "hobbies": ["필름 사진", "러닝", "커피"]
+  },
+  "m3": {
+    "name": "김동진",
+    "age": "33세",
+    "gender": "남성",
+    "photo": "images/profile-m6.jpg",
+    "thumb": "images/profile-m6.jpg",
+    "online": false,
+    "oneliner": "보드게임 룰 설명은 제가 할게요",
+    "event": "보드게임 로테이션 파티",
+    "matched": "8월 16일",
+    "memo": "보드게임 카페 추천해 줌, 강아지 키움",
+    "area": "서울 강남구",
+    "job": "금융 · 회계",
+    "jobVerified": true,
+    "hobbies": ["보드게임", "등산", "요리"]
+  }
+}

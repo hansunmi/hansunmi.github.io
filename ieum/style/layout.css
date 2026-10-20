@@ -40,7 +40,7 @@
 .l-header__brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 3px; /* 로고 svg 좌우 여백(약 7px)이 있어 눈으로 보는 간격은 10px 정도 */
 }
 
 .l-header__nav {
@@ -72,6 +72,19 @@
   gap: 8px;
 }
 
+/* 프로필 사진 = 마이 페이지 입구. 마이 페이지에서는 인디고 링 */
+.l-header__profile {
+  display: flex;
+  margin-left: 4px;
+  padding: 2px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: box-shadow 0.15s;
+}
+
+.l-header__profile:hover { box-shadow: inset 0 0 0 2px var(--color-line-strong); }
+.l-header__profile[aria-current="page"] { box-shadow: inset 0 0 0 2px var(--color-primary); }
+
 /* ---------- 모바일 상단 바 (S05-1-Mobile) ---------- */
 .l-topbar {
   display: flex;
@@ -100,7 +113,7 @@
 .l-mhead__brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
 }
 
 /* ---------- 모바일 하단 탭 (S01-Mobile) ---------- */

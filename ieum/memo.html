@@ -18,11 +18,24 @@
 <body class="p-page">
 
 <header data-pc-header data-current="my" data-after-count="2" class="l-header--line"></header>
-<!-- 이 화면은 PC 시안이 없어 PC 헤더 아래에 모바일 레이아웃을 가운데 정렬로 보여준다 (6.1 · 임시안) -->
+<!-- 소개팅 진행 중에 쓰는 화면이라 PC에서는 모바일 이용 안내만 보여준다 -->
 <div class="l-main">
 
+<!-- S17 · PC: 모바일 이용 안내 -->
+  <section class="p-mobile-only l-only-pc" aria-labelledby="memo-pc-t">
+    <span class="p-mobile-only__icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg></span>
+    <span class="p-mobile-only__eyebrow">ROTATION MEMO</span>
+    <h1 id="memo-pc-t" class="p-mobile-only__title">로테이션 메모는<br>모바일에서 남겨주세요</h1>
+    <p class="p-mobile-only__desc">메모는 소개팅이 진행되는 동안 대화가 끝날 때마다 바로 적는 기능이에요.<br>휴대폰의 이음에서 열면 지금 대화 순서에 맞춰 이어서 쓸 수 있어요.</p>
+    <ul class="p-mobile-only__list">
+    <li>메모는 나만 볼 수 있어요</li>
+    <li>남긴 메모는 애프터 선택 화면에 함께 보여요</li>
+    </ul>
+    <a href="today.html?id=citypop" class="p-mobile-only__back">오늘의 소개팅으로 돌아가기</a>
+  </section>
+
 <!-- S17-Mobile · S17 로테이션 메모 · 모바일 -->
-  <div class="p-cb p-s17-m-root p-frame l-narrow">
+  <div class="p-cb p-s17-m-root p-frame l-only-mobile">
     <section class="p-s17-m-1">
     <svg width="260" height="170" viewBox="0 0 340 212" aria-hidden="true" class="p-s17-m-2"><circle cx="134" cy="106" r="60" fill="none" stroke="#FFFFFF" stroke-width="14"></circle><circle cx="206" cy="106" r="60" fill="none" stroke="#FFFFFF" stroke-width="14"></circle></svg>
     <div class="p-s17-m-3">
@@ -32,114 +45,25 @@
     </div>
     <div class="p-s17-m-7">
     <div class="p-s17-m-8">
-    <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="12번 중 4번째 대화"><circle cx="42" cy="42" r="36" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="7"></circle><circle cx="42" cy="42" r="36" fill="none" stroke="#F0B79C" stroke-width="7" stroke-linecap="round" stroke-dasharray="75 226" transform="rotate(-90 42 42)"></circle></svg>
-    <span class="p-s17-m-9">4<span class="p-s17-m-10">/12</span></span>
+    <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="12번 중 4번째 대화" data-memo-ring><circle cx="42" cy="42" r="36" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="7"></circle><circle cx="42" cy="42" r="36" fill="none" stroke="#F0B79C" stroke-width="7" stroke-linecap="round" stroke-dasharray="75 226" data-memo-arc transform="rotate(-90 42 42)"></circle></svg>
+    <span class="p-s17-m-9"><span data-memo-round>4</span><span class="p-s17-m-10">/12</span></span>
     </div>
     <div class="p-s17-m-11">
-    <span class="p-s17-m-12">지금 4번째 대화 중</span>
+    <span class="p-s17-m-12" data-memo-now>지금 4번째 대화 중</span>
+    <span class="p-mm-timer" data-memo-timer>다음 대화까지 <b>2:40</b></span>
     <span class="p-s17-m-13">메모는 나만 볼 수 있어요.<br>애프터 선택 화면에 함께 보여요.</span>
     </div>
     </div>
     </section>
 
-    <main class="p-s17-m-14">
-
-    <article class="p-s17-m-15">
-    <div class="p-s17-m-16">
-    <span class="p-s17-m-17">
-    <img src="images/profile-m1.jpg" alt="" class="p-s17-m-18">
-
-    <span class="p-s17-m-19">12</span>
-    </span>
-    <div class="p-s17-m-20">
-    <span class="p-s17-m-5">김○○</span>
-    <span class="p-s17-m-21">1번째 대화</span>
-    </div>
-    <button type="button" aria-label="다시 보고 싶어요 취소" aria-pressed="true" class="p-s17-m-22"><svg width="20" height="20" viewBox="0 0 24 24" fill="#B5562F" stroke="#B5562F" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
-    </div>
-
-    <span class="p-s17-m-23">고양이 키움, LP 수집. 다음엔 레코드 가게 얘기!</span>
-
-
-    </article>
-
-    <article class="p-s17-m-15">
-    <div class="p-s17-m-16">
-    <span class="p-s17-m-17">
-    <img src="images/profile-m2.jpg" alt="" class="p-s17-m-18">
-
-    <span class="p-s17-m-19">3</span>
-    </span>
-    <div class="p-s17-m-20">
-    <span class="p-s17-m-5">이○○</span>
-    <span class="p-s17-m-21">2번째 대화</span>
-    </div>
-    <button type="button" aria-label="다시 보고 싶어요" aria-pressed="false" class="p-s17-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E6270" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
-    </div>
-
-    <span class="p-s17-m-23">같은 동네, 말이 잘 통함</span>
-
-
-    </article>
-
-    <article class="p-s17-m-15">
-    <div class="p-s17-m-16">
-    <span class="p-s17-m-17">
-    <img src="images/profile-m6.jpg" alt="" class="p-s17-m-18">
-
-    <span class="p-s17-m-19">9</span>
-    </span>
-    <div class="p-s17-m-20">
-    <span class="p-s17-m-5">박○○</span>
-    <span class="p-s17-m-21">3번째 대화</span>
-    </div>
-    <button type="button" aria-label="다시 보고 싶어요" aria-pressed="false" class="p-s17-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E6270" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
-    </div>
-
-
-    </article>
-
-    <article class="p-s17-m-25">
-    <div class="p-s17-m-16">
-    <span class="p-s17-m-17">
-    <img src="images/profile-m7.jpg" alt="" class="p-s17-m-26">
-
-    <span class="p-s17-m-19">5</span>
-    </span>
-    <div class="p-s17-m-20">
-    <span class="p-s17-m-5">최○○</span>
-    <span class="p-s17-m-27">4번째 대화 · 지금</span>
-    </div>
-    <button type="button" aria-label="다시 보고 싶어요" aria-pressed="false" class="p-s17-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E6270" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
-    </div>
-
-
-    <label class="p-s17-m-28"><span class="p-s17-m-29">지금 대화 중인 사람 메모</span><textarea rows="2" placeholder="기억하고 싶은 이야기를 짧게 적어두세요" class="p-s17-m-30"></textarea></label>
-
-    </article>
-
-    <article class="p-s17-m-31">
-    <div class="p-s17-m-16">
-    <span class="p-s17-m-17">
-
-    <span class="p-s17-m-32"></span>
-    <span class="p-s17-m-19">-</span>
-    </span>
-    <div class="p-s17-m-20">
-    <span class="p-s17-m-5">다음 상대</span>
-    <span class="p-s17-m-21">5번째 대화</span>
-    </div>
-    <button type="button" aria-label="다시 보고 싶어요" aria-pressed="false" class="p-s17-m-24"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E6270" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path></svg></button>
-    </div>
-
-
-    </article>
-
-    </main>
+    <!-- 대화 카드는 js/memo.js — 진행자가 다음 라운드를 시작하면(시연: 아래 버튼 · 타이머 0) 다음 상대가 공개되며 넘어간다 -->
+    <main class="p-s17-m-14" data-memo-list aria-live="polite"></main>
+    <div class="p-mm-demo"><button type="button" data-memo-advance>시연 · 진행자가 다음 라운드 시작</button></div>
   </div>
 
 </div>
 
 <script src="js/common.js"></script>
+<script src="js/memo.js"></script>
 </body>
 </html>

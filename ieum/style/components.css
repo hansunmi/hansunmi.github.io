@@ -449,3 +449,9 @@
     transform: translate(-50%, -50%);
   }
 }
+
+/* 칠해진 버튼은 전역 a:hover(테라코타 글자)를 받지 않는다 — 살짝 밝아지는 것으로 호버 표시 */
+.c-btn--primary,
+.c-btn--accent { transition: filter 0.15s ease; }
+.c-btn--primary:hover,
+.c-btn--accent:hover { color: #FFFFFF; filter: brightness(1.12); }
