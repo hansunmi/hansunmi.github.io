@@ -36,6 +36,7 @@
 .ieum .meta{margin-top:36px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;padding-top:24px;border-top:1px solid var(--line)}
 .ieum .meta dt{font-size:12px;color:var(--faint);letter-spacing:.06em}
 .ieum .meta dd{margin:2px 0 0;font-size:15px;font-weight:500}
+.ieum .meta>div:last-child:nth-child(odd){grid-column:1/-1} /* 항목이 홀수면 마지막 줄은 한 칸 전체 */
 .ieum .ph{color:var(--terra-ink);background:var(--terra-tint);border-radius:6px;padding:0 6px;font-weight:500}
 .ieum .phones{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:14px}
 .ieum .phone{flex:0 1 220px;min-width:0;border-radius:30px;padding:7px;background:var(--frame);box-shadow:var(--shadow),0 0 0 1px var(--line)}
@@ -160,6 +161,9 @@
 .ieum .browser .bar i{width:8px;height:8px;border-radius:50%;background:var(--line)}
 .ieum .browser img{display:block;width:100%;aspect-ratio:1440/900;object-fit:cover;object-position:top}
 @media (max-width:900px){.ieum .gal-m{grid-template-columns:repeat(2,minmax(0,1fr))}.ieum .gal-p{grid-template-columns:1fr}}
+.ieum .gal-sub{margin:72px 0 24px;padding-top:40px;border-top:1px solid var(--line)}
+.ieum .gal-sub h3{font-size:20px}
+.ieum .gal-sub p{margin:6px 0 0;font-size:15px;color:var(--muted)}
 
 /* retro */
 .ieum .retro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
@@ -182,6 +186,7 @@
 .ieum .sw-terra{background:#B5562F}
 .ieum .sw-indigo-tint{background:#EEF1F6}
 .ieum .sw-terra-tint{background:#FBEDE6}
+.ieum .sw-green{background:#2B8A52}
 .ieum .sw-text{background:#24252B}
 .ieum .sw-surface{background:#F4F5F7}
 .ieum .cta-row{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
