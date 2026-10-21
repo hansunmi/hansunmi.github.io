@@ -44,8 +44,14 @@ export function CaseStudyPage() {
 
   return (
     <div className="cs-body" style={css`display:flex;flex-direction:column`}>
-      {/* HERO */}
-      <header style={css`background-color:#24211c;background-image:linear-gradient(#2e2a24 2px,transparent 2px),linear-gradient(90deg,#2e2a24 2px,transparent 2px);background-size:40px 40px;color:#f4f1ea;padding:72px 24px 0`}>
+      {/* NAV (사이트 공통) */}
+      <nav className="site-nav">
+        <a href="../index.html" className="nav-logo">Hansunmi</a>
+        <a href="../index.html#personal" className="back-btn">← Personal</a>
+      </nav>
+
+      {/* HERO — 고정 상단 바 높이만큼 위 여백을 더한다 */}
+      <header style={css`background-color:#24211c;background-image:linear-gradient(#2e2a24 2px,transparent 2px),linear-gradient(90deg,#2e2a24 2px,transparent 2px);background-size:40px 40px;color:#f4f1ea;padding:140px 24px 0`}>
         <div style={css`max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:28px`}>
           <div style={css`display:flex;align-items:center;gap:10px`}>
             <div style={css`width:18px;height:18px;background:oklch(0.72 0.13 75);box-shadow:inset -4px -4px 0 oklch(0.55 0.13 75)`} />

@@ -22,6 +22,14 @@ body{margin:0;background:#f4f1ea;font-family:Pretendard,system-ui,sans-serif;col
 .cs-body a{color:#24211c;text-decoration:underline;text-underline-offset:3px}
 .cs-body a:hover{color:oklch(0.5 0.12 250)}
 
+/* 사이트 공통 상단 바 — 포트폴리오 다른 상세 페이지(css/app.css .sub-nav)와 동일 */
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:24px 56px;background:rgba(17,17,17,0.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.07);font-family:Pretendard,system-ui,sans-serif}
+.cs-body .site-nav a{text-decoration:none}
+.cs-body .site-nav .nav-logo{font-size:15px;font-weight:600;letter-spacing:0.12em;color:#fff}
+.cs-body .site-nav .back-btn{font-size:13px;letter-spacing:0.1em;color:#5B8DD9;transition:opacity 0.2s}
+.cs-body .site-nav .back-btn:hover{opacity:0.65}
+@media (max-width:960px){.site-nav{padding:20px 28px}}
+
 /* 데모 화면은 1440×900 고정 레이아웃이므로 폭이 좁으면 가로 스크롤을 허용한다 */
 .demo-page{min-width:1440px}
 

@@ -22976,5 +22976,5 @@
 /* 채팅 입력칸 — input의 기본 최소 폭(약 20자)이 실기기 글꼴에서 화면보다 넓어져
    입력줄이 넘치고 페이지 전체가 축소되던 문제. 줄어들 수 있게 최소 폭을 없앤다 */
 .p-s15-m-25,
-.p-s15-pc-45 { min-width: 0; width: 0; }
+.p-s15-pc-53 { min-width: 0; width: 0; }
 .p-s15-m-root { width: 100%; max-width: 100vw; overflow-x: hidden; }

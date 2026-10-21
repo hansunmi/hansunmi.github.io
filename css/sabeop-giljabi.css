@@ -55,7 +55,7 @@
   background: var(--color-bg);
   color: var(--color-text);
   font-family: "Pretendard", system-ui, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.55;
   font-weight: 400;
   word-break: keep-all;
@@ -107,7 +107,7 @@
   display: inline-flex; align-items: center; gap: 8px;
   padding: 14px 22px;
   background: var(--color-accent-700); color: #fff;
-  font-size: 16px; font-weight: 700; letter-spacing: -0.01em;
+  font-size: 14px; font-weight: 700; letter-spacing: -0.01em;
   border: 1px solid var(--color-accent-700);
   transition: background 0.2s ease;
 }

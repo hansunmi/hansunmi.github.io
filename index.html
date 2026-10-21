@@ -124,16 +124,27 @@
     </div>
   </section>
 
-  <!-- ③ PERSONAL PROJECTS -->
+  <!-- ③ PERSONAL PROJECTS — Works와 구분되는 흰 시트 -->
   <section id="personal">
-    <div class="personal-head">
-      <div class="personal-title">Personal Projects</div>
-      <div class="personal-meta">SIDE PROJECT · 04 PROJECTS · ALL IN PROGRESS</div>
-    </div>
+    <div class="personal-sheet">
+      <div class="personal-head">
+        <div class="personal-head-left">
+          <div class="personal-eyebrow">SIDE PROJECTS</div>
+          <div class="personal-title">Personal Projects</div>
+        </div>
+        <div class="personal-head-right">
+          <p class="personal-lead">회사 밖에서 직접 기획하고 만들어 보는 프로젝트들</p>
+          <div class="personal-meta">04 PROJECTS · ALL IN PROGRESS</div>
+        </div>
+      </div>
 
+      <div class="personal-grid">
     <a href="works/haru.html" class="personal-card">
-      <div class="personal-visual haru" aria-hidden="true">
-        <img src="img/haru/home.png" alt="" loading="lazy">
+      <div class="personal-stage haru" aria-hidden="true">
+        <div class="mock-browser">
+          <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">하루의 기록</span></div>
+          <div class="mock-screen"><img src="img/haru/home.png" alt="" loading="lazy"></div>
+        </div>
         <div class="pv-tag">LIVE · NEXT.JS</div>
       </div>
 
@@ -161,16 +172,12 @@
     </a>
 
     <a href="pixel-office/" class="personal-card">
-      <div class="personal-visual" aria-hidden="true">
-        <div class="pv-grid"></div>
-        <div class="pv-desk pv-desk-1"></div>
-        <div class="pv-desk pv-desk-2"></div>
-        <div class="pv-desk pv-desk-3"></div>
-        <div class="pv-agent pv-agent-1"></div>
-        <div class="pv-agent pv-agent-2"></div>
-        <div class="pv-agent pv-agent-3"></div>
-        <div class="pv-agent pv-agent-4"></div>
-        <div class="pv-tag">1440 × 900</div>
+      <div class="personal-stage office" aria-hidden="true">
+        <div class="mock-browser">
+          <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">AI Office</span></div>
+          <div class="mock-screen"><img src="img/ai_office/preview.png" alt="" loading="lazy"></div>
+        </div>
+        <div class="pv-tag">WEB · REACT</div>
       </div>
 
       <div class="personal-body">
@@ -197,8 +204,10 @@
     </a>
 
     <a href="projects/sabeop-giljabi/" class="personal-card">
-      <div class="personal-visual sabeop" aria-hidden="true">
-        <img src="img/sabeop/home.png" alt="" loading="lazy">
+      <div class="personal-stage sabeop" aria-hidden="true">
+        <div class="mock-phone">
+          <div class="mock-screen"><img src="img/sabeop/home.png" alt="" loading="lazy"></div>
+        </div>
         <div class="pv-tag">MOBILE · EXPO</div>
       </div>
 
@@ -226,8 +235,11 @@
     </a>
 
     <a href="projects/ieum/" class="personal-card">
-      <div class="personal-visual ieum" aria-hidden="true">
-        <img src="img/ieum/home.jpg" alt="" loading="lazy">
+      <div class="personal-stage ieum" aria-hidden="true">
+        <div class="mock-browser">
+          <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">이음</span></div>
+          <div class="mock-screen"><img src="img/ieum/D-S01-PC.jpg" alt="" loading="lazy"></div>
+        </div>
         <div class="pv-tag">WEB · RESPONSIVE</div>
       </div>
 
@@ -256,8 +268,11 @@
 
     <!-- 집결 — 임시 비공개
     <a href="site/index.html" class="personal-card">
-      <div class="personal-visual jg" aria-hidden="true">
-        <img src="site/assets/web-map.jpg" alt="" loading="lazy">
+      <div class="personal-stage jg" aria-hidden="true">
+        <div class="mock-browser">
+          <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">집결</span></div>
+          <div class="mock-screen"><img src="site/assets/web-map.jpg" alt="" loading="lazy"></div>
+        </div>
         <div class="pv-tag">WEB · APP DEMO</div>
       </div>
 
@@ -284,6 +299,8 @@
       </div>
     </a>
     -->
+      </div>
+    </div>
   </section>
 
   <!-- ④ EDUCATION & SKILLS -->
