@@ -214,7 +214,7 @@ body.intro-active .cursor-ring { opacity: 0; }
 }
 .hero-line4 {
   margin-top: 26px;
-  font-size: clamp(12px, 1.2vw, 15px); letter-spacing: 0.14em;
+  font-size: clamp(13px, 1.25vw, 16px); letter-spacing: 0.01em; word-break: keep-all;
   color: #6a6963;
   --d: 0.48s;
 }
@@ -342,8 +342,10 @@ body.intro-active .cursor-ring { opacity: 0; }
 .work-preview-inner img[data-idx="2"] { object-position: center top; }
 .work-preview-inner > [data-active] { opacity: 1; }
 
-@media (hover: none) {
-  .work-preview { display: none; }
+/* 터치 기기: 호버 미리보기 · "HOVER A PROJECT" 안내 없이 목록만, 누르면 바로 이동 */
+@media (hover: none), (pointer: coarse), (max-width: 960px) {
+  .work-preview, .works-detail { display: none; }
+  .work-row:active { background: var(--blue); }
 }
 
 /* ══════════════ PERSONAL PROJECTS ══════════════ */
@@ -386,6 +388,7 @@ body.intro-active .cursor-ring { opacity: 0; }
 /* 썸네일 무대 — 프로젝트마다 옅은 색 면 위에 목업을 올린다 */
 .personal-stage {
   position: relative; aspect-ratio: 16 / 11;
+  container-type: size; /* 안의 폰 프레임이 cqh로 크기를 맞춘다 */
   border-radius: 20px; overflow: hidden;
   display: grid; place-items: center;
   background: #eceef2;
@@ -395,6 +398,7 @@ body.intro-active .cursor-ring { opacity: 0; }
 .personal-stage.sabeop { background: #dde5ec; }
 .personal-stage.ieum   { background: #f4e4da; }
 .personal-stage.jg     { background: #ebe7dd; }
+.personal-stage.jipda  { background: #dfe5f4; }
 
 .mock-browser, .mock-phone {
   transition: translate 0.35s cubic-bezier(.2,.7,.2,1), box-shadow 0.35s ease;
@@ -429,16 +433,19 @@ body.intro-active .cursor-ring { opacity: 0; }
   position: absolute; top: 7%; bottom: 7%; left: 50%;
   translate: -50% 0;
   aspect-ratio: 9 / 19.5;
-  padding: 6px; border-radius: 30px;
+  /* 프레임 크기가 썸네일 높이를 따라가므로 모서리 · 테두리 두께도 높이(cqh)에 맞춰 줄인다 */
+  --ph-pad: clamp(3px, 1.9cqh, 6px);
+  --ph-r: clamp(12px, 6.2cqh, 30px);
+  padding: var(--ph-pad); border-radius: var(--ph-r);
   background: #16181c;
   box-shadow: inset 0 0 0 1.5px #3a3d44, 0 22px 44px -14px rgba(20,24,40,0.4);
 }
 .mock-phone::before {
   content: ""; position: absolute; z-index: 1;
-  top: 13px; left: 50%; width: 30%; height: 13px;
+  top: calc(var(--ph-pad) + 2.2cqh); left: 50%; width: 30%; height: clamp(7px, 3.6cqh, 13px);
   translate: -50% 0; border-radius: 999px; background: #16181c;
 }
-.mock-phone .mock-screen { height: 100%; border-radius: 24px; background: #fff; }
+.mock-phone .mock-screen { height: 100%; border-radius: calc(var(--ph-r) - var(--ph-pad)); background: #fff; }
 .mock-phone .mock-screen img { top: 9%; height: auto; min-height: 91%; } /* 노치 아래 상태바 여백 */
 
 .mock-screen { position: relative; overflow: hidden; }
@@ -455,7 +462,7 @@ body.intro-active .cursor-ring { opacity: 0; }
 }
 
 .personal-body { flex: 1; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
-.personal-row-top { display: flex; align-items: center; gap: 12px; }
+.personal-row-top { display: flex; align-items: center; gap: 12px; min-height: 27px; } /* UPDATING 배지 유무와 상관없이 제목 줄 높이를 맞춤 */
 .personal-num { font-size: 11px; letter-spacing: 0.14em; opacity: 0.4; }
 .personal-kicker { font-size: 10px; letter-spacing: 0.2em; color: var(--blue-deep); }
 /* 계속 업데이트 중인 프로젝트 표시 — 숨 쉬는 점 */
@@ -696,10 +703,57 @@ body.intro-active .cursor-ring { opacity: 0; }
   .personal-sheet { border-radius: 22px; padding: 56px 16px 72px; }
   .personal-stage { border-radius: 14px; }
   .mock-browser { width: 88%; }
-  .mock-phone { border-radius: 24px; padding: 5px; }
-  .mock-phone .mock-screen { border-radius: 19px; }
-  .mock-phone::before { top: 10px; height: 10px; }
   .pv-tag { display: none; } /* 좁은 화면에선 목업과 겹쳐서 숨김 — 키커가 같은 정보 */
-  .contact-row { flex-wrap: wrap; }
-  .contact-row-value { font-size: clamp(20px, 6vw, 30px); }
+  /* 이메일이 잘리지 않게: 라벨은 위 줄로, 주소는 폭에 맞춰 한 줄 전체 표시 */
+  .contact-row { flex-wrap: wrap; row-gap: 8px; column-gap: 12px; }
+  .contact-row-label { flex-basis: 100%; min-width: 0; }
+  .contact-row-value {
+    font-size: clamp(17px, 5.6vw, 30px);
+    overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere;
+  }
+}
+
+/* ── 개인 프로젝트 가로 레일: 다음 카드가 살짝 보이게, 자동 전환 없음 ── */
+.personal-rail-bar { display: flex; align-items: center; gap: 8px; }
+.personal-rail-count { margin-right: 10px; }
+.personal-rail-count { font-size: 11px; letter-spacing: 0.2em; color: #8a8a87; font-variant-numeric: tabular-nums; }
+.rail-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgba(17,17,17,0.18); background: #fff; color: var(--black);
+  font-size: 18px; cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.rail-btn:hover:not(:disabled) { background: var(--black); color: #fff; border-color: var(--black); }
+.rail-btn:disabled { opacity: 0.3; cursor: default; }
+.rail-btn:focus-visible, .personal-rail:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+
+.personal-rail {
+  display: grid; grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * clamp(20px, 2.4vw, 36px)) / 2.8);
+  gap: clamp(20px, 2.4vw, 36px);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  scrollbar-width: none; padding-bottom: 4px;
+}
+.personal-rail::-webkit-scrollbar { display: none; }
+.personal-rail > .personal-card { scroll-snap-align: start; min-width: 0; gap: 22px; }
+/* 노트북 높이에서도 카드 한 장이 한 화면에 들어오도록 썸네일을 낮추고 설명은 3줄까지 */
+.personal-rail .personal-stage { aspect-ratio: 16 / 10; border-radius: 16px; }
+.personal-rail .personal-body { gap: 12px; }
+.personal-rail .personal-name { font-size: clamp(22px, 2.1vw, 30px); }
+.personal-rail .personal-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.personal-rail.is-dragging { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; }
+.personal-rail.is-dragging .personal-card { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .personal-rail { scroll-behavior: auto; } }
+
+@media (max-width: 1100px) {
+  .personal-rail { grid-auto-columns: calc((100% - clamp(20px, 2.4vw, 36px)) / 2.2); }
+}
+@media (max-width: 960px) {
+  .personal-rail { grid-auto-columns: 78%; }
+  .personal-rail .personal-desc { min-height: calc(1.75em * 3); }
+}
+@media (max-width: 560px) {
+  .personal-rail { grid-auto-columns: 86%; gap: 16px; }
+  .rail-btn { width: 40px; height: 40px; font-size: 16px; }
 }

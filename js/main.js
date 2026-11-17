@@ -145,9 +145,9 @@ window.addEventListener('scroll', () => {
   const detailIndex = document.getElementById('detailIndex');
 
   const WORKS = [
-    { name: 'CRM', role: 'Design', desc: '서비스 전반 UI/UX 디자인 — 개선 및 신규 기능 설계', tags: ['UX/UI', 'FLOW', 'DESIGN SYSTEM'] },
+    { name: 'CRM', role: 'Design', desc: '신규 B2B SaaS 0→1 — 영업 흐름 설계부터 React 퍼블리싱까지', tags: ['UX/UI', 'FLOW', 'DESIGN SYSTEM'] },
     { name: 'CRM Admin', role: 'Admin Design', desc: '관리자 페이지 전체 디자인 및 퍼블리싱', tags: ['UI', 'PUBLISHING', 'TABLE UX'] },
-    { name: 'App', role: 'App Design', desc: '트레이드잇 신규 상품 앱 디자인 — 출시 전, 디자인 완료 단계', tags: ['MOBILE', 'UI', 'PROTOTYPE'] },
+    { name: 'App', role: 'App Design', desc: '트레이드잇 B2B 명함 앱 X4 디자인 — iOS · Android 출시', tags: ['MOBILE', 'UI', 'MOTION'] },
     { name: 'Marketing', role: '마케팅 지원 디자인', desc: 'SNS 콘텐츠 · 배너 · 브로슈어 · 인쇄물 디자인', tags: ['SNS', 'BANNER', 'LANDING'] }
   ];
 
@@ -175,6 +175,9 @@ window.addEventListener('scroll', () => {
     previewSlots.forEach(el => el.toggleAttribute('data-active', Number(el.dataset.idx) === idx));
     preview.classList.toggle('is-on', !!d);
   }
+
+  // 터치 기기(모바일 · 태블릿)는 미리보기 없이 눌러서 바로 이동
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
   rows.forEach(row => {
     row.addEventListener('mouseenter', () => setHover(Number(row.dataset.idx)));
@@ -223,4 +226,61 @@ window.addEventListener('scroll', () => {
     });
   }, { threshold: 0.2 });
   io.observe(section);
+})();
+
+/* ── 개인 프로젝트 가로 레일: 화살표 · 드래그 · 현재 번호 ── */
+(() => {
+  const rail = document.getElementById('personalRail');
+  if (!rail) return;
+  const prev = document.getElementById('railPrev');
+  const next = document.getElementById('railNext');
+  const count = document.getElementById('railCount');
+  const cards = Array.from(rail.querySelectorAll('.personal-card'));
+  const total = String(cards.length).padStart(2, '0');
+
+  const step = () => {
+    const gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+    return cards[0].getBoundingClientRect().width + gap;
+  };
+  const update = () => {
+    const max = rail.scrollWidth - rail.clientWidth - 2;
+    prev.disabled = rail.scrollLeft <= 2;
+    next.disabled = rail.scrollLeft >= max;
+    const idx = rail.scrollLeft >= max ? cards.length - 1 : Math.round(rail.scrollLeft / step());
+    count.textContent = String(idx + 1).padStart(2, '0') + ' / ' + total;
+  };
+  prev.addEventListener('click', () => rail.scrollBy({ left: -step() }));
+  next.addEventListener('click', () => rail.scrollBy({ left: step() }));
+  rail.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  window.addEventListener('resize', update);
+  rail.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); rail.scrollBy({ left: step() }); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); rail.scrollBy({ left: -step() }); }
+  });
+
+  // 마우스로 끌어서 넘기기. 조금이라도 끌었으면 카드 클릭으로 처리하지 않는다.
+  let down = false, moved = false, startX = 0, startLeft = 0;
+  rail.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    down = true; moved = false; startX = e.clientX; startLeft = rail.scrollLeft;
+  });
+  window.addEventListener('pointermove', (e) => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (!moved && Math.abs(dx) > 6) { moved = true; rail.classList.add('is-dragging'); }
+    if (moved) rail.scrollLeft = startLeft - dx;
+  });
+  window.addEventListener('pointerup', () => {
+    if (!down) return;
+    down = false;
+    if (moved) {
+      rail.classList.remove('is-dragging');
+      const i = Math.round(rail.scrollLeft / step());
+      rail.scrollTo({ left: i * step() });
+    }
+  });
+  rail.addEventListener('click', (e) => { if (moved) { e.preventDefault(); moved = false; } }, true);
+  rail.addEventListener('dragstart', (e) => e.preventDefault());
+
+  update();
 })();

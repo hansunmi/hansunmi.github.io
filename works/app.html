@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>App Design — Hansunmi</title>
+  <title>X4 App — Hansunmi</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="../css/app.css" />
+  <link rel="stylesheet" href="../css/work-case.css" />
 </head>
 <body>
 
@@ -22,7 +23,7 @@
     <div class="hero-top">
       <div class="hero-intro">
         <div class="badge-row">
-          <span class="badge-fill"><span class="badge-dot"></span>출시 전 · PRE-LAUNCH</span>
+          <span class="badge-fill"><span class="badge-dot"></span>출시 · LIVE</span>
           <span class="htag">Mobile App</span>
           <span class="htag">iOS · Android</span>
         </div>
@@ -38,15 +39,16 @@
         <p class="hero-desc" data-reveal>명함 한 장을 찍으면 상대 기업의 <strong>거래 데이터까지 이어지는 B2B 명함 앱</strong>입니다. 전시회에서 받은 명함 뭉치를 일괄 스캔해 정리하고, 등록된 기업의 수출입 이력·담당자·선하증권 정보를 명함 상세 안에서 바로 확인할 수 있게 설계했습니다.</p>
 
         <div class="hero-cta-row" data-reveal>
-          <a href="#screens" class="outro-btn outro-btn--fill">View Screens ↓</a>
-          <span class="cta-note">스토어 출시 준비 중 — 공개 링크 없음</span>
+          <a href="#overview" class="outro-btn outro-btn--fill">Case Study ↓</a>
+          <a href="https://play.google.com/store/apps/details?id=kr.co.tradeit.tradeitapp.tradeit_app" class="outro-btn" target="_blank" rel="noopener">Google Play ↗</a>
+          <a href="https://apps.apple.com/kr/app/x4/id6815110176" class="outro-btn" target="_blank" rel="noopener">App Store ↗</a>
         </div>
       </div>
 
       <div class="info-grid" data-reveal>
         <div class="info-cell"><span class="info-label">Service</span><span class="info-value">App UI/UX Design, Motion</span></div>
         <div class="info-cell"><span class="info-label">Timeline</span><span class="info-value">2026.08 — 2026.09</span></div>
-        <div class="info-cell"><span class="info-label">Status</span><span class="info-value status-warm">출시 전 (디자인 완료)</span></div>
+        <div class="info-cell"><span class="info-label">Status</span><span class="info-value">출시 (iOS · Android)</span></div>
         <div class="info-cell">
           <span class="info-label">Tools</span>
           <div class="tool-row">
@@ -66,23 +68,79 @@
     </div>
   </header>
 
-  <!-- ② POINTS -->
-  <section class="section points-section">
-    <div class="points-grid">
-      <div class="point-card" data-reveal>
-        <p class="point-label">Problem</p>
-        <h3 class="point-title">명함은 쌓이는데,<br>정보는 남지 않는다</h3>
-        <p class="point-desc">전시회에서 받은 수십 장의 명함이 사진첩에만 남는 문제. 촬영 → 정리 → 기업 확인이 전부 끊겨 있었습니다.</p>
+  <!-- ② CASE STUDY -->
+  <section id="overview" class="section cs">
+    <div class="cs-row" data-reveal>
+      <span class="cs-label">01 · 사용자와 과제</span>
+      <div class="cs-main">
+        <h2 class="cs-title">명함은 쌓이는데,<br>정보는 남지 않는다</h2>
+        <div class="cs-cols">
+          <div class="cs-col">
+            <span class="cs-k">사용자</span>
+            <p>전시회와 미팅에서 하루에 수십 장의 명함을 받는 해외영업 담당자. 받은 명함의 회사가 실제로 무엇을, 어디와 거래하는지 알아야 다음 연락을 정할 수 있습니다.</p>
+          </div>
+          <div class="cs-col">
+            <span class="cs-k">출발점</span>
+            <p>명함은 사진첩에만 남고, 촬영 → 정리 → 기업 확인이 전부 끊겨 있었습니다. 트레이드잇이 가진 무역 데이터를 명함 한 장에서 바로 꺼내 쓰게 하는 것이 이 앱의 역할이었습니다.</p>
+          </div>
+          <div class="cs-col">
+            <span class="cs-k">디자인 과제</span>
+            <p><strong>찍기</strong>와 <strong>확인하기</strong>를 오가는 일이 손에 익게 만드는 것. 여러 장을 빠르게 찍고, 한 장을 열면 그 회사의 거래 정보까지 이어지게 하는 것이 목표였습니다.</p>
+          </div>
+        </div>
       </div>
-      <div class="point-card" data-reveal data-delay="80">
-        <p class="point-label">Design</p>
-        <h3 class="point-title">스캔과 인박스를<br>한 축으로</h3>
-        <p class="point-desc">하단 Inbox / Scan 토글 하나로 두 모드를 왕복하게 했습니다. 연속 촬영 후 썸네일로 모아 일괄 등록해, 한 장씩 저장하는 반복을 없앴습니다.</p>
-      </div>
-      <div class="point-card" data-reveal data-delay="160">
-        <p class="point-label">Why</p>
-        <h3 class="point-title">데이터 화면만<br>다크로</h3>
-        <p class="point-desc">명함·기업 정보는 라이트, 선하증권 같은 거래 데이터는 다크로 분리했습니다. 숫자와 코드가 많은 화면에서 대비를 높여 스캔성을 확보하려는 의도입니다.</p>
+    </div>
+
+    <div class="cs-row" data-reveal>
+      <span class="cs-label">02 · 핵심 결정</span>
+      <div class="cs-main">
+        <h2 class="cs-title">전시장에서 한 손으로 쓰게</h2>
+        <div class="dec-list">
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">A</span>
+              <h3>스캔과 인박스를 한 토글로</h3>
+              <p>앱의 일은 명함을 찍는 것과 모아 보는 것 두 가지라, 하단 메뉴 대신 Inbox / Scan 토글 하나만 띄웠습니다. 어느 화면에서든 엄지 한 번으로 두 모드를 오갑니다.</p>
+            </div>
+            <div class="dec-phones">
+              <img src="../img/mobile/메인-명함有.jpg" alt="인박스: 명함 카드 목록" loading="lazy" />
+              <img src="../img/mobile/명함스캔01.jpg" alt="스캔: 가이드 프레임" loading="lazy" />
+            </div>
+          </article>
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">B</span>
+              <h3>한 장씩 저장하지 않고 몰아서 등록</h3>
+              <p>받은 명함을 연달아 찍으면 아래에 썸네일로 쌓이고, 마지막에 한 번에 등록합니다. 한 번에 최대 10장까지 찍을 수 있고, 넘으면 이유를 바로 알려줍니다. 등록이 끝나면 새로 스캔할지, 인박스로 갈지 고르게 했습니다.</p>
+            </div>
+            <div class="dec-phones">
+              <img src="../img/mobile/명함스캔02.jpg" alt="연속 촬영한 명함 썸네일" loading="lazy" />
+              <img src="../img/mobile/명함스캔개수제한.jpg" alt="스캔 개수 제한 안내" loading="lazy" />
+            </div>
+          </article>
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">C</span>
+              <h3>명함 상세 안에서 거래 정보까지</h3>
+              <p>명함 상세를 Company · Trade Info · Team&amp;Crew 탭으로 나눠, 연락처 아래에서 바로 그 회사의 수출입 이력을 확인하게 했습니다. 다른 앱이나 사이트로 나가 회사를 다시 검색할 필요가 없습니다.</p>
+            </div>
+            <div class="dec-phones">
+              <img src="../img/mobile/명함상세.jpg" alt="명함 상세: 기업 정보 탭" loading="lazy" />
+              <img src="../img/mobile/선하증권조회.jpg" alt="Trade Info: 수출입 이력" loading="lazy" />
+            </div>
+          </article>
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">D</span>
+              <h3>거래 데이터 화면만 다크로</h3>
+              <p>명함 · 기업 정보는 라이트, 선하증권 같은 거래 데이터는 다크로 분리했습니다. 숫자와 코드가 많은 화면에서 대비를 높여 훑어 읽기 쉽게 하고, 지금 보는 정보가 명함인지 거래 기록인지 색으로도 구분됩니다.</p>
+            </div>
+            <div class="dec-phones">
+              <img src="../img/mobile/선하증권조회-검색결과상세.jpg" alt="선하증권 상세: 다크 화면" loading="lazy" />
+              <img src="../img/mobile/검색히스토리.jpg" alt="조회 이력" loading="lazy" />
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -217,7 +275,7 @@
 
   <!-- ⑦ CLOSING -->
   <footer class="closing" data-reveal>
-    <p class="closing-note">출시 후 스토어 링크로 업데이트할 예정입니다. 상세한 설계 과정은 <a href="mailto:gkstjsal1016@naver.com">메일</a>로 문의 주세요.</p>
+    <p class="closing-note">X4가 연결하는 무역 데이터 서비스는 CRM 페이지에서 볼 수 있습니다. <a href="design.html">Global CRM 보기 →</a></p>
     <a href="../index.html#works" class="back-btn">BACK TO WORKS →</a>
   </footer>
 

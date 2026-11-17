@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Design — Hansunmi</title>
+  <title>CRM Admin — Hansunmi</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="stylesheet" href="../css/work-case.css" />
 </head>
 <body>
 
@@ -31,18 +32,18 @@
           <p class="hero-tagline">/ Real Project</p>
         </div>
 
-        <p class="hero-desc" data-reveal>트레이드잇 운영진이 쓰는 내부 관리자 콘솔.<br>회원·프로젝트·월별 트래킹 데이터를 한 테이블에서 관리해야 해서, 정보 밀도가 높은 화면의 위계와 조작 흐름을 우선 설계했습니다. 전체 화면 디자인과 퍼블리싱을 담당했습니다.</p>
+        <p class="hero-desc" data-reveal>트레이드잇 운영진이 고객사의 영업 대행 업무를 관리하는 내부 콘솔입니다.<br>고객사마다 매달 진행하는 업무와 바이어 활동 기록이 한곳에 쌓여야 해서, 정보가 많은 화면에서도 지금 확인할 것과 입력할 곳이 바로 보이도록 설계했습니다. 전체 화면 디자인과 React 퍼블리싱을 맡았습니다.</p>
 
         <div class="hero-cta-row" data-reveal>
-          <a href="#shots" class="btn btn--fill">View Screens <span>↓</span></a>
-          <a href="mailto:gkstjsal1016@naver.com" class="btn">Contact Me</a>
+          <a href="#overview" class="btn btn--fill">Case Study <span>↓</span></a>
+          <a href="#shots" class="btn">View Screens</a>
         </div>
       </div>
 
       <div class="info-grid" data-reveal>
-        <div class="info-cell"><span class="info-label">Service</span><span class="info-value">Admin UI Design, Web Publishing</span></div>
+        <div class="info-cell"><span class="info-label">Service</span><span class="info-value">관리자 콘솔 UI/UX 디자인 · React 퍼블리싱</span></div>
         <div class="info-cell"><span class="info-label">Timeline</span><span class="info-value">2025.01 — 2026.09</span></div>
-        <div class="info-cell"><span class="info-label">Role</span><span class="info-value">Admin Designer · Publisher</span></div>
+        <div class="info-cell"><span class="info-label">Role</span><span class="info-value">Product Designer · Publisher</span></div>
         <div class="info-cell">
           <span class="info-label">Tools</span>
           <div class="tool-row">
@@ -72,8 +73,8 @@
               <span class="tool-tip">NEXT.JS</span>
             </div>
             <div class="tool-icon" tabindex="0">
-              <img src="../img/design/webstorm.png" alt="WebStorm" width="28" height="28" />
-              <span class="tool-tip">WEBSTORM</span>
+              <span class="tool-mono" aria-hidden="true">CC</span>
+              <span class="tool-tip">CLAUDE CODE</span>
             </div>
           </div>
         </div>
@@ -81,8 +82,80 @@
     </div>
   </header>
 
-  <!-- ② SCREENS -->
+  <!-- ② CASE STUDY -->
+  <section id="overview" class="section cs">
+    <div class="cs-row" data-reveal>
+      <span class="cs-label">01 · 사용자와 과제</span>
+      <div class="cs-main">
+        <h2 class="cs-title">고객사 수십 곳의 월별 업무를<br>한 화면에서 놓치지 않게</h2>
+        <div class="cs-cols">
+          <div class="cs-col">
+            <span class="cs-k">사용자</span>
+            <p>고객사 대신 해외 영업을 진행하는 트레이드잇 운영진(국내 · 해외 영업팀). 고객사마다 계약 기간 동안 매달 킥오프 미팅, 시장조사, 바이어 리스트 등록, 콜드콜 같은 업무를 진행하고 기록합니다.</p>
+          </div>
+          <div class="cs-col">
+            <span class="cs-k">출발점</span>
+            <p>CRM과 함께 새로 만든 콘솔이라 기존 화면이 없었습니다. 고객사 정보, 월별 업무 진행, 바이어 활동 기록이 서로 다른 곳에 흩어지면 누가 언제 무엇을 했는지 확인하기 어려웠습니다.</p>
+          </div>
+          <div class="cs-col">
+            <span class="cs-k">디자인 과제</span>
+            <p>정보가 많은 표를 <strong>훑어보는 화면</strong>과 <strong>입력하는 화면</strong>으로 나누는 것. 목록에서는 밀린 업무가 바로 보이고, 입력은 화면을 옮기지 않고 한곳에서 끝나게 하는 것이 목표였습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-row" data-reveal>
+      <span class="cs-label">02 · 일하는 방식</span>
+      <div class="cs-main">
+        <h2 class="cs-title">CRM과 같은 방식으로 디자인 · 퍼블리싱했습니다</h2>
+        <ol class="steps">
+          <li><span>기획자</span>기능 정리 · 와이어프레임</li>
+          <li class="is-me"><span>나</span>Figma 디자인</li>
+          <li class="is-me"><span>나</span>React 퍼블리싱</li>
+          <li><span>개발자</span>기능 연결 · 배포</li>
+        </ol>
+        <p class="cs-lead">운영 방식이 바뀌거나 관리할 항목이 늘면 회의로 맞춘 뒤 디자인과 코드를 함께 고쳤습니다.</p>
+      </div>
+    </div>
+
+    <div class="cs-row" data-reveal>
+      <span class="cs-label">03 · 핵심 결정</span>
+      <div class="cs-main">
+        <h2 class="cs-title">빽빽한 표에서도 할 일이 보이게</h2>
+        <div class="dec-list">
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">A</span>
+              <h3>한 행에 요약, 펼치면 12개월</h3>
+              <p>대시보드는 고객사 한 곳을 한 행으로 두고, 서비스 경과 기간과 이번 달 업무 6가지의 진행 상태만 보여줍니다. 행을 펼치면 M1~M12 월별 카드가 나와 바이어 리스트 등록 수와 콜드콜 수를 달마다 비교할 수 있습니다. "11개월차" 같은 값이 사람마다 다르게 읽히지 않도록 월 · 주를 세는 기준도 표 위에 적어 두었습니다.</p>
+            </div>
+            <img class="dec-img" src="../img/design/admin_dashboard.jpg" alt="관리자 대시보드: 고객사 행과 펼친 M1~M12 월별 카드" loading="lazy" />
+          </article>
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">B</span>
+              <h3>한 달 치 입력은 한 팝업에서</h3>
+              <p>킥오프 미팅 · 시장조사 · CIC · D&amp;B · 기업 개요 · 영업제안서를 예정 / 완료(담당자 · 수행일) / 해당 없음 중에서 고르고, 바이어 리스트 등록과 콜드콜 수치, 메모까지 같은 팝업에서 저장합니다. 상단에는 고객사 정보를 고정해 어느 회사를 입력 중인지 헷갈리지 않게 했습니다.</p>
+            </div>
+            <img class="dec-img" src="../img/design/admin_dashboard_popup.jpg" alt="데이터 트래킹 관리 팝업" loading="lazy" />
+          </article>
+          <article class="dec">
+            <div class="dec-text">
+              <span class="dec-num">C</span>
+              <h3>고르고, 보고, 쓰는 3열</h3>
+              <p>트래커는 바이어 목록 → 활동 이력 → 기록 에디터를 3열로 나란히 두었습니다. 바이어를 고르면 그 바이어의 이력이 가운데에, 선택한 기록이 오른쪽 에디터에 열려 화면 이동 없이 이어서 작성합니다. 이력은 Inquiry · RFQ · Quotation 태그로 걸러 봅니다.</p>
+            </div>
+            <img class="dec-img" src="../img/design/admin_tracker.jpg" alt="트래커: 바이어 목록, 활동 이력, 에디터 3열" loading="lazy" />
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ SCREENS -->
   <section id="shots" class="section shots-section">
+    <div class="shots-intro" data-reveal><span class="cs-label">04 · 주요 화면</span></div>
     <div class="shot-block" data-reveal>
       <div class="shot-head">
         <span class="shot-num">01</span>
@@ -129,9 +202,9 @@
     </div>
   </section>
 
-  <!-- ③ CLOSING -->
+  <!-- ④ CLOSING -->
   <footer class="closing" data-reveal>
-    <p class="closing-note">관리자 화면 설계 과정에 대해 더 듣고 싶다면 <a href="mailto:gkstjsal1016@naver.com">메일</a>로 연락 주세요.</p>
+    <p class="closing-note">고객이 쓰는 서비스 화면은 CRM 페이지에서 볼 수 있습니다. <a href="design.html">Global CRM 보기 →</a></p>
     <a href="../index.html#works" class="back-btn">BACK TO WORKS →</a>
   </footer>
 
